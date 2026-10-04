@@ -1,49 +1,58 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#0B1220] text-white mt-20">
+    <footer className="bg-[#0B1220] text-white mt-24">
 
-      <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-10">
+      <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12">
 
-        {/* BRAND */}
+        {/* ================= BRAND ================= */}
         <div>
-          <h2 className="font-semibold text-lg tracking-wide">
+          <h2 className="text-lg font-semibold tracking-wide">
             Zaky Zhafran & Partners
           </h2>
 
-          <p className="text-gray-400 text-sm mt-3 leading-relaxed">
-            Legal Advisory & Business Consulting focused on helping modern businesses
-            grow with structured and reliable legal solutions.
+          <p className="text-gray-400 text-sm mt-4 leading-relaxed max-w-md">
+            Legal & Tax Advisory Firm focused on corporate governance,
+            compliance, and strategic business protection.
           </p>
+
+          <div className="mt-6 inline-flex px-3 py-1 rounded-full bg-white/10 text-[11px] text-gray-300">
+            Trusted Legal Advisory
+          </div>
         </div>
 
-        {/* CONTACT */}
-        <div className="text-sm text-gray-400 space-y-2">
-          <p className="text-white font-medium mb-3">Contact</p>
-          <p>Villa Bekasi Indah 1 Blok G1 No.2, RT.005/RW.012, Mangunjaya, Kec. Tambun Selatan, Kabupaten Bekasi, Jawa Barat 17510, Bekasi, Indonesia</p>
-          <p>kingmada@zakyzhafran.com</p>
-          <p>+62 822-4288-7887</p>
-        </div>
+        {/* ================= CONTACT ================= */}
+        <div>
+          <p className="text-white font-medium mb-4 text-sm">
+            Contact
+          </p>
 
-        {/* QUICK LINKS */}
-        <div className="text-sm text-gray-400 space-y-2">
-          <p className="text-white font-medium mb-3">Navigation</p>
-          <a href="#about" className="block hover:text-white transition">About</a>
-          <a href="#services" className="block hover:text-white transition">Services</a>
-          <a href="#contact" className="block hover:text-white transition">Contact</a>
+          <div className="space-y-3 text-sm text-gray-400 leading-relaxed">
+
+            <p>
+              Villa Bekasi Indah, Bekasi, Indonesia
+            </p>
+
+            <p>
+              kingmada@zakyzhafran.com
+            </p>
+
+            <p>
+              +62 822-4288-7887
+            </p>
+
+          </div>
         </div>
 
       </div>
 
-      {/* DIVIDER */}
+      {/* ================= DIVIDER ================= */}
       <div className="border-t border-white/10" />
 
-      {/* BOTTOM */}
-      <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+      {/* ================= BOTTOM ================= */}
+      <div className="max-w-7xl mx-auto px-6 py-6 text-center text-xs text-gray-500">
 
-        <p>© {new Date().getFullYear()} Zaky Zhafran & Partners</p>
-
-        <p className="mt-2 md:mt-0">
-          Built with precision & modern design
+        <p>
+          © {new Date().getFullYear()} Zaky Zhafran & Partners — All rights reserved.
         </p>
 
       </div>

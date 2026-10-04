@@ -1,6 +1,13 @@
 import { useParams, useNavigate } from "react-router-dom";
 import Navbar from "../components/layout/Navbar";
 
+import fotocg from "../assets/ClarteGagah.png";
+import fotodnr from "../assets/Dimas_Nugraha_Riyadi.jpeg";
+import fotoda from "../assets/Dina_Aisyah.png";
+import fotodi from "../assets/Dini_Inasyah.png";
+import fotota from "../assets/Tsabbit_Aqdamana.png";
+import fotozz from "../assets/ZakyZhafran.jpeg"
+
 const team = [
   {
     id: "zaky",
@@ -8,66 +15,70 @@ const team = [
     role: "Managing Partner",
     edu: "Universitas Islam Indonesia • Universitas Indonesia",
     desc:
-      "Memimpin strategi hukum korporasi dengan fokus pada struktur bisnis, mitigasi risiko, dan kepatuhan regulasi perusahaan berskala nasional dan internasional.",
+      "Memberikan strategic legal counsel kepada perusahaan dan pemegang kepentingan korporasi dalam berbagai aspek corporate law, corporate governance, regulatory compliance, dan tax law.",
     detail:
-      "Berpengalaman menangani restrukturisasi perusahaan, merger & acquisition, serta advisory hukum untuk perusahaan besar dan startup yang sedang berkembang.",
-    photo:
-      "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=400&q=80",
+      "Berpengalaman dalam corporate restructuring, merger & acquisition, investment transactions, corporate governance, regulatory advisory, serta tax legal matters and disputes.",
+    photo:fotozz,
   },
+
   {
     id: "dimas",
     name: "Dimas Nugraha Riyadi, S.H., M.H.",
     role: "Partner",
     edu: "Universitas Islam Indonesia • Universitas Indonesia",
-    desc: "Spesialis hukum kontrak dan litigasi bisnis.",
+    desc:
+      "Spesialis dalam contract law, commercial disputes, dan business litigation, dengan fokus pada pemberian strategic legal counsel dalam menangani kompleksitas hubungan bisnis, perjanjian komersial, serta berbagai potensi dan sengketa hukum perusahaan.",
     detail:
-      "Fokus pada penyelesaian sengketa bisnis, perjanjian komersial, serta pendampingan hukum pada sektor industri dan keuangan.",
-    photo:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80",
+      "Berpengalaman dalam commercial agreements, business disputes, contract advisory, serta pendampingan hukum pada sektor industri dan jasa keuangan. Memberikan representasi dan advisory hukum dengan pendekatan yang strategis, presisi, dan berorientasi pada perlindungan kepentingan serta posisi hukum klien.",
+    photo: fotodnr,
   },
+
   {
     id: "dini",
     name: "Dini Inasyah Alfaridah, S.H., M.H.",
     role: "Partner",
     edu: "UIN Sunan Gunung Djati",
-    desc: "Hukum perdata dan kepatuhan regulasi.",
+    desc:
+      "Berfokus pada hukum perdata, regulatory compliance, dan legal governance, dengan perhatian khusus pada penerapan prinsip hukum syariah dalam hubungan dan transaksi bisnis serta penanganan aspek hukum dalam lingkungan korporasi dan pemerintahan.",
     detail:
-      "Berpengalaman dalam hukum berbasis syariah, compliance perusahaan, serta legal governance dalam bisnis modern.",
-    photo:
-      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=400&q=80",
+      "Berpengalaman dalam hukum perdata, kontrak syariah, sharia-based agreements, corporate compliance, serta legal governance dalam bisnis modern. Memiliki pengalaman dalam penyusunan, penelaahan, dan pendampingan terkait perjanjian berbasis syariah, sekaligus menangani perkara Tata Usaha Negara (TUN) dan berbagai isu hukum yang berkaitan dengan keputusan maupun tindakan administrasi pemerintahan.",
+    photo: fotodi,
   },
+
   {
     id: "tsabbit",
     name: "Tsabbit Aqdamana, S.H., M.H.",
     role: "Partner",
     edu: "Universitas Islam Indonesia",
-    desc: "Legal drafting & startup advisory.",
+    desc:
+      "Berfokus pada legal drafting, startup advisory, hukum acara PTUN, dan constitutional litigation, dengan pengalaman memberikan pendampingan hukum pada tahap awal pendirian usaha hingga penanganan perkara di ranah administrasi negara dan Mahkamah Konstitusi.",
     detail:
-      "Mendampingi startup dalam pendirian usaha, perizinan, serta struktur hukum awal perusahaan.",
-    photo:
-      "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=400&q=80",
+      "Berpengalaman dalam mendampingi startup dan emerging businesses terkait pendirian badan usaha, perizinan, penyusunan dokumen hukum, serta pembentukan struktur hukum awal perusahaan. Turut menangani perkara Tata Usaha Negara (PTUN), termasuk penyusunan dan pendampingan gugatan, serta perkara di Mahkamah Konstitusi dengan pendekatan hukum yang strategis, sistematis, dan berbasis pada analisis hukum yang komprehensif.",
+    photo: fotota,
   },
+
   {
     id: "dina",
     name: "Dina Aisyah Alfarijah, S.H., M.Kn.",
     role: "Partner",
     edu: "Universitas Padjadjaran • Universitas Yarsi",
-    desc: "Hukum pertanahan & kenotariatan.",
+    desc:
+      "Berfokus pada land law, property law, dan contract law, dengan pengalaman memberikan strategic legal counsel dalam berbagai transaksi dan aktivitas bisnis yang berkaitan dengan aset, properti, serta hubungan kontraktual.",
     detail:
-      "Spesialis transaksi properti, akta notaris, dan legalisasi aset bernilai tinggi.",
-    photo:
-      "https://images.unsplash.com/photo-1589571894960-20bbe2828d0a?auto=format&fit=crop&w=400&q=80",
+      "Berpengalaman dalam property transactions, land matters, licensing & permits, serta commercial and business contracts. Memberikan pendampingan hukum mulai dari legal due diligence, penataan dan pengalihan hak atas properti, proses perizinan, hingga penyusunan dan negosiasi kontrak bisnis dengan pendekatan yang presisi dan berorientasi pada mitigasi risiko hukum.",
+    photo: fotoda,
   },
+
   {
     id: "clarte",
     name: "Clarte Gagah, S.H.",
     role: "Partner",
     edu: "Universitas Islam Indonesia",
-    desc: "Corporate legal & compliance.",
+    desc:
+      "Berfokus pada corporate legal, regulatory compliance, dan criminal law, dengan pendekatan strategis dalam memastikan kepatuhan, penguatan struktur hukum perusahaan, serta pengelolaan risiko hukum yang berpotensi memengaruhi kegiatan dan kepentingan korporasi.",
     detail:
-      "Fokus audit legal internal, kepatuhan perusahaan, dan penguatan struktur hukum korporasi.",
-    photo:
-      "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=400&q=80",
+      "Berpengalaman dalam internal legal audit, corporate compliance, legal risk management, serta penguatan corporate legal structure and governance. Turut memberikan pendampingan dalam criminal law matters, termasuk analisis dan penanganan aspek hukum pidana yang berkaitan dengan kegiatan usaha, manajemen, maupun kepentingan korporasi.",
+    photo: fotocg,
   },
 ];
 
@@ -87,78 +98,73 @@ export default function Profile() {
 
   return (
     <div className="bg-white min-h-screen">
-
       <Navbar />
 
-      <div className="max-w-5xl mx-auto px-6 py-28">
+      <div className="max-w-6xl mx-auto px-6 py-28">
 
-        {/* BACK */}
         <button
           onClick={() => navigate(-1)}
-          className="mb-6 text-sm text-gray-500 hover:text-black transition"
+          className="mb-8 text-sm text-gray-500 hover:text-black transition"
         >
           ← Back
         </button>
 
-        {/* CARD */}
-        <div className="border rounded-2xl shadow-sm overflow-hidden">
+        <div className="border rounded-3xl shadow-lg overflow-hidden">
 
           {/* HEADER */}
-          <div className="bg-[#0B1220] text-white p-8 md:p-10 grid md:grid-cols-3 gap-8 items-center">
+          <div className="bg-[#0B1220] text-white p-14 grid md:grid-cols-3 gap-12 items-center">
 
-            {/* PHOTO */}
+            {/* 🔥 FIX FOTO TOTAL */}
             <div className="flex justify-center md:justify-start">
-              <img
-                src={person.photo}
-                alt={person.name}
-                className="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover border-4 border-white/20"
-              />
+              <div className="w-56 h-56 md:w-64 md:h-64 bg-white rounded-3xl flex items-center justify-center p-4 shadow-xl">
+                <img
+                  src={person.photo}
+                  alt={person.name}
+                  className="max-w-full max-h-full object-contain"
+                />
+              </div>
             </div>
 
-            {/* INFO */}
             <div className="md:col-span-2 text-center md:text-left">
-              <h1 className="text-2xl font-semibold">{person.name}</h1>
-              <p className="text-gray-300 mt-1">{person.role}</p>
+              <h1 className="text-3xl font-semibold">{person.name}</h1>
+              <p className="text-gray-300 mt-3 text-lg">{person.role}</p>
+              <p className="text-gray-400 text-sm mt-4">{person.edu}</p>
 
-              <p className="text-gray-400 text-sm mt-3">{person.edu}</p>
-
-              <div className="mt-4 inline-block px-3 py-1 text-xs bg-white/10 rounded-full">
+              <div className="mt-6 inline-block px-5 py-2 text-xs bg-white/10 rounded-full">
                 Legal & Corporate Advisory
               </div>
             </div>
           </div>
 
           {/* BODY */}
-          <div className="p-8 md:p-10 space-y-6">
+          <div className="p-12 space-y-10">
 
-            {/* SHORT DESC */}
             <div>
-              <h2 className="text-sm font-semibold text-gray-900 mb-2">
+              <h2 className="text-sm font-semibold mb-3">
                 Professional Overview
               </h2>
-              <p className="text-gray-600 leading-relaxed text-sm">
+              <p className="text-gray-600 text-sm leading-relaxed">
                 {person.desc}
               </p>
             </div>
 
-            {/* DETAIL */}
             <div>
-              <h2 className="text-sm font-semibold text-gray-900 mb-2">
+              <h2 className="text-sm font-semibold mb-3">
                 Expertise & Experience
               </h2>
-              <p className="text-gray-600 leading-relaxed text-sm">
+              <p className="text-gray-600 text-sm leading-relaxed">
                 {person.detail}
               </p>
             </div>
 
-            {/* CTA */}
-            <div className="pt-4 flex flex-col sm:flex-row gap-3">
+            <div className="pt-6 flex flex-col sm:flex-row gap-4">
 
               <a
                 href={`https://wa.me/6281234567890?text=${encodeURIComponent(
                   "Halo, saya ingin konsultasi dengan " + person.name
                 )}`}
                 target="_blank"
+                rel="noreferrer"
                 className="bg-black text-white px-6 py-3 rounded-xl text-sm hover:scale-105 transition text-center"
               >
                 Konsultasi Sekarang
@@ -174,11 +180,8 @@ export default function Profile() {
             </div>
 
           </div>
-
         </div>
-
       </div>
-
     </div>
   );
 }
