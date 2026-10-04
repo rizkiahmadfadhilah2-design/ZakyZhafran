@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import logo from "../../assets/logozp.png";
 import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
@@ -8,7 +7,6 @@ export default function Navbar() {
 
   const isActive = (path) => location.pathname === path;
 
-  // 🔥 lock scroll ketika menu open (mobile UX penting)
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "auto";
   }, [open]);
@@ -24,13 +22,14 @@ export default function Navbar() {
 
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
 
-        {/* LOGO */}
+        {/* LOGO (PUBLIC FOLDER FIX) */}
         <Link to="/" className="flex items-center gap-2 sm:gap-3">
           <img
-            src={logo}
+            src="/logozp.png"
             alt="ZP Logo"
             className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover"
           />
+
           <h1 className="text-white text-[11px] sm:text-sm tracking-widest font-semibold leading-tight">
             ZAKY ZHAFRAN <br className="sm:hidden" /> & PARTNERS
           </h1>
@@ -51,7 +50,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* CTA DESKTOP */}
+        {/* CTA */}
         <a
           href="https://wa.me/6281234567890"
           className="hidden md:inline-block bg-white text-black px-5 py-2 rounded-full text-sm font-medium hover:scale-105 active:scale-95 transition"
@@ -63,22 +62,17 @@ export default function Navbar() {
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden text-white text-2xl"
-          aria-label="Toggle menu"
         >
           {open ? "✕" : "☰"}
         </button>
       </div>
 
-      {/* ================= MOBILE MENU (IMPROVED UX) ================= */}
+      {/* MOBILE MENU */}
       <div
-        className={`
-          md:hidden fixed top-0 left-0 w-full h-full
-          bg-black/95 backdrop-blur-xl
-          transform transition-transform duration-300
-          ${open ? "translate-y-0" : "-translate-y-full"}
-        `}
+        className={`md:hidden fixed top-0 left-0 w-full h-full bg-black/95 backdrop-blur-xl transition-transform duration-300 ${
+          open ? "translate-y-0" : "-translate-y-full"
+        }`}
       >
-
         <div className="px-6 py-6 space-y-6 pt-20">
 
           {menu.map((item) => (
@@ -86,7 +80,7 @@ export default function Navbar() {
               key={item.path}
               to={item.path}
               onClick={() => setOpen(false)}
-              className={`block text-lg transition ${
+              className={`block text-lg ${
                 isActive(item.path)
                   ? "text-white"
                   : "text-white/70 hover:text-white"
@@ -104,7 +98,6 @@ export default function Navbar() {
           </a>
 
         </div>
-
       </div>
 
     </nav>
