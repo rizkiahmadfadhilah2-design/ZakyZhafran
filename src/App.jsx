@@ -5,6 +5,7 @@ import ServicesPage from "./pages/ServicePage";
 import Profile from "./pages/Profile";
 import LawyersPage from "./pages/LawyersPage";
 import Firm from "./pages/Firm";
+import Kontak from "./pages/Kontak";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <Route path="/services" element={<ServicesPage />} />
       <Route path="/profile/:id" element={<Profile />} />
       <Route path="/firm" element={<Firm />} />
+      <Route path="/contact" element={<Kontak />} />
     </Routes>
   );
 }

@@ -15,11 +15,14 @@ export default function Navbar() {
   const menu = [
     { name: "Home", path: "/" },
 
-    // ✅ ABOUT = FIRM PAGE
+    // About → Firm Page
     { name: "About", path: "/firm" },
 
-    // ✅ LAWYERS = ABOUT PAGE (yang lama)
-    { name: "Lawyers", path: "/Lawyers" },
+    // Lawyers Page (team page lama)
+    { name: "Lawyers", path: "/about" },
+
+    // NEW CONTACT PAGE
+    { name: "Contact", path: "/contact" },
 
     { name: "Services", path: "/services" },
   ];
@@ -27,6 +30,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-[999]">
 
+      {/* NAVBAR */}
       <div className="bg-[#0B1220]/70 backdrop-blur-xl border-b border-white/10">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3">
 
@@ -69,15 +73,17 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* CTA */}
+          {/* CTA DESKTOP */}
           <a
-            href="https://wa.me/6281234567890"
+            href="https://wa.me/6282242887887?text=Halo%20Zaky%20Zhafran%20%26%20Partners%2C%20saya%20ingin%20konsultasi%20hukum%20dan%20pajak."
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:inline-flex bg-white text-black px-5 py-2 rounded-full text-sm font-medium hover:scale-105 transition"
           >
             Consultation
           </a>
 
-          {/* HAMBURGER */}
+          {/* MOBILE BUTTON */}
           <button
             onClick={() => setOpen(true)}
             className="md:hidden text-white text-2xl"
@@ -87,31 +93,43 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* MOBILE */}
-      <div className={`fixed inset-0 z-[1000] ${open ? "visible opacity-100" : "invisible opacity-0"}`}>
+      {/* MOBILE MENU */}
+      <div className={`fixed inset-0 z-[1000] transition ${
+        open ? "visible opacity-100" : "invisible opacity-0"
+      }`}>
 
+        {/* BACKDROP */}
         <div
           className="absolute inset-0 bg-black/70"
           onClick={() => setOpen(false)}
         />
 
-        <div className={`absolute right-0 top-0 h-full w-[85%] max-w-sm bg-[#0B1220] transition-transform ${
-          open ? "translate-x-0" : "translate-x-full"
-        }`}>
+        {/* PANEL */}
+        <div
+          className={`absolute right-0 top-0 h-full w-[85%] max-w-sm bg-[#0B1220] transition-transform ${
+            open ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
 
+          {/* HEADER */}
           <div className="flex justify-between px-6 py-5 border-b border-white/10">
-            <p className="text-white text-sm">MENU</p>
-            <button onClick={() => setOpen(false)} className="text-white">✕</button>
+            <p className="text-white text-sm tracking-widest">MENU</p>
+            <button onClick={() => setOpen(false)} className="text-white text-xl">
+              ✕
+            </button>
           </div>
 
+          {/* MENU */}
           <div className="flex flex-col gap-6 px-6 py-8">
             {menu.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
                 onClick={() => setOpen(false)}
-                className={`text-lg ${
-                  isActive(item.path) ? "text-white" : "text-white/60"
+                className={`text-lg transition ${
+                  isActive(item.path)
+                    ? "text-white"
+                    : "text-white/60 hover:text-white"
                 }`}
               >
                 {item.name}
@@ -119,10 +137,13 @@ export default function Navbar() {
             ))}
           </div>
 
+          {/* CTA MOBILE */}
           <div className="absolute bottom-8 w-full px-6">
             <a
-              href="https://wa.me/6281234567890"
-              className="block text-center bg-white text-black py-3 rounded-xl"
+              href="https://wa.me/6282242887887?text=Halo%20Zaky%20Zhafran%20%26%20Partners%2C%20saya%20ingin%20konsultasi%20hukum%20dan%20pajak."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-center bg-white text-black py-3 rounded-xl font-medium hover:scale-105 transition"
             >
               Consultation
             </a>
