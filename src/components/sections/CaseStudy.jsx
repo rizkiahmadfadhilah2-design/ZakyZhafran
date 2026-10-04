@@ -20,48 +20,48 @@ const cases = [
 
 export default function CaseStudy() {
   return (
-    <section className="py-28 bg-[#0B1220] text-white">
+    <section className="py-20 md:py-28 bg-[#0B1220] text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* TITLE */}
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-semibold mb-4">
+          <h2 className="text-3xl md:text-5xl font-semibold mb-4">
             Case Studies
           </h2>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <p className="text-gray-400 max-w-xl mb-14 leading-relaxed">
+          <p className="text-gray-400 max-w-2xl mb-10 md:mb-14 leading-relaxed text-sm md:text-base">
             Selected projects that demonstrate how we help businesses solve complex legal challenges
             with structured and strategic solutions.
           </p>
         </ScrollReveal>
 
         {/* GRID */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
           {cases.map((item, i) => (
             <ScrollReveal key={i} delay={i * 0.1}>
 
-              <div className="group relative p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md transition duration-300 hover:-translate-y-2 hover:bg-white/10 hover:shadow-xl">
+              <div className="group relative p-5 md:p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md transition duration-300 hover:-translate-y-1 md:hover:-translate-y-2 hover:bg-white/10 hover:shadow-xl">
 
-                {/* TOP TAG */}
-                <span className="inline-block text-[11px] px-3 py-1 rounded-full bg-white/10 text-yellow-300 mb-4 group-hover:bg-white/20 transition">
+                {/* TAG */}
+                <span className="inline-block text-[10px] md:text-[11px] px-3 py-1 rounded-full bg-white/10 text-yellow-300 mb-4 group-hover:bg-white/20 transition">
                   {item.tag}
                 </span>
 
                 {/* TITLE */}
-                <h3 className="text-lg font-semibold mb-3 text-white">
+                <h3 className="text-base md:text-lg font-semibold mb-3 text-white leading-snug">
                   {item.title}
                 </h3>
 
                 {/* DESC */}
-                <p className="text-sm text-gray-400 leading-relaxed">
+                <p className="text-xs md:text-sm text-gray-400 leading-relaxed">
                   {item.desc}
                 </p>
 
-                {/* FAKE “VIEW MORE” FEEL */}
-                <div className="mt-6 text-xs text-white/50 group-hover:text-white transition">
+                {/* CTA */}
+                <div className="mt-5 md:mt-6 text-[11px] md:text-xs text-white/50 group-hover:text-white transition">
                   View details →
                 </div>
 

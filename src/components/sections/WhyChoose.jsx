@@ -21,25 +21,25 @@ const items = [
 
 export default function WhyChoose({ lang }) {
   return (
-    <section className="py-28 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-16 sm:py-24 lg:py-28 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* HEADER */}
         <ScrollReveal>
           <div className="text-center max-w-3xl mx-auto">
-            <p className="text-xs tracking-[0.3em] text-gray-400 uppercase">
+            <p className="text-[10px] sm:text-xs tracking-[0.3em] text-gray-400 uppercase">
               {lang === "en"
                 ? "Institutional Strength"
                 : "Kekuatan Institusional"}
             </p>
 
-            <h2 className="text-4xl md:text-5xl font-semibold mt-3 text-gray-900">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mt-3 text-gray-900 leading-snug">
               {lang === "en"
                 ? "Why Clients Trust Our Firm"
                 : "Mengapa Klien Mempercayai Kami"}
             </h2>
 
-            <p className="text-gray-500 mt-4 leading-relaxed text-sm">
+            <p className="text-sm sm:text-base text-gray-500 mt-4 leading-relaxed">
               {lang === "en"
                 ? "We provide structured legal advisory with a focus on compliance, governance, and sustainable business growth."
                 : "Kami memberikan konsultasi hukum terstruktur dengan fokus pada kepatuhan, tata kelola, dan pertumbuhan bisnis berkelanjutan."}
@@ -48,24 +48,31 @@ export default function WhyChoose({ lang }) {
         </ScrollReveal>
 
         {/* GRID */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+        <div className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-8">
 
           {items.map((item, i) => (
-            <ScrollReveal key={i} delay={i * 0.1}>
+            <ScrollReveal key={i} delay={i * 0.08}>
 
-              <div className="p-8 border border-gray-100 rounded-2xl bg-white
-                hover:shadow-lg transition duration-300">
+              <div className="
+                h-full
+                p-5 sm:p-6 lg:p-8
+                border border-gray-100
+                rounded-xl sm:rounded-2xl
+                bg-white
+                hover:shadow-lg hover:-translate-y-1
+                transition duration-300
+              ">
 
-                {/* subtle line accent */}
-                <div className="w-10 h-[2px] bg-gray-300 mb-5"></div>
+                {/* accent line */}
+                <div className="w-8 sm:w-10 h-[2px] bg-gray-300 mb-4 sm:mb-5"></div>
 
                 {/* TITLE */}
-                <h3 className="text-base font-semibold text-gray-900 leading-snug mb-3">
+                <h3 className="text-sm sm:text-base font-semibold text-gray-900 leading-snug mb-3">
                   {item.title}
                 </h3>
 
                 {/* DESC */}
-                <p className="text-sm text-gray-500 leading-relaxed">
+                <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">
                   {item.desc}
                 </p>
 
