@@ -36,7 +36,7 @@ export default function Footer() {
 
               <div className="flex gap-2">
                 <span className="text-gray-500">📍</span>
-                <p>Villa Bekasi Indah, Bekasi, Indonesia</p>
+                <p>Alamat Kantor Villa Bekasi Indah 1 Blok G1 No.2, Bekasi, Indonesia</p>
               </div>
 
               <div className="flex gap-2">

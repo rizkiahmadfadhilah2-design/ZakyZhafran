@@ -1,109 +1,131 @@
 import Navbar from "../components/layout/Navbar";
 import ScrollReveal from "../components/ui/ScrollReveal";
 
-const services = [
-  {
-    title: "Tax Compliance Audit & Reporting",
-    problem: "Banyak perusahaan tidak sadar terjadi kesalahan pelaporan pajak yang berisiko denda dan pemeriksaan.",
-    solution: "Kami melakukan audit pajak internal, pengecekan kewajiban, dan koreksi laporan sesuai regulasi DJP.",
-    result: "Perusahaan menjadi 100% compliant dan terhindar dari risiko sanksi pajak."
-  },
-  {
-    title: "Tax Planning & Optimization Strategy",
-    problem: "Beban pajak perusahaan sering tidak efisien karena tidak ada strategi perencanaan.",
-    solution: "Kami menyusun strategi pajak legal berdasarkan struktur bisnis dan cashflow perusahaan.",
-    result: "Efisiensi pajak optimal tanpa melanggar hukum."
-  },
-  {
-    title: "Business Legal Structuring",
-    problem: "Struktur bisnis yang tidak jelas menyebabkan risiko hukum saat scaling atau investasi.",
-    solution: "Kami merancang struktur legal perusahaan (PT, holding, partnership) sesuai tujuan bisnis.",
-    result: "Bisnis siap ekspansi dan investor-ready."
-  },
-  {
-    title: "Contract Drafting & Risk Review",
-    problem: "Banyak kerugian bisnis terjadi karena kontrak tidak melindungi posisi perusahaan.",
-    solution: "Kami menyusun dan mereview kontrak agar semua risiko hukum ter-cover.",
-    result: "Kontrak aman, jelas, dan menghindari sengketa."
-  },
-  {
-    title: "Business Licensing & Compliance",
-    problem: "Proses perizinan usaha sering rumit dan tidak sesuai regulasi terbaru.",
-    solution: "Kami membantu pengurusan NIB, OSS, dan izin operasional lainnya.",
-    result: "Bisnis legal dan siap beroperasi tanpa hambatan."
-  },
-  {
-    title: "Dispute Resolution & Legal Assistance",
-    problem: "Sengketa bisnis bisa mengganggu operasional dan merugikan finansial.",
-    solution: "Kami menangani negosiasi, mediasi, hingga pendampingan hukum.",
-    result: "Sengketa selesai tanpa merusak bisnis."
-  }
-];
-
 export default function ServicesPage() {
+  const legalServices = [
+    "Litigation Field",
+    "Corporate Sector",
+    "Banking Sector",
+    "Bankruptcy Field",
+    "Investment Sector",
+    "Labor Sector",
+    "Property & Infrastructure",
+    "Tax",
+    "Family & Private",
+    "Islamic Finance",
+    "Technology & Communications",
+  ];
+
+  const taxServices = [
+    "Konsultasi Perpajakan",
+    "Pelaporan SPT Tahunan",
+    "Pelaporan SPT Masa",
+    "Pendampingan Pemeriksaan Pajak",
+    "Penyelesaian Sengketa Pajak",
+    "Review Kepatuhan Pajak",
+    "Tax Compliance",
+    "Tax Audit Support",
+    "Tax Planning",
+    "Pembukuan & Administrasi Pajak",
+  ];
+
   return (
     <div className="bg-white text-gray-900">
 
       <Navbar />
 
-      {/* HEADER */}
-      <section className="py-28 bg-[#0B1220] text-white">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+      {/* HERO */}
+      <section className="relative py-28 bg-[#0B1220] text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.25),transparent_55%)]" />
+        <div className="relative max-w-6xl mx-auto px-6 text-center">
 
           <ScrollReveal>
-            <h1 className="text-5xl font-semibold">
-              How We Help Your Business
+            <h1 className="text-4xl md:text-5xl font-semibold">
+              Our Legal & Tax Services
             </h1>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <p className="text-gray-300 mt-4 max-w-2xl mx-auto">
-              We don't just provide services — we solve real business, tax, and legal problems
-              with structured consulting and compliance strategy.
+            <p className="text-gray-300 mt-4 max-w-2xl mx-auto text-sm">
+              Comprehensive legal advisory and tax consulting services designed
+              to support business growth, compliance, and risk mitigation.
             </p>
           </ScrollReveal>
 
         </div>
       </section>
 
-      {/* CONTENT */}
-      <section className="py-28 bg-gray-50">
+      {/* SERVICES GRID */}
+      <section className="py-24 bg-[#F6F7FB]">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10">
 
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+          {/* LEFT - LEGAL */}
+          <ScrollReveal>
+            <div className="bg-white rounded-3xl border shadow-sm p-8 h-full">
 
-          {services.map((item, i) => (
-            <ScrollReveal key={i} delay={i * 0.1}>
+              <h2 className="text-2xl font-semibold mb-6">
+                Legal Services
+              </h2>
 
-              <div className="bg-white border rounded-2xl p-6 hover:shadow-xl transition">
-
-                {/* TITLE */}
-                <h3 className="text-xl font-semibold mb-4">
-                  {item.title}
-                </h3>
-
-                {/* PROBLEM */}
-                <p className="text-sm text-red-500 mb-2">
-                  ❗ Problem: {item.problem}
-                </p>
-
-                {/* SOLUTION */}
-                <p className="text-sm text-gray-600 mb-2">
-                  🧠 Solution: {item.solution}
-                </p>
-
-                {/* RESULT */}
-                <p className="text-sm text-green-600">
-                  ✅ Result: {item.result}
-                </p>
-
+              <div className="space-y-3">
+                {legalServices.map((item, i) => (
+                  <div
+                    key={i}
+                    className="flex items-start gap-3 text-sm text-gray-700"
+                  >
+                    <span className="text-blue-600 mt-[2px]">•</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
               </div>
 
-            </ScrollReveal>
-          ))}
+            </div>
+          </ScrollReveal>
+
+          {/* RIGHT - TAX */}
+          <ScrollReveal delay={0.1}>
+            <div className="bg-[#0B1220] text-white rounded-3xl shadow-xl p-8 h-full">
+
+              <h2 className="text-2xl font-semibold mb-6">
+                Tax Services
+              </h2>
+
+              <div className="space-y-3">
+                {taxServices.map((item, i) => (
+                  <div
+                    key={i}
+                    className="flex items-start gap-3 text-sm text-gray-300"
+                  >
+                    <span className="text-white mt-[2px]">•</span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          </ScrollReveal>
 
         </div>
-
       </section>
+
+      {/* CTA */}
+      <section className="py-28 bg-[#0B1220] text-white text-center">
+        <h2 className="text-3xl md:text-4xl font-semibold">
+          Let’s Build Strong Legal Protection
+        </h2>
+
+        <p className="text-gray-300 mt-4 max-w-xl mx-auto text-sm">
+          Consult with our legal team for strategic business and tax solutions.
+        </p>
+
+        <a
+          href="https://wa.me/6282242887887"
+          className="inline-block mt-8 bg-white text-black px-8 py-3 rounded-full font-medium hover:scale-105 transition"
+        >
+          Consult Now
+        </a>
+      </section>
+
     </div>
   );
 }

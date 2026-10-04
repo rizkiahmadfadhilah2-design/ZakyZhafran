@@ -4,72 +4,30 @@ import ScrollReveal from "../ui/ScrollReveal";
 const services = [
   {
     category: {
-      en: "Corporate & Business Law",
-      id: "Hukum Korporasi & Bisnis",
+      en: "Corporate Law",
+      id: "Hukum Korporasi",
     },
     items: [
       {
         icon: "🏢",
         title: {
-          en: "Corporate Structuring",
-          id: "Struktur Perusahaan",
+          en: "Corporate Law",
+          id: "Hukum Korporasi",
         },
         desc: {
-          en: "Designing strong legal structures to support scalable and secure business growth.",
-          id: "Menyusun struktur hukum perusahaan yang kuat untuk mendukung pertumbuhan bisnis.",
-        },
-      },
-      {
-        icon: "📈",
-        title: {
-          en: "Investment Advisory",
-          id: "Konsultasi Investasi",
-        },
-        desc: {
-          en: "Helping businesses manage legal aspects of investment and expansion strategies.",
-          id: "Membantu bisnis dalam aspek hukum investasi dan ekspansi usaha.",
+          en: "Legal structuring and governance for business entities.",
+          id: "Struktur dan tata kelola hukum perusahaan.",
         },
       },
       {
         icon: "🏦",
         title: {
-          en: "Banking & Finance",
-          id: "Perbankan & Keuangan",
+          en: "Banking and Finance",
+          id: "Perbankan dan Keuangan",
         },
         desc: {
-          en: "Advisory on financial regulations, compliance, and risk management.",
-          id: "Konsultasi terkait regulasi keuangan, kepatuhan, dan manajemen risiko.",
-        },
-      },
-    ],
-  },
-
-  {
-    category: {
-      en: "Dispute & Litigation",
-      id: "Sengketa & Litigasi",
-    },
-    items: [
-      {
-        icon: "⚖️",
-        title: {
-          en: "Litigation",
-          id: "Litigasi",
-        },
-        desc: {
-          en: "Representing clients in court with strategic and result-driven legal approach.",
-          id: "Mewakili klien di pengadilan dengan strategi hukum yang efektif.",
-        },
-      },
-      {
-        icon: "📉",
-        title: {
-          en: "Bankruptcy & Restructuring",
-          id: "Kepailitan & Restrukturisasi",
-        },
-        desc: {
-          en: "Assisting companies in financial restructuring and bankruptcy proceedings.",
-          id: "Membantu perusahaan dalam restrukturisasi keuangan dan kepailitan.",
+          en: "Regulatory and financial legal advisory for banking sector.",
+          id: "Konsultasi hukum sektor perbankan dan keuangan.",
         },
       },
       {
@@ -79,8 +37,19 @@ const services = [
           id: "Hukum Ketenagakerjaan",
         },
         desc: {
-          en: "Managing employment disputes and workforce compliance issues.",
-          id: "Menangani sengketa ketenagakerjaan dan kepatuhan tenaga kerja.",
+          en: "Employment regulation and workforce dispute handling.",
+          id: "Pengaturan ketenagakerjaan dan penyelesaian sengketa kerja.",
+        },
+      },
+      {
+        icon: "📉",
+        title: {
+          en: "Bankruptcy and Restructuring",
+          id: "Kepailitan dan Restrukturisasi",
+        },
+        desc: {
+          en: "Corporate restructuring and insolvency legal solutions.",
+          id: "Restrukturisasi perusahaan dan kepailitan.",
         },
       },
     ],
@@ -88,21 +57,52 @@ const services = [
 
   {
     category: {
-      en: "Tax & Financial Advisory",
-      id: "Pajak & Keuangan",
+      en: "Litigation & Property",
+      id: "Litigasi & Properti",
     },
     items: [
       {
-        icon: "💰",
+        icon: "⚖️",
         title: {
-          en: "Tax Compliance",
-          id: "Kepatuhan Pajak",
+          en: "Litigation",
+          id: "Litigasi",
         },
         desc: {
-          en: "Ensuring businesses meet all tax obligations accurately and on time.",
-          id: "Memastikan bisnis memenuhi kewajiban pajak secara tepat dan akurat.",
+          en: "Court representation and dispute resolution strategy.",
+          id: "Representasi pengadilan dan penyelesaian sengketa.",
         },
       },
+      {
+        icon: "🏗️",
+        title: {
+          en: "Property and Infrastructure",
+          id: "Properti dan Infrastruktur",
+        },
+        desc: {
+          en: "Legal handling of real estate and infrastructure projects.",
+          id: "Penanganan hukum properti dan proyek infrastruktur.",
+        },
+      },
+      {
+        icon: "⚔️",
+        title: {
+          en: "Criminal Law",
+          id: "Hukum Pidana",
+        },
+        desc: {
+          en: "Criminal case assistance and legal defense.",
+          id: "Pendampingan dan pembelaan perkara pidana.",
+        },
+      },
+    ],
+  },
+
+  {
+    category: {
+      en: "Tax Advisory",
+      id: "Konsultasi Pajak",
+    },
+    items: [
       {
         icon: "📊",
         title: {
@@ -110,19 +110,30 @@ const services = [
           id: "Perencanaan Pajak",
         },
         desc: {
-          en: "Optimizing tax strategy to reduce risk and improve efficiency legally.",
-          id: "Mengoptimalkan strategi pajak secara legal untuk efisiensi bisnis.",
+          en: "Optimizing tax strategy legally for efficiency.",
+          id: "Strategi pajak legal untuk efisiensi bisnis.",
         },
       },
       {
-        icon: "🕌",
+        icon: "💰",
         title: {
-          en: "Islamic Finance",
-          id: "Keuangan Syariah",
+          en: "Tax Compliance",
+          id: "Kepatuhan Pajak",
         },
         desc: {
-          en: "Advisory on Sharia-compliant financial structures and transactions.",
-          id: "Konsultasi terkait struktur keuangan berbasis syariah.",
+          en: "Ensuring full compliance with tax regulations.",
+          id: "Memastikan kepatuhan penuh terhadap regulasi pajak.",
+        },
+      },
+      {
+        icon: "🧾",
+        title: {
+          en: "Annual Tax Return",
+          id: "Laporan SPT Tahunan",
+        },
+        desc: {
+          en: "Preparation and filing of annual tax reports.",
+          id: "Penyusunan dan pelaporan SPT tahunan.",
         },
       },
     ],
@@ -130,30 +141,30 @@ const services = [
 
   {
     category: {
-      en: "Specialized Legal Services",
-      id: "Layanan Hukum Khusus",
+      en: "Specialized Practice",
+      id: "Praktik Khusus",
     },
     items: [
       {
-        icon: "🏠",
+        icon: "🏛️",
         title: {
-          en: "Property & Infrastructure",
-          id: "Properti & Infrastruktur",
+          en: "Corporate Advisory",
+          id: "Konsultasi Korporasi",
         },
         desc: {
-          en: "Handling legal matters in real estate and infrastructure development.",
-          id: "Menangani aspek hukum properti dan pembangunan infrastruktur.",
+          en: "Strategic corporate legal consultation.",
+          id: "Konsultasi hukum korporasi strategis.",
         },
       },
       {
-        icon: "👨‍👩‍👧",
+        icon: "🛡️",
         title: {
-          en: "Family & Private Law",
-          id: "Hukum Keluarga",
+          en: "Tax Advisory",
+          id: "Konsultasi Pajak",
         },
         desc: {
-          en: "Managing personal legal matters with confidentiality and care.",
-          id: "Menangani masalah hukum pribadi secara profesional dan rahasia.",
+          en: "Ensuring business tax compliance structure.",
+          id: "Struktur kepatuhan pajak perusahaan.",
         },
       },
     ],
@@ -163,13 +174,11 @@ const services = [
 export default function ServicesPage({ lang }) {
   return (
     <div className="bg-white text-gray-900">
-
       <Navbar />
 
       {/* HEADER */}
       <section className="py-28 bg-[#0B1220] text-white text-center">
         <div className="max-w-4xl mx-auto px-6">
-
           <ScrollReveal>
             <h1 className="text-5xl font-semibold">
               {lang === "en" ? "Our Services" : "Layanan Kami"}
@@ -183,57 +192,51 @@ export default function ServicesPage({ lang }) {
                 : "Solusi hukum dan pajak yang komprehensif untuk mendukung pertumbuhan bisnis Anda."}
             </p>
           </ScrollReveal>
-
         </div>
       </section>
 
       {/* SERVICES */}
       <section className="py-28">
         <div className="max-w-7xl mx-auto px-6 space-y-20">
-
           {services.map((group, i) => (
             <div key={i}>
-
-              {/* CATEGORY TITLE */}
               <ScrollReveal>
-                <h2 className="text-2xl font-semibold mb-8">
+                <h2 className="text-2xl font-semibold mb-8 uppercase tracking-wide">
                   {group.category[lang]}
                 </h2>
               </ScrollReveal>
 
-              {/* CARDS */}
               <div className="grid md:grid-cols-3 gap-6">
-
                 {group.items.map((item, idx) => (
                   <ScrollReveal key={idx} delay={idx * 0.1}>
-
                     <div className="p-6 border rounded-2xl hover:shadow-xl hover:-translate-y-1 transition">
 
-                      <div className="text-3xl mb-4">
-                        {item.icon}
+                      {/* ICON + TITLE SIDE BY SIDE */}
+                      <div className="flex items-center gap-3 mb-3">
+
+                        <span className="text-xl">
+                          {item.icon}
+                        </span>
+
+                        <h3 className="font-bold text-base">
+                          {item.title[lang]}
+                        </h3>
+
                       </div>
 
-                      <h3 className="font-semibold text-lg mb-2">
-                        {item.title[lang]}
-                      </h3>
-
+                      {/* DESCRIPTION */}
                       <p className="text-sm text-gray-500 leading-relaxed">
                         {item.desc[lang]}
                       </p>
 
                     </div>
-
                   </ScrollReveal>
                 ))}
-
               </div>
-
             </div>
           ))}
-
         </div>
       </section>
-
     </div>
   );
 }

@@ -17,8 +17,8 @@ export default function About({ lang }) {
           <ScrollReveal delay={0.1}>
             <p className="text-gray-600 mt-5 leading-relaxed text-sm md:text-base">
               {lang === "en"
-                ? "We are a professional legal and tax consulting firm helping businesses navigate compliance, taxation, and corporate structure with precision and clarity."
-                : "Kami adalah firma konsultan hukum dan pajak profesional yang membantu bisnis dalam kepatuhan, perpajakan, dan struktur perusahaan secara tepat dan terarah."}
+                ? "We’re a law firm helping businesses and individuals navigate legal and tax matters with clarity and confidence.From everyday legal needs to more complex matters, we focus on practical solutions that protect your interests, reduce risks, and help you move forward with confidence."
+                 : "Kami adalah firma hukum yang membantu bisnis dan individu dalam menghadapi berbagai aspek hukum dan perpajakan dengan jelas dan penuh keyakinan. Mulai dari kebutuhan hukum sehari-hari hingga kasus yang lebih kompleks, kami berfokus pada solusi yang praktis, melindungi kepentingan klien, mengurangi risiko, dan membantu Anda melangkah maju dengan percaya diri."}
             </p>
           </ScrollReveal>
 
@@ -26,7 +26,7 @@ export default function About({ lang }) {
             <p className="text-gray-600 mt-4 leading-relaxed text-sm md:text-base">
               {lang === "en"
                 ? "Our approach combines legal expertise, tax strategy, and business insight to deliver practical and sustainable solutions for long-term growth."
-                : "Pendekatan kami menggabungkan keahlian hukum, strategi pajak, dan wawasan bisnis untuk memberikan solusi praktis dan berkelanjutan."}
+                : "Pendekatan kami mengintegrasikan keahlian hukum, strategi perpajakan, serta wawasan bisnis untuk menghadirkan solusi yang praktis, strategis, dan berkelanjutan guna mendukung pertumbuhan jangka panjang."}
             </p>
           </ScrollReveal>
 
@@ -64,20 +64,20 @@ export default function About({ lang }) {
         <ScrollReveal>
           <div className="relative order-1 md:order-2">
 
-            {/* glow (SAFE RESPONSIVE) */}
+            {/* glow */}
             <div className="absolute -top-20 -left-20 w-64 md:w-[400px] h-64 md:h-[400px] bg-blue-500/10 blur-3xl rounded-full -z-10" />
 
             {/* CARD */}
             <div className="bg-gray-50 border rounded-2xl p-6 md:p-10 shadow-sm">
 
               <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-4">
-                {lang === "en" ? "Why We Exist" : "Mengapa Kami Ada"}
+                {lang === "en" ? "Why Choose Us" : "Mengapa Memilih Kami"}
               </h3>
 
               <p className="text-gray-600 leading-relaxed text-sm md:text-base">
                 {lang === "en"
-                  ? "To simplify legal complexity and empower businesses to grow safely, strategically, and sustainably in a fast-changing regulatory environment."
-                  : "Untuk menyederhanakan kompleksitas hukum dan membantu bisnis tumbuh secara aman, strategis, dan berkelanjutan di tengah regulasi yang terus berubah."}
+                  ? "Expertise You Can Trust. Solutions That Move Your Business Forward. We combine legal expertise and tax advisory to deliver practical, strategic solutions that protect your interests, strengthen compliance, minimize risks, and support your business at every stage of growth."
+                  : "Keahlian yang dapat Anda percayai, solusi yang mendorong bisnis Anda maju. Kami menggabungkan keahlian hukum dan konsultasi perpajakan untuk menghadirkan solusi yang praktis dan strategis, melindungi kepentingan Anda, memperkuat kepatuhan, meminimalkan risiko, serta mendukung perkembangan bisnis di setiap tahap pertumbuhan."}
               </p>
 
             </div>

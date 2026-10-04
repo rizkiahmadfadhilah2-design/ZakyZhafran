@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 
+// 🔥 IMPORT FOTO LOCAL
+import heroImage from "../../assets/ZakyZhafran.jpeg";
+
 export default function Hero({ lang }) {
   const [open, setOpen] = useState(false);
 
-  // ESC close modal (UX improvement)
   useEffect(() => {
     const handleKey = (e) => {
       if (e.key === "Escape") setOpen(false);
@@ -13,9 +15,12 @@ export default function Hero({ lang }) {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center bg-[#0B1220] text-white overflow-hidden">
+    <section className="relative min-h-screen bg-[#0B1220] text-white overflow-hidden">
 
-      {/* BACKGROUND GLOW (RESPONSIVE SAFE) */}
+      {/* SAFE OFFSET NAVBAR */}
+      <div className="pt-24 md:pt-28" />
+
+      {/* BACKGROUND GLOW */}
       <div className="absolute w-60 md:w-[500px] h-60 md:h-[500px] bg-blue-500/20 blur-3xl rounded-full top-[-80px] md:top-[-120px] right-[-80px] md:right-[-120px]" />
       <div className="absolute w-56 md:w-[400px] h-56 md:h-[400px] bg-yellow-500/10 blur-3xl rounded-full bottom-[-80px] md:bottom-[-120px] left-[-80px] md:left-[-120px]" />
 
@@ -24,50 +29,42 @@ export default function Hero({ lang }) {
         {/* LEFT */}
         <div className="text-center md:text-left">
 
-          {/* BADGE */}
           <div className="mb-4 inline-flex items-center gap-2 text-[10px] sm:text-xs px-3 py-1 rounded-full bg-white/10 border border-white/20">
             {lang === "en"
               ? "Trusted Legal & Tax Consultant"
               : "Konsultan Hukum & Pajak Terpercaya"}
           </div>
 
-          {/* TITLE */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight">
             {lang === "en"
               ? "Strategic Legal & Tax Solutions for Business Growth"
               : "Solusi Hukum & Pajak Strategis untuk Pertumbuhan Bisnis"}
           </h1>
 
-          {/* DESC */}
           <p className="text-gray-300 mt-5 sm:mt-6 max-w-md mx-auto md:mx-0 leading-relaxed text-sm sm:text-base">
             {lang === "en"
-              ? "We help businesses stay compliant, reduce tax risks, and build strong legal structures for sustainable growth."
-              : "Kami membantu bisnis tetap patuh regulasi, mengurangi risiko pajak, dan membangun struktur hukum yang kuat."}
+              ? "We are a law firm providing legal and tax advisory services to individuals and businesses. We help our clients navigate legal and tax matters, minimize risks, and build strong legal foundations for sustainable growth."
+              : "Kami memberikan solusi hukum dan perpajakan yang strategis untuk membantu klien melindungi kepentingan, meminimalkan risiko, dan membangun bisnis yang berkelanjutan."}
           </p>
 
-          {/* STATS (RESPONSIVE GRID INSTEAD OF FLEX) */}
+          {/* STATS */}
           <div className="grid grid-cols-3 gap-4 mt-8 text-center md:text-left text-sm text-gray-300">
-
             <div>
               <p className="text-white text-lg font-semibold">50+</p>
               <p>Clients</p>
             </div>
-
             <div>
               <p className="text-white text-lg font-semibold">100%</p>
               <p>Compliance</p>
             </div>
-
             <div>
               <p className="text-white text-lg font-semibold">5yr+</p>
               <p>Experience</p>
             </div>
-
           </div>
 
           {/* CTA */}
           <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-
             <button
               onClick={() => setOpen(true)}
               className="w-full sm:w-auto bg-white text-black px-6 py-3 rounded-full font-medium hover:scale-105 active:scale-95 transition"
@@ -83,14 +80,11 @@ export default function Hero({ lang }) {
             >
               WhatsApp
             </a>
-
           </div>
 
-          {/* TRUST LINE */}
           <p className="text-[11px] sm:text-xs text-gray-400 mt-5">
             Response within 24 hours • Confidential consultation
           </p>
-
         </div>
 
         {/* RIGHT */}
@@ -105,7 +99,8 @@ export default function Hero({ lang }) {
             <div className="bg-white/10 backdrop-blur-md border border-white/20 p-3 sm:p-4 rounded-2xl">
 
               <img
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+                src={heroImage}
+                alt="Zaky Zhafran"
                 className="w-[220px] sm:w-[260px] md:w-[300px] h-[280px] sm:h-[340px] md:h-[360px] object-cover rounded-xl"
               />
 
@@ -118,31 +113,27 @@ export default function Hero({ lang }) {
           </div>
 
         </div>
-
       </div>
 
-      {/* MODAL (RESPONSIVE FIXED) */}
+      {/* MODAL */}
       {open && (
         <div
           className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 px-4"
           onClick={() => setOpen(false)}
         >
-
           <div
             className="bg-white w-full max-w-sm sm:max-w-md rounded-2xl p-5 sm:p-6 text-black"
             onClick={(e) => e.stopPropagation()}
           >
-
             <h2 className="text-lg sm:text-xl font-semibold mb-4">
               {lang === "en" ? "Book Consultation" : "Form Konsultasi"}
             </h2>
 
-            <input className="w-full border p-3 rounded-lg mb-3 text-sm sm:text-base" placeholder="Name" />
-            <input className="w-full border p-3 rounded-lg mb-3 text-sm sm:text-base" placeholder="Email" />
-            <textarea className="w-full border p-3 rounded-lg mb-4 text-sm sm:text-base" placeholder="Message" />
+            <input className="w-full border p-3 rounded-lg mb-3" placeholder="Name" />
+            <input className="w-full border p-3 rounded-lg mb-3" placeholder="Email" />
+            <textarea className="w-full border p-3 rounded-lg mb-4" placeholder="Message" />
 
             <div className="flex flex-col sm:flex-row gap-3">
-
               <button className="bg-black text-white px-4 py-2 rounded-lg w-full">
                 Submit
               </button>
@@ -153,11 +144,8 @@ export default function Hero({ lang }) {
               >
                 Close
               </button>
-
             </div>
-
           </div>
-
         </div>
       )}
 
