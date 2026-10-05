@@ -19,7 +19,7 @@ export default function Navbar() {
     { name: "About", path: "/firm" },
 
     // Lawyers Page (team page lama)
-    { name: "Lawyers", path: "/about" },
+    { name: "Lawyers", path: "/lawyers" },
 
     // NEW CONTACT PAGE
     { name: "Contact", path: "/contact" },
