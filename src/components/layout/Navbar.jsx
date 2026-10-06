@@ -9,148 +9,281 @@ export default function Navbar() {
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "auto";
-    return () => (document.body.style.overflow = "auto");
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [open]);
 
   const menu = [
     { name: "Home", path: "/" },
-
-    // About → Firm Page
     { name: "About", path: "/firm" },
-
-    // Lawyers Page (team page lama)
     { name: "Lawyers", path: "/lawyers" },
-
-    // NEW CONTACT PAGE
     { name: "Contact", path: "/contact" },
-
     { name: "Services", path: "/services" },
   ];
 
+  const consultationUrl =
+    "https://wa.me/6282242887887?text=Halo%20Zaky%20Zhafran%20%26%20Partners%2C%20saya%20ingin%20konsultasi%20hukum%20dan%20pajak.";
+
   return (
-    <nav className="fixed top-0 left-0 w-full z-[999]">
+    <nav className="fixed left-0 top-0 z-[999] w-full">
 
-      {/* NAVBAR */}
-      <div className="bg-[#0B1220]/70 backdrop-blur-xl border-b border-white/10">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3">
+      {/* =====================================================
+          NAVBAR
+      ===================================================== */}
+      <div className="border-b border-white/10 bg-[#0B1220]/85 backdrop-blur-xl">
 
-          {/* LOGO */}
-          <Link to="/" className="flex items-center gap-3">
+        <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-6 md:px-10">
+
+          {/* =================================================
+              LOGO
+          ================================================= */}
+          <Link
+            to="/"
+            onClick={() => setOpen(false)}
+            className="group flex items-center gap-3"
+          >
             <img
               src="/logozp.png"
-              alt="ZP Logo"
-              className="w-8 h-8 rounded-full object-cover ring-1 ring-white/20"
+              alt="Zaky Zhafran & Partners"
+              className="h-8 w-8 rounded-full object-cover ring-1 ring-white/15 transition duration-300 group-hover:ring-blue-400/50"
             />
 
-            <div className="leading-tight">
-              <h1 className="text-white text-sm font-semibold tracking-widest">
+            <div className="leading-none">
+
+              <p className="text-[11px] font-semibold tracking-[0.18em] text-white">
                 ZAKY ZHAFRAN
-              </h1>
-              <p className="text-[10px] text-white/60 tracking-[0.2em]">
+              </p>
+
+              <p className="mt-1 text-[8px] tracking-[0.28em] text-white/40">
                 & PARTNERS
               </p>
+
             </div>
           </Link>
 
-          {/* DESKTOP MENU */}
-          <div className="hidden md:flex items-center gap-10 text-sm text-white/70">
+
+          {/* =================================================
+              DESKTOP MENU
+          ================================================= */}
+          <div className="hidden items-center gap-8 md:flex">
+
             {menu.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`relative transition hover:text-white ${
-                  isActive(item.path) ? "text-white" : ""
+                className={`group relative py-2 text-[11px] font-medium tracking-[0.08em] transition duration-300 ${
+                  isActive(item.path)
+                    ? "text-white"
+                    : "text-white/45 hover:text-white"
                 }`}
               >
                 {item.name}
 
+                {/* ACTIVE LINE */}
                 <span
-                  className={`absolute left-0 -bottom-2 h-[2px] bg-white transition-all ${
-                    isActive(item.path) ? "w-full" : "w-0"
+                  className={`absolute bottom-0 left-0 h-px bg-blue-400 transition-all duration-300 ${
+                    isActive(item.path)
+                      ? "w-full"
+                      : "w-0 group-hover:w-full"
                   }`}
                 />
               </Link>
             ))}
+
           </div>
 
-          {/* CTA DESKTOP */}
+
+          {/* =================================================
+              DESKTOP CTA
+          ================================================= */}
           <a
-            href="https://wa.me/6282242887887?text=Halo%20Zaky%20Zhafran%20%26%20Partners%2C%20saya%20ingin%20konsultasi%20hukum%20dan%20pajak."
+            href={consultationUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex bg-white text-black px-5 py-2 rounded-full text-sm font-medium hover:scale-105 transition"
+            className="hidden items-center gap-3 border border-white/15 px-4 py-2.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-white transition duration-300 hover:border-blue-400 hover:bg-blue-400 hover:text-[#0B1220] md:inline-flex"
           >
-            Consultation
+            <span>Consultation</span>
+
+            <span className="text-sm leading-none transition duration-300 hover:translate-x-1">
+              →
+            </span>
           </a>
 
-          {/* MOBILE BUTTON */}
+
+          {/* =================================================
+              MOBILE BUTTON
+          ================================================= */}
           <button
+            type="button"
             onClick={() => setOpen(true)}
-            className="md:hidden text-white text-2xl"
+            aria-label="Open navigation menu"
+            className="flex h-9 w-9 items-center justify-center border border-white/10 text-white transition duration-300 hover:border-blue-400 md:hidden"
           >
-            ☰
+            <span className="flex flex-col gap-[4px]">
+              <span className="h-px w-4 bg-white" />
+              <span className="h-px w-3 bg-white/60" />
+            </span>
           </button>
+
         </div>
+
       </div>
 
-      {/* MOBILE MENU */}
-      <div className={`fixed inset-0 z-[1000] transition ${
-        open ? "visible opacity-100" : "invisible opacity-0"
-      }`}>
+
+      {/* =====================================================
+          MOBILE MENU
+      ===================================================== */}
+      <div
+        className={`fixed inset-0 z-[1000] transition-all duration-300 ${
+          open
+            ? "visible bg-black/60 opacity-100"
+            : "invisible bg-black/0 opacity-0"
+        }`}
+      >
 
         {/* BACKDROP */}
-        <div
-          className="absolute inset-0 bg-black/70"
+        <button
+          type="button"
+          aria-label="Close navigation menu"
           onClick={() => setOpen(false)}
+          className="absolute inset-0 h-full w-full cursor-default"
         />
 
-        {/* PANEL */}
+
+        {/* =================================================
+            MOBILE PANEL
+        ================================================= */}
         <div
-          className={`absolute right-0 top-0 h-full w-[85%] max-w-sm bg-[#0B1220] transition-transform ${
+          className={`absolute right-0 top-0 flex h-full w-[88%] max-w-sm flex-col bg-[#0B1220] transition-transform duration-300 ${
             open ? "translate-x-0" : "translate-x-full"
           }`}
         >
 
-          {/* HEADER */}
-          <div className="flex justify-between px-6 py-5 border-b border-white/10">
-            <p className="text-white text-sm tracking-widest">MENU</p>
-            <button onClick={() => setOpen(false)} className="text-white text-xl">
-              ✕
+          {/* =================================================
+              PANEL HEADER
+          ================================================= */}
+          <div className="flex items-center justify-between border-b border-white/10 px-6 py-5">
+
+            <div>
+
+              <p className="text-[9px] font-semibold uppercase tracking-[0.28em] text-blue-300">
+                Navigation
+              </p>
+
+              <p className="mt-1 text-xs text-white/35">
+                Zaky Zhafran & Partners
+              </p>
+
+            </div>
+
+
+            <button
+              type="button"
+              onClick={() => setOpen(false)}
+              aria-label="Close navigation menu"
+              className="flex h-8 w-8 items-center justify-center border border-white/10 text-white/60 transition hover:border-blue-400 hover:text-white"
+            >
+              <span className="relative h-4 w-4">
+                <span className="absolute left-1/2 top-1/2 h-px w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-current" />
+                <span className="absolute left-1/2 top-1/2 h-px w-4 -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-current" />
+              </span>
             </button>
+
           </div>
 
-          {/* MENU */}
-          <div className="flex flex-col gap-6 px-6 py-8">
-            {menu.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                onClick={() => setOpen(false)}
-                className={`text-lg transition ${
-                  isActive(item.path)
-                    ? "text-white"
-                    : "text-white/60 hover:text-white"
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+
+          {/* =================================================
+              MOBILE NAVIGATION
+          ================================================= */}
+          <div className="flex flex-1 flex-col px-6 py-8">
+
+            <p className="mb-6 text-[9px] font-semibold uppercase tracking-[0.28em] text-white/20">
+              Main Navigation
+            </p>
+
+            <div className="border-t border-white/10">
+
+              {menu.map((item, index) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setOpen(false)}
+                  className={`group flex items-center justify-between border-b border-white/10 py-5 transition duration-300 ${
+                    isActive(item.path)
+                      ? "text-white"
+                      : "text-white/45 hover:text-white"
+                  }`}
+                >
+
+                  <div className="flex items-center gap-4">
+
+                    <span
+                      className={`text-[9px] tracking-[0.15em] ${
+                        isActive(item.path)
+                          ? "text-blue-300"
+                          : "text-white/20"
+                      }`}
+                    >
+                      0{index + 1}
+                    </span>
+
+                    <span className="text-base font-light">
+                      {item.name}
+                    </span>
+
+                  </div>
+
+                  <span
+                    className={`text-sm transition duration-300 ${
+                      isActive(item.path)
+                        ? "translate-x-0 text-blue-300"
+                        : "-translate-x-1 text-white/20 group-hover:translate-x-0 group-hover:text-blue-300"
+                    }`}
+                  >
+                    →
+                  </span>
+
+                </Link>
+              ))}
+
+            </div>
+
           </div>
 
-          {/* CTA MOBILE */}
-          <div className="absolute bottom-8 w-full px-6">
+
+          {/* =================================================
+              MOBILE CTA
+          ================================================= */}
+          <div className="border-t border-white/10 px-6 py-6">
+
+            <p className="mb-4 text-[9px] uppercase tracking-[0.22em] text-white/25">
+              Need legal assistance?
+            </p>
+
             <a
-              href="https://wa.me/6282242887887?text=Halo%20Zaky%20Zhafran%20%26%20Partners%2C%20saya%20ingin%20konsultasi%20hukum%20dan%20pajak."
+              href={consultationUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-center bg-white text-black py-3 rounded-xl font-medium hover:scale-105 transition"
+              onClick={() => setOpen(false)}
+              className="flex items-center justify-between border border-white/15 px-4 py-4 text-xs font-medium text-white transition duration-300 hover:border-blue-400 hover:bg-blue-400 hover:text-[#0B1220]"
             >
-              Consultation
+
+              <span>Start Consultation</span>
+
+              <span className="text-base">
+                →
+              </span>
+
             </a>
+
           </div>
 
         </div>
+
       </div>
+
     </nav>
   );
 }

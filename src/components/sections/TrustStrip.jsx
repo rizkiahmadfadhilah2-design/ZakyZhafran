@@ -1,5 +1,6 @@
-export default function TrustStrip({ lang }) {
+import { motion } from "framer-motion";
 
+export default function TrustStrip({ lang }) {
   const legalServices = [
     {
       title: {
@@ -88,8 +89,16 @@ export default function TrustStrip({ lang }) {
         id: "Penanganan Pajak",
       },
       items: {
-        en: ["Tax Audit", "Tax Dispute", "Tax Audit Support"],
-        id: ["Pemeriksaan Pajak", "Sengketa Pajak", "Pendampingan Pemeriksaan"],
+        en: [
+          "Tax Audit",
+          "Tax Dispute",
+          "Tax Audit Support",
+        ],
+        id: [
+          "Pemeriksaan Pajak",
+          "Sengketa Pajak",
+          "Pendampingan Pemeriksaan",
+        ],
       },
     },
     {
@@ -98,110 +107,670 @@ export default function TrustStrip({ lang }) {
         id: "Strategi Pajak",
       },
       items: {
-        en: ["Tax Planning", "Tax Compliance System", "Tax Administration"],
-        id: ["Perencanaan Pajak", "Sistem Kepatuhan Pajak", "Administrasi Pajak"],
+        en: [
+          "Tax Planning",
+          "Tax Compliance System",
+          "Tax Administration",
+        ],
+        id: [
+          "Perencanaan Pajak",
+          "Sistem Kepatuhan Pajak",
+          "Administrasi Pajak",
+        ],
       },
     },
   ];
 
+  const container = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.12,
+      },
+    },
+  };
+
+  const item = {
+    hidden: {
+      opacity: 0,
+      y: 24,
+    },
+
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.65,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
-    <section className="bg-white border-y border-gray-100 py-14 sm:py-20">
+    <section className="relative overflow-hidden bg-[#F6F7FB] py-24 md:py-32">
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      {/* =========================================================
+          BACKGROUND DECORATION
+      ========================================================= */}
 
-        {/* HEADER */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+      <div
+        className="
+          pointer-events-none
+          absolute
+          -left-40
+          top-20
+          h-[420px]
+          w-[420px]
+          rounded-full
+          bg-blue-500/[0.035]
+          blur-[120px]
+        "
+      />
 
-          <p className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-gray-400">
-            {lang === "en"
-              ? "TWO CORE ADVISORY PILLARS"
-              : "DUA PILAR LAYANAN UTAMA"}
-          </p>
+      <div
+        className="
+          pointer-events-none
+          absolute
+          -right-40
+          bottom-0
+          h-[500px]
+          w-[500px]
+          rounded-full
+          bg-slate-900/[0.035]
+          blur-[130px]
+        "
+      />
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mt-3 text-gray-900 leading-snug">
-            {lang === "en"
-              ? "TRUSTED LEGAL & TAX ADVISORY"
-              : "KONSULTAN HUKUM & PAJAK TERPERCAYA"}
-          </h2>
+      {/* =========================================================
+          MAIN CONTAINER
+      ========================================================= */}
 
-          <p className="text-sm text-gray-500 mt-4 leading-relaxed">
-            {lang === "en"
-              ? "Comprehensive legal and tax solutions to protect your interests, ensure compliance, and support sustainable business growth."
-              : "Solusi hukum dan pajak komprehensif untuk melindungi kepentingan Anda, memastikan kepatuhan, dan mendukung pertumbuhan bisnis."}
-          </p>
-        </div>
+      <div className="relative mx-auto max-w-7xl px-6 md:px-10">
 
-        {/* GRID */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10">
+        {/* =======================================================
+            HEADER
+        ======================================================= */}
 
-          {/* LEGAL */}
-          <div className="rounded-2xl border bg-gray-50 p-4 sm:p-6">
+        <div className="max-w-3xl">
 
-            <h3 className="text-base sm:text-lg font-semibold mb-5 text-gray-900">
+          {/* LABEL */}
+          <div className="flex items-center gap-3">
+
+            <span className="h-px w-8 bg-blue-500" />
+
+            <p
+              className="
+                text-[10px]
+                font-semibold
+                uppercase
+                tracking-[0.32em]
+                text-blue-600
+              "
+            >
               {lang === "en"
-                ? "LEGAL ADVISORY SERVICES"
-                : "LAYANAN HUKUM"}
-            </h3>
+                ? "01 / TRUSTED CAPABILITIES"
+                : "01 / KAPABILITAS TERPERCAYA"}
+            </p>
 
-            <div className="space-y-4 sm:space-y-6">
-
-              {legalServices.map((group, i) => (
-                <div key={i} className="bg-white border rounded-xl p-4 sm:p-5">
-
-                  <h4 className="text-xs sm:text-sm font-semibold text-gray-800 mb-3 uppercase">
-                    {group.title[lang]}
-                  </h4>
-
-                  <div className="flex flex-wrap gap-2">
-                    {group.items[lang].map((item, idx) => (
-                      <span
-                        key={idx}
-                        className="text-[11px] sm:text-xs px-2 sm:px-3 py-1 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-
-                </div>
-              ))}
-
-            </div>
           </div>
 
-          {/* TAX */}
-          <div className="rounded-2xl border bg-gray-50 p-4 sm:p-6">
+          {/* TITLE */}
+          <h2
+            className="
+              mt-6
+              max-w-2xl
+              text-3xl
+              font-light
+              leading-[1.1]
+              tracking-[-0.04em]
+              text-[#0B1220]
+              sm:text-4xl
+              md:text-5xl
+            "
+          >
+            {lang === "en"
+              ? "Legal precision. Tax clarity. Strategic confidence."
+              : "Presisi hukum. Kejelasan pajak. Keyakinan strategis."}
+          </h2>
 
-            <h3 className="text-base sm:text-lg font-semibold mb-5 text-gray-900">
-              {lang === "en"
-                ? "TAX ADVISORY SERVICES"
-                : "LAYANAN PAJAK"}
-            </h3>
+          {/* LINE */}
+          <div className="mt-7 h-px w-16 bg-[#0B1220]/15" />
 
-            <div className="space-y-4 sm:space-y-6">
+          {/* DESCRIPTION */}
+          <p
+            className="
+              mt-6
+              max-w-2xl
+              text-sm
+              leading-7
+              text-gray-500
+              md:text-base
+              md:leading-8
+            "
+          >
+            {lang === "en"
+              ? "Our advisory capabilities are structured around two core pillars, combining comprehensive legal services with practical tax solutions for modern businesses."
+              : "Kapabilitas kami dibangun di atas dua pilar utama, menggabungkan layanan hukum yang komprehensif dengan solusi perpajakan praktis untuk kebutuhan bisnis modern."}
+          </p>
 
-              {taxServices.map((group, i) => (
-                <div key={i} className="bg-white border rounded-xl p-4 sm:p-5">
+        </div>
 
-                  <h4 className="text-xs sm:text-sm font-semibold text-gray-800 mb-3 uppercase">
-                    {group.title[lang]}
-                  </h4>
+        {/* =======================================================
+            TWO CORE PILLARS
+        ======================================================= */}
 
-                  <div className="flex flex-wrap gap-2">
-                    {group.items[lang].map((item, idx) => (
-                      <span
-                        key={idx}
-                        className="text-[11px] sm:text-xs px-2 sm:px-3 py-1 rounded-full bg-blue-50 text-blue-700 hover:bg-blue-100 transition"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
+        <div className="mt-16 grid gap-5 lg:mt-20 lg:grid-cols-2 lg:gap-6">
+
+          {/* =====================================================
+              LEGAL PANEL
+          ===================================================== */}
+
+          <div
+            className="
+              relative
+              overflow-hidden
+              rounded-2xl
+              border
+              border-gray-200
+              bg-white
+              p-7
+              shadow-[0_20px_70px_rgba(11,18,32,0.04)]
+              md:p-9
+              lg:p-10
+            "
+          >
+
+            {/* Decorative circle */}
+            <div
+              className="
+                pointer-events-none
+                absolute
+                -right-24
+                -top-24
+                h-64
+                w-64
+                rounded-full
+                border
+                border-blue-500/[0.06]
+              "
+            />
+
+            {/* Header */}
+            <div className="relative">
+
+              <div className="flex items-start justify-between gap-6">
+
+                <div>
+
+                  <p
+                    className="
+                      text-[9px]
+                      font-semibold
+                      uppercase
+                      tracking-[0.3em]
+                      text-blue-600
+                    "
+                  >
+                    {lang === "en"
+                      ? "CORE PILLAR 01"
+                      : "PILAR UTAMA 01"}
+                  </p>
+
+                  <h3
+                    className="
+                      mt-3
+                      text-2xl
+                      font-light
+                      tracking-[-0.03em]
+                      text-[#0B1220]
+                      md:text-3xl
+                    "
+                  >
+                    {lang === "en"
+                      ? "LEGAL ADVISORY"
+                      : "LAYANAN HUKUM"}
+                  </h3>
 
                 </div>
-              ))}
+
+                <span
+                  className="
+                    text-4xl
+                    font-light
+                    tracking-[-0.05em]
+                    text-gray-200
+                  "
+                >
+                  01
+                </span>
+
+              </div>
+
+              <p
+                className="
+                  mt-5
+                  max-w-lg
+                  text-sm
+                  leading-7
+                  text-gray-500
+                "
+              >
+                {lang === "en"
+                  ? "Comprehensive legal support across corporate, litigation, regulatory, and specialized practice areas."
+                  : "Dukungan hukum komprehensif dalam bidang korporasi, litigasi, regulasi, dan praktik hukum khusus."}
+              </p>
 
             </div>
+
+            {/* Divider */}
+            <div className="my-8 h-px bg-gray-100" />
+
+            {/* Legal groups */}
+            <motion.div
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              viewport={{
+                once: true,
+                amount: 0.2,
+              }}
+              className="space-y-8"
+            >
+
+              {legalServices.map((group, index) => (
+                <motion.div
+                  key={index}
+                  variants={item}
+                  className="group relative"
+                >
+
+                  {/* Group header */}
+                  <div className="flex items-center gap-3">
+
+                    <span
+                      className="
+                        flex
+                        h-7
+                        w-7
+                        shrink-0
+                        items-center
+                        justify-center
+                        rounded-full
+                        bg-[#0B1220]
+                        text-[9px]
+                        font-semibold
+                        text-white
+                        transition
+                        duration-300
+                        group-hover:bg-blue-600
+                      "
+                    >
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+
+                    <h4
+                      className="
+                        text-sm
+                        font-semibold
+                        tracking-[-0.01em]
+                        text-[#0B1220]
+                      "
+                    >
+                      {group.title[lang]}
+                    </h4>
+
+                  </div>
+
+                  {/* Items */}
+                  <ul className="mt-4 space-y-2 pl-10">
+
+                    {group.items[lang].map((service, idx) => (
+                      <li
+                        key={idx}
+                        className="
+                          group/item
+                          flex
+                          items-center
+                          gap-3
+                          text-xs
+                          leading-6
+                          text-gray-500
+                          transition
+                          duration-300
+                          hover:text-[#0B1220]
+                        "
+                      >
+
+                        <span
+                          className="
+                            h-px
+                            w-4
+                            bg-gray-300
+                            transition-all
+                            duration-300
+                            group-hover/item:w-6
+                            group-hover/item:bg-blue-500
+                          "
+                        />
+
+                        <span>{service}</span>
+
+                      </li>
+                    ))}
+
+                  </ul>
+
+                </motion.div>
+              ))}
+
+            </motion.div>
+
+            {/* Bottom accent */}
+            <div
+              className="
+                absolute
+                bottom-0
+                left-0
+                h-1
+                w-0
+                bg-blue-500
+                transition-all
+                duration-500
+                hover:w-full
+              "
+            />
+
+          </div>
+
+          {/* =====================================================
+              TAX PANEL
+          ===================================================== */}
+
+          <div
+            className="
+              relative
+              overflow-hidden
+              rounded-2xl
+              border
+              border-white/10
+              bg-[#0B1220]
+              p-7
+              text-white
+              shadow-[0_25px_80px_rgba(11,18,32,0.12)]
+              md:p-9
+              lg:p-10
+            "
+          >
+
+            {/* Glow */}
+            <div
+              className="
+                pointer-events-none
+                absolute
+                -right-24
+                -top-24
+                h-72
+                w-72
+                rounded-full
+                bg-blue-500/10
+                blur-[80px]
+              "
+            />
+
+            <div
+              className="
+                pointer-events-none
+                absolute
+                -bottom-32
+                -left-24
+                h-72
+                w-72
+                rounded-full
+                bg-blue-400/[0.05]
+                blur-[80px]
+              "
+            />
+
+            {/* Decorative circle */}
+            <div
+              className="
+                pointer-events-none
+                absolute
+                -right-24
+                -top-24
+                h-64
+                w-64
+                rounded-full
+                border
+                border-white/[0.04]
+              "
+            />
+
+            {/* Header */}
+            <div className="relative">
+
+              <div className="flex items-start justify-between gap-6">
+
+                <div>
+
+                  <p
+                    className="
+                      text-[9px]
+                      font-semibold
+                      uppercase
+                      tracking-[0.3em]
+                      text-blue-300
+                    "
+                  >
+                    {lang === "en"
+                      ? "CORE PILLAR 02"
+                      : "PILAR UTAMA 02"}
+                  </p>
+
+                  <h3
+                    className="
+                      mt-3
+                      text-2xl
+                      font-light
+                      tracking-[-0.03em]
+                      text-white
+                      md:text-3xl
+                    "
+                  >
+                    {lang === "en"
+                      ? "TAX ADVISORY"
+                      : "LAYANAN PAJAK"}
+                  </h3>
+
+                </div>
+
+                <span
+                  className="
+                    text-4xl
+                    font-light
+                    tracking-[-0.05em]
+                    text-white/10
+                  "
+                >
+                  02
+                </span>
+
+              </div>
+
+              <p
+                className="
+                  mt-5
+                  max-w-lg
+                  text-sm
+                  leading-7
+                  text-white/45
+                "
+              >
+                {lang === "en"
+                  ? "Practical tax advisory covering compliance, audit handling, dispute resolution, and strategic tax planning."
+                  : "Konsultasi pajak praktis yang mencakup kepatuhan, pemeriksaan, penyelesaian sengketa, dan perencanaan pajak strategis."}
+              </p>
+
+            </div>
+
+            {/* Divider */}
+            <div className="my-8 h-px bg-white/10" />
+
+            {/* Tax groups */}
+            <motion.div
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              viewport={{
+                once: true,
+                amount: 0.2,
+              }}
+              className="space-y-8"
+            >
+
+              {taxServices.map((group, index) => (
+                <motion.div
+                  key={index}
+                  variants={item}
+                  className="group relative"
+                >
+
+                  {/* Group header */}
+                  <div className="flex items-center gap-3">
+
+                    <span
+                      className="
+                        flex
+                        h-7
+                        w-7
+                        shrink-0
+                        items-center
+                        justify-center
+                        rounded-full
+                        border
+                        border-white/10
+                        bg-white/[0.04]
+                        text-[9px]
+                        font-semibold
+                        text-blue-300
+                        transition
+                        duration-300
+                        group-hover:border-blue-300/30
+                        group-hover:bg-blue-500/10
+                      "
+                    >
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+
+                    <h4
+                      className="
+                        text-sm
+                        font-semibold
+                        tracking-[-0.01em]
+                        text-white
+                      "
+                    >
+                      {group.title[lang]}
+                    </h4>
+
+                  </div>
+
+                  {/* Items */}
+                  <ul className="mt-4 space-y-2 pl-10">
+
+                    {group.items[lang].map((service, idx) => (
+                      <li
+                        key={idx}
+                        className="
+                          group/item
+                          flex
+                          items-center
+                          gap-3
+                          text-xs
+                          leading-6
+                          text-white/45
+                          transition
+                          duration-300
+                          hover:text-white
+                        "
+                      >
+
+                        <span
+                          className="
+                            h-px
+                            w-4
+                            bg-white/15
+                            transition-all
+                            duration-300
+                            group-hover/item:w-6
+                            group-hover/item:bg-blue-400
+                          "
+                        />
+
+                        <span>{service}</span>
+
+                      </li>
+                    ))}
+
+                  </ul>
+
+                </motion.div>
+              ))}
+
+            </motion.div>
+
+          </div>
+
+        </div>
+
+        {/* =======================================================
+            BOTTOM STATEMENT
+        ======================================================= */}
+
+        <div
+          className="
+            mt-16
+            flex
+            flex-col
+            gap-5
+            border-t
+            border-gray-200
+            pt-7
+            md:flex-row
+            md:items-center
+            md:justify-between
+          "
+        >
+
+          <p
+            className="
+              max-w-2xl
+              text-xs
+              leading-6
+              text-gray-400
+            "
+          >
+            {lang === "en"
+              ? "One advisory partner across legal complexity, regulatory requirements, and tax obligations."
+              : "Satu mitra penasihat untuk menghadapi kompleksitas hukum, kebutuhan regulasi, dan kewajiban perpajakan."}
+          </p>
+
+          <div className="flex items-center gap-3">
+
+            <span className="h-px w-8 bg-blue-500" />
+
+            <span
+              className="
+                text-[9px]
+                font-semibold
+                uppercase
+                tracking-[0.25em]
+                text-gray-400
+              "
+            >
+              Zaky Zhafran & Partners
+            </span>
+
           </div>
 
         </div>

@@ -1,53 +1,62 @@
 export default function Footer() {
+  const phone = "6282242887887";
+  const email = "kingmada@zakyzhafran.com";
+
   return (
-    <footer className="bg-[#0B1220] text-white mt-24">
+    <footer className="mt-20 bg-[#0B1220] text-white">
 
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="mx-auto max-w-7xl px-6 py-12 md:px-10 md:py-14">
 
-        {/* TOP GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+        {/* ================= TOP ================= */}
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-20">
 
           {/* ================= BRAND ================= */}
-          <div className="space-y-5">
+          <div>
 
-            <h2 className="text-lg md:text-xl font-semibold tracking-wide">
+            <h2 className="text-lg font-semibold tracking-wide">
               Zaky Zhafran & Partners
             </h2>
 
-            <p className="text-gray-400 text-sm leading-relaxed max-w-md">
+            <div className="mt-4 h-px w-8 bg-blue-400" />
+
+            <p className="mt-5 max-w-md text-xs leading-6 text-white/45 md:text-sm md:leading-7">
               Legal & Tax Advisory Firm focused on corporate governance,
               compliance, and strategic business protection.
             </p>
 
-            <div className="inline-flex px-3 py-1 rounded-full bg-white/10 text-[11px] text-gray-300">
-              Trusted Legal Advisory
-            </div>
-
           </div>
 
+
           {/* ================= CONTACT ================= */}
-          <div className="space-y-5">
+          <div>
 
-            <h3 className="text-sm font-medium text-white">
+            <p className="text-[9px] font-semibold uppercase tracking-[0.28em] text-blue-300">
               Contact
-            </h3>
+            </p>
 
-            <div className="space-y-3 text-sm text-gray-400 leading-relaxed">
+            <div className="mt-5 space-y-3 text-xs leading-6 text-white/50 md:text-sm">
 
-              <div className="flex gap-2">
-                <span className="text-gray-500">📍</span>
-                <p>Alamat Kantor Villa Bekasi Indah 1 Blok G1 No.2, Bekasi, Indonesia</p>
-              </div>
+              <p>
+                Villa Bekasi Indah 1 Blok G1 No.2,
+                <br />
+                Bekasi, Indonesia
+              </p>
 
-              <div className="flex gap-2">
-                <span className="text-gray-500">✉️</span>
-                <p className="break-all">kingmada@zakyzhafran.com</p>
-              </div>
+              <a
+                href={`mailto:${email}`}
+                className="block transition hover:text-blue-300"
+              >
+                {email}
+              </a>
 
-              <div className="flex gap-2">
-                <span className="text-gray-500">📞</span>
-                <p>+62 822-4288-7887</p>
-              </div>
+              <a
+                href={`https://wa.me/${phone}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block transition hover:text-blue-300"
+              >
+                +62 822-4288-7887
+              </a>
 
             </div>
 
@@ -55,17 +64,19 @@ export default function Footer() {
 
         </div>
 
-        {/* DIVIDER */}
-        <div className="border-t border-white/10 mt-12" />
 
-        {/* BOTTOM */}
-        <div className="mt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-gray-500">
+        {/* ================= DIVIDER ================= */}
+        <div className="mt-10 border-t border-white/10" />
 
-          <p className="text-center md:text-left">
+
+        {/* ================= BOTTOM ================= */}
+        <div className="mt-5 flex flex-col gap-2 text-[10px] text-white/30 sm:flex-row sm:items-center sm:justify-between">
+
+          <p>
             © {new Date().getFullYear()} Zaky Zhafran & Partners
           </p>
 
-          <p className="text-center md:text-right tracking-wide">
+          <p className="tracking-wide">
             Legal precision meets modern design
           </p>
 
