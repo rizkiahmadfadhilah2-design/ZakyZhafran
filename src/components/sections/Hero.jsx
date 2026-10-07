@@ -19,43 +19,60 @@ export default function Hero({ lang }) {
   }, []);
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-[#0B1220] text-white">
-
+    <section
+      className="
+        relative
+        min-h-screen
+        w-full
+        overflow-hidden
+        bg-gradient-to-br
+        from-[#155D40]
+        via-[#0B4F32]
+        to-[#073923]
+        text-white
+      "
+    >
       {/* =========================================================
-          BACKGROUND
+          BACKGROUND GLOW
       ========================================================= */}
 
-      {/* Blue glow - top right */}
+      {/* Deep Maroon Glow - Top Right */}
+
       <div
         className="
+          pointer-events-none
           absolute
           -right-40
           -top-40
           h-[500px]
           w-[500px]
           rounded-full
-          bg-blue-500/10
+          bg-[#A92F46]/20
           blur-[120px]
         "
       />
 
-      {/* Blue glow - bottom left */}
+      {/* Secondary Maroon Glow - Bottom Left */}
+
       <div
         className="
+          pointer-events-none
           absolute
           -bottom-40
           -left-40
           h-[450px]
           w-[450px]
           rounded-full
-          bg-blue-400/[0.06]
+          bg-[#A92F46]/10
           blur-[120px]
         "
       />
 
-      {/* Center glow */}
+      {/* Center Subtle Glow */}
+
       <div
         className="
+          pointer-events-none
           absolute
           left-1/2
           top-1/2
@@ -64,14 +81,18 @@ export default function Hero({ lang }) {
           -translate-x-1/2
           -translate-y-1/2
           rounded-full
-          bg-blue-600/[0.025]
-          blur-[100px]
+          bg-white/[0.018]
+          blur-[110px]
         "
       />
 
-      {/* Decorative circles */}
+      {/* =========================================================
+          DECORATIVE CIRCLES
+      ========================================================= */}
+
       <div
         className="
+          pointer-events-none
           absolute
           right-[-180px]
           top-[18%]
@@ -79,12 +100,13 @@ export default function Hero({ lang }) {
           w-[600px]
           rounded-full
           border
-          border-white/[0.035]
+          border-white/[0.045]
         "
       />
 
       <div
         className="
+          pointer-events-none
           absolute
           right-[-80px]
           top-[25%]
@@ -92,7 +114,21 @@ export default function Hero({ lang }) {
           w-[430px]
           rounded-full
           border
-          border-white/[0.035]
+          border-[#A92F46]/[0.16]
+        "
+      />
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          left-[-180px]
+          bottom-[10%]
+          h-[360px]
+          w-[360px]
+          rounded-full
+          border
+          border-white/[0.025]
         "
       />
 
@@ -139,7 +175,6 @@ export default function Hero({ lang }) {
           lg:pt-16
         "
       >
-
         <div
           className="
             grid
@@ -150,14 +185,13 @@ export default function Hero({ lang }) {
             lg:gap-20
           "
         >
-
           {/* =====================================================
               LEFT CONTENT
           ===================================================== */}
 
           <div className="text-center lg:text-left">
-
             {/* EYEBROW */}
+
             <div
               className="
                 mb-7
@@ -168,7 +202,7 @@ export default function Hero({ lang }) {
                 lg:justify-start
               "
             >
-              <span className="h-px w-8 bg-blue-400/70" />
+              <span className="h-px w-8 bg-[#A92F46]/90" />
 
               <p
                 className="
@@ -176,26 +210,29 @@ export default function Hero({ lang }) {
                   font-semibold
                   uppercase
                   tracking-[0.32em]
-                  text-blue-300/80
+                  text-[#A92F46]
                 "
               >
                 {lang === "en"
-                  ? "Trusted Legal & Tax Advisory"
-                  : "Konsultan Hukum & Pajak Terpercaya"}
+                  ? "TRUSTED LEGAL & TAX ADVISORY"
+                  : "KONSULTAN HUKUM & PAJAK TERPERCAYA"}
               </p>
 
-              <span className="hidden h-px w-8 bg-blue-400/70 sm:block" />
+              <span className="hidden h-px w-8 bg-[#A92F46]/90 sm:block" />
             </div>
 
             {/* MAIN TITLE */}
+
             <h1
               className="
                 mx-auto
                 max-w-4xl
                 text-4xl
                 font-light
+                uppercase
                 leading-[1.04]
                 tracking-[-0.045em]
+                text-white
                 sm:text-5xl
                 md:text-6xl
                 lg:mx-0
@@ -205,34 +242,36 @@ export default function Hero({ lang }) {
             >
               {lang === "en" ? (
                 <>
-                  Legal & Tax Solutions for{" "}
-                  <span className="text-blue-300">
-                    Stronger Business Growth
+                  LEGAL & TAX SOLUTIONS FOR{" "}
+                  <span className="text-[#A92F46]">
+                    STRONGER BUSINESS GROWTH
                   </span>
                 </>
               ) : (
                 <>
-                  Solusi Hukum & Pajak untuk{" "}
-                  <span className="text-blue-300">
-                    Pertumbuhan Bisnis Kuat
+                  SOLUSI HUKUM & PAJAK UNTUK{" "}
+                  <span className="text-[#A92F46]">
+                    PERTUMBUHAN BISNIS KUAT
                   </span>
                 </>
               )}
             </h1>
 
             {/* SMALL LINE */}
+
             <div
               className="
                 mx-auto
                 mt-8
                 h-px
                 w-14
-                bg-blue-400/70
+                bg-[#A92F46]
                 lg:mx-0
               "
             />
 
             {/* DESCRIPTION */}
+
             <p
               className="
                 mx-auto
@@ -240,7 +279,7 @@ export default function Hero({ lang }) {
                 max-w-xl
                 text-sm
                 leading-7
-                text-white/55
+                text-white/60
                 md:text-base
                 md:leading-8
                 lg:mx-0
@@ -252,6 +291,7 @@ export default function Hero({ lang }) {
             </p>
 
             {/* CTA */}
+
             <div
               className="
                 mt-9
@@ -264,10 +304,8 @@ export default function Hero({ lang }) {
                 lg:justify-start
               "
             >
-
-              
-
               {/* WHATSAPP */}
+
               <a
                 href={
                   lang === "en"
@@ -284,38 +322,36 @@ export default function Hero({ lang }) {
                   justify-center
                   gap-3
                   rounded-full
-                  border
-                  border-white/15
-                  bg-white/[0.03]
+                  bg-[#F8F6EF]
                   px-7
                   py-3.5
                   text-xs
-                  font-medium
+                  font-semibold
+                  uppercase
                   tracking-[0.08em]
-                  text-white
-                  backdrop-blur-md
+                  text-[#0B4F32]
                   transition-all
                   duration-300
                   hover:-translate-y-1
-                  hover:border-blue-300/40
-                  hover:bg-white/[0.08]
+                  hover:bg-[#A92F46]
+                  hover:text-[#F8F6EF]
+                  hover:shadow-[0_15px_40px_rgba(84,21,34,0.32)]
                   sm:w-auto
                 "
               >
-                WhatsApp
+                WHATSAPP
 
                 <span
                   className="
-                    text-white/40
+                    text-[#0B4F32]/50
                     transition
                     group-hover:translate-x-1
-                    group-hover:text-blue-300
+                    group-hover:text-[#F8F6EF]
                   "
                 >
                   ↗
                 </span>
               </a>
-
             </div>
 
             {/* =================================================
@@ -336,8 +372,8 @@ export default function Hero({ lang }) {
                 lg:max-w-xl
               "
             >
-
               {/* CLIENTS */}
+
               <div className="text-center lg:text-left">
                 <p
                   className="
@@ -355,16 +391,18 @@ export default function Hero({ lang }) {
                   className="
                     mt-1
                     text-[10px]
+                    font-medium
                     uppercase
                     tracking-[0.2em]
-                    text-white/35
+                    text-white/40
                   "
                 >
-                  {lang === "en" ? "Clients" : "Klien"}
+                  {lang === "en" ? "CLIENTS" : "KLIEN"}
                 </p>
               </div>
 
               {/* CASES */}
+
               <div
                 className="
                   border-l
@@ -390,16 +428,18 @@ export default function Hero({ lang }) {
                   className="
                     mt-1
                     text-[10px]
+                    font-medium
                     uppercase
                     tracking-[0.2em]
-                    text-white/35
+                    text-white/40
                   "
                 >
-                  {lang === "en" ? "Cases" : "Perkara"}
+                  {lang === "en" ? "CASES" : "PERKARA"}
                 </p>
               </div>
 
               {/* YEARS */}
+
               <div
                 className="
                   border-l
@@ -425,17 +465,16 @@ export default function Hero({ lang }) {
                   className="
                     mt-1
                     text-[10px]
+                    font-medium
                     uppercase
                     tracking-[0.2em]
-                    text-white/35
+                    text-white/40
                   "
                 >
-                  {lang === "en" ? "Years" : "Tahun"}
+                  {lang === "en" ? "YEARS" : "TAHUN"}
                 </p>
               </div>
-
             </div>
-
           </div>
 
           {/* =====================================================
@@ -443,19 +482,36 @@ export default function Hero({ lang }) {
           ===================================================== */}
 
           <div className="relative flex justify-center lg:justify-end">
+            {/* OUTER DEEP MAROON GLOW */}
 
-            {/* OUTER GLOW */}
             <div
               className="
                 absolute
                 -inset-10
                 rounded-[2rem]
-                bg-blue-500/[0.08]
+                bg-[#A92F46]/[0.18]
+                blur-[80px]
+              "
+            />
+
+            {/* SECONDARY MAROON GLOW */}
+
+            <div
+              className="
+                pointer-events-none
+                absolute
+                -bottom-20
+                -left-20
+                h-64
+                w-64
+                rounded-full
+                bg-[#A92F46]/[0.10]
                 blur-[80px]
               "
             />
 
             {/* DECORATIVE FRAME */}
+
             <div
               className="
                 absolute
@@ -466,12 +522,30 @@ export default function Hero({ lang }) {
                 w-[80%]
                 rounded-[2rem]
                 border
-                border-blue-300/10
+                border-[#A92F46]/25
+                lg:block
+              "
+            />
+
+            {/* SECOND FRAME */}
+
+            <div
+              className="
+                absolute
+                -bottom-5
+                -left-5
+                hidden
+                h-[85%]
+                w-[75%]
+                rounded-[2rem]
+                border
+                border-white/[0.04]
                 lg:block
               "
             />
 
             {/* IMAGE WRAPPER */}
+
             <div
               className="
                 relative
@@ -487,10 +561,9 @@ export default function Hero({ lang }) {
                 backdrop-blur-md
               "
             >
-
               {/* IMAGE */}
-              <div className="relative overflow-hidden rounded-[1.15rem]">
 
+              <div className="relative overflow-hidden rounded-[1.15rem]">
                 <img
                   src={heroImage}
                   alt="Zaky Zhafran"
@@ -507,18 +580,20 @@ export default function Hero({ lang }) {
                 />
 
                 {/* IMAGE GRADIENT */}
+
                 <div
                   className="
                     absolute
                     inset-0
                     bg-gradient-to-t
-                    from-[#0B1220]/90
-                    via-transparent
+                    from-[#073923]/95
+                    via-[#073923]/20
                     to-transparent
                   "
                 />
 
                 {/* IMAGE LABEL */}
+
                 <div
                   className="
                     absolute
@@ -529,17 +604,17 @@ export default function Hero({ lang }) {
                   "
                 >
                   <div className="flex items-end justify-between gap-4">
-
                     <div>
                       <p
                         className="
                           text-[9px]
+                          font-semibold
                           uppercase
                           tracking-[0.28em]
-                          text-blue-300
+                          text-[#A92F46]
                         "
                       >
-                        Managing Partner
+                        MANAGING PARTNER
                       </p>
 
                       <p
@@ -547,14 +622,15 @@ export default function Hero({ lang }) {
                           mt-2
                           text-lg
                           font-light
+                          uppercase
                           tracking-[-0.02em]
                           text-white
                         "
                       >
-                        Zaky Zhafran
+                        ZAKY ZHAFRAN
                       </p>
 
-                      <p className="mt-1 text-xs text-white/45">
+                      <p className="mt-1 text-xs text-white/50">
                         Legal & Tax Advisory
                       </p>
                     </div>
@@ -572,21 +648,19 @@ export default function Hero({ lang }) {
                         border-white/15
                         bg-white/10
                         text-sm
-                        text-white
+                        text-[#A92F46]
                         backdrop-blur-md
                       "
                     >
                       ↗
                     </div>
-
                   </div>
                 </div>
-
               </div>
-
             </div>
 
             {/* SMALL FLOATING LABEL */}
+
             <div
               className="
                 absolute
@@ -596,7 +670,7 @@ export default function Hero({ lang }) {
                 rounded-xl
                 border
                 border-white/10
-                bg-[#111B30]/90
+                bg-[#073923]/95
                 px-5
                 py-4
                 shadow-xl
@@ -608,21 +682,28 @@ export default function Hero({ lang }) {
               <p
                 className="
                   text-[9px]
+                  font-semibold
                   uppercase
                   tracking-[0.2em]
-                  text-white/30
+                  text-[#A92F46]/90
                 "
               >
-                Firm
+                FIRM
               </p>
 
-              <p className="mt-1 text-xs font-medium text-white/80">
+              <p
+                className="
+                  mt-1
+                  text-xs
+                  font-medium
+                  uppercase
+                  text-white/80
+                "
+              >
                 Zaky Zhafran & Partners
               </p>
             </div>
-
           </div>
-
         </div>
       </div>
 
@@ -647,12 +728,15 @@ export default function Hero({ lang }) {
         <span
           className="
             text-[9px]
+            font-medium
             uppercase
             tracking-[0.3em]
-            text-white/25
+            text-white/30
           "
         >
-          Scroll to explore
+          {lang === "en"
+            ? "SCROLL TO EXPLORE"
+            : "GULIR UNTUK MENJELAJAH"}
         </span>
 
         <span className="h-px w-8 bg-white/20" />
@@ -671,7 +755,7 @@ export default function Hero({ lang }) {
             flex
             items-center
             justify-center
-            bg-black/70
+            bg-[#A92F46]/80
             px-4
             backdrop-blur-sm
           "
@@ -683,29 +767,50 @@ export default function Hero({ lang }) {
               max-w-md
               overflow-hidden
               rounded-2xl
-              bg-white
-              text-[#0B1220]
+              bg-[#F8F6EF]
+              text-[#16251F]
               shadow-2xl
             "
             onClick={(e) => e.stopPropagation()}
           >
-
             {/* MODAL HEADER */}
-            <div className="bg-[#0B1220] px-6 py-6 text-white">
 
+            <div
+              className="
+                bg-gradient-to-br
+                from-[#155D40]
+                via-[#0B4F32]
+                to-[#073923]
+                px-6
+                py-6
+                text-white
+              "
+            >
               <div className="flex items-start justify-between gap-4">
-
                 <div>
-                  <p className="text-[9px] uppercase tracking-[0.25em] text-blue-300">
-                    {lang === "en"
-                      ? "Consultation"
-                      : "Konsultasi"}
+                  <p
+                    className="
+                      text-[9px]
+                      font-semibold
+                      uppercase
+                      tracking-[0.25em]
+                      text-[#A92F46]
+                    "
+                  >
+                    {lang === "en" ? "CONSULTATION" : "KONSULTASI"}
                   </p>
 
-                  <h2 className="mt-2 text-xl font-light">
+                  <h2
+                    className="
+                      mt-2
+                      text-xl
+                      font-light
+                      uppercase
+                    "
+                  >
                     {lang === "en"
-                      ? "Book Consultation"
-                      : "Form Konsultasi"}
+                      ? "BOOK CONSULTATION"
+                      : "FORM KONSULTASI"}
                   </h2>
                 </div>
 
@@ -722,25 +827,35 @@ export default function Hero({ lang }) {
                     border-white/10
                     text-white/50
                     transition
-                    hover:bg-white/10
+                    hover:border-[#A92F46]/40
+                    hover:bg-[#A92F46]/30
                     hover:text-white
                   "
                 >
                   ×
                 </button>
-
               </div>
-
             </div>
 
             {/* MODAL FORM */}
-            <div className="p-6">
 
+            <div className="p-6">
               <div className="space-y-4">
+                {/* NAME */}
 
                 <div>
-                  <label className="mb-2 block text-xs font-medium text-gray-600">
-                    {lang === "en" ? "Name" : "Nama"}
+                  <label
+                    className="
+                      mb-2
+                      block
+                      text-xs
+                      font-medium
+                      uppercase
+                      tracking-[0.04em]
+                      text-[#16251F]/65
+                    "
+                  >
+                    {lang === "en" ? "NAME" : "NAMA"}
                   </label>
 
                   <input
@@ -754,22 +869,37 @@ export default function Hero({ lang }) {
                       w-full
                       rounded-xl
                       border
-                      border-gray-200
+                      border-[#16251F]/10
+                      bg-white
                       px-4
                       py-3
                       text-sm
+                      text-[#16251F]
                       outline-none
                       transition
-                      focus:border-[#0B1220]
+                      placeholder:text-[#16251F]/30
+                      focus:border-[#A92F46]
                       focus:ring-2
-                      focus:ring-blue-100
+                      focus:ring-[#A92F46]/10
                     "
                   />
                 </div>
 
+                {/* EMAIL */}
+
                 <div>
-                  <label className="mb-2 block text-xs font-medium text-gray-600">
-                    Email
+                  <label
+                    className="
+                      mb-2
+                      block
+                      text-xs
+                      font-medium
+                      uppercase
+                      tracking-[0.04em]
+                      text-[#16251F]/65
+                    "
+                  >
+                    EMAIL
                   </label>
 
                   <input
@@ -779,24 +909,37 @@ export default function Hero({ lang }) {
                       w-full
                       rounded-xl
                       border
-                      border-gray-200
+                      border-[#16251F]/10
+                      bg-white
                       px-4
                       py-3
                       text-sm
+                      text-[#16251F]
                       outline-none
                       transition
-                      focus:border-[#0B1220]
+                      placeholder:text-[#16251F]/30
+                      focus:border-[#A92F46]
                       focus:ring-2
-                      focus:ring-blue-100
+                      focus:ring-[#A92F46]/10
                     "
                   />
                 </div>
 
+                {/* MESSAGE */}
+
                 <div>
-                  <label className="mb-2 block text-xs font-medium text-gray-600">
-                    {lang === "en"
-                      ? "Message"
-                      : "Pesan"}
+                  <label
+                    className="
+                      mb-2
+                      block
+                      text-xs
+                      font-medium
+                      uppercase
+                      tracking-[0.04em]
+                      text-[#16251F]/65
+                    "
+                  >
+                    {lang === "en" ? "MESSAGE" : "PESAN"}
                   </label>
 
                   <textarea
@@ -811,41 +954,43 @@ export default function Hero({ lang }) {
                       resize-none
                       rounded-xl
                       border
-                      border-gray-200
+                      border-[#16251F]/10
+                      bg-white
                       px-4
                       py-3
                       text-sm
+                      text-[#16251F]
                       outline-none
                       transition
-                      focus:border-[#0B1220]
+                      placeholder:text-[#16251F]/30
+                      focus:border-[#A92F46]
                       focus:ring-2
-                      focus:ring-blue-100
+                      focus:ring-[#A92F46]/10
                     "
                   />
                 </div>
-
               </div>
 
               {/* MODAL BUTTONS */}
-              <div className="mt-6 flex gap-3">
 
+              <div className="mt-6 flex gap-3">
                 <button
                   className="
                     flex-1
                     rounded-full
-                    bg-[#0B1220]
+                    bg-[#0B4F32]
                     px-5
                     py-3
                     text-xs
                     font-semibold
+                    uppercase
+                    tracking-[0.05em]
                     text-white
                     transition
-                    hover:bg-[#111B30]
+                    hover:bg-[#A92F46]
                   "
                 >
-                  {lang === "en"
-                    ? "Submit"
-                    : "Kirim"}
+                  {lang === "en" ? "SUBMIT" : "KIRIM"}
                 </button>
 
                 <button
@@ -854,35 +999,41 @@ export default function Hero({ lang }) {
                     flex-1
                     rounded-full
                     border
-                    border-gray-200
+                    border-[#16251F]/10
                     px-5
                     py-3
                     text-xs
                     font-medium
-                    text-gray-600
+                    uppercase
+                    tracking-[0.05em]
+                    text-[#16251F]/65
                     transition
-                    hover:bg-gray-50
+                    hover:border-[#A92F46]/30
+                    hover:bg-[#A92F46]/5
+                    hover:text-[#A92F46]
                   "
                 >
-                  {lang === "en"
-                    ? "Close"
-                    : "Tutup"}
+                  {lang === "en" ? "CLOSE" : "TUTUP"}
                 </button>
-
               </div>
 
-              <p className="mt-5 text-center text-[10px] leading-5 text-gray-400">
+              <p
+                className="
+                  mt-5
+                  text-center
+                  text-[10px]
+                  leading-5
+                  text-[#16251F]/35
+                "
+              >
                 {lang === "en"
                   ? "Your consultation request will be reviewed by our team."
                   : "Permintaan konsultasi Anda akan ditinjau oleh tim kami."}
               </p>
-
             </div>
-
           </div>
         </div>
       )}
-
     </section>
   );
 }

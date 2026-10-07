@@ -106,11 +106,6 @@ export default function Firm() {
       id: "Hubungi Kami",
     },
 
-    viewPractice: {
-      en: "View Practice",
-      id: "Lihat Praktik",
-    },
-
     matter: {
       en: "Matter",
       id: "Perkara",
@@ -191,6 +186,10 @@ export default function Firm() {
     },
   ];
 
+  /*
+   * TAX DIHAPUS DARI LEGAL SERVICES
+   * Karena sudah tersedia pada bagian TAX SERVICES.
+   */
   const legalServices = [
     { en: "LITIGATION FIELD", id: "LITIGASI" },
     { en: "CORPORATE SECTOR", id: "KORPORASI" },
@@ -202,7 +201,6 @@ export default function Firm() {
       en: "PROPERTY & INFRASTRUCTURE",
       id: "PROPERTI & INFRASTRUKTUR",
     },
-    { en: "TAX", id: "PAJAK" },
     { en: "FAMILY & PRIVATE", id: "KELUARGA & PRIVAT" },
     { en: "ISLAMIC FINANCE", id: "KEUANGAN SYARIAH" },
     {
@@ -243,25 +241,13 @@ export default function Firm() {
     },
   ];
 
+  /*
+   * CROSS-BORDER ACQUISITION STRUCTURING
+   * SUDAH DIHAPUS.
+   */
   const caseStudies = [
     {
       number: "01",
-      category: {
-        en: "CORPORATE / M&A",
-        id: "KORPORASI / M&A",
-      },
-      title: {
-        en: "Cross-Border Acquisition Structuring",
-        id: "Struktur Akuisisi Lintas Negara",
-      },
-      desc: {
-        en: "Handled multi-jurisdiction M&A with regulatory optimization strategy.",
-        id: "Menangani M&A multi-negara dengan strategi optimasi regulasi.",
-      },
-    },
-
-    {
-      number: "02",
       category: {
         en: "TAX / DISPUTE",
         id: "PAJAK / SENGKETA",
@@ -277,7 +263,7 @@ export default function Firm() {
     },
 
     {
-      number: "03",
+      number: "02",
       category: {
         en: "CORPORATE / ADVISORY",
         id: "KORPORASI / ADVISORY",
@@ -294,41 +280,51 @@ export default function Firm() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen overflow-hidden bg-[#F8F6EF] text-[#16251F]">
 
       <Navbar />
 
       {/* =========================================================
           LANGUAGE SWITCHER
       ========================================================= */}
-      <div className="fixed top-20 right-5 z-[999]">
+      <div className="fixed right-5 top-20 z-[999]">
         <button
           onClick={() => setLang(lang === "en" ? "id" : "en")}
           className="
-            group flex items-center gap-2
+            group
+            flex
+            items-center
+            gap-2
             rounded-full
-            border border-white/10
-            bg-[#0B1220]/90
-            px-4 py-2
+            border
+            border-white/10
+            bg-[#073923]/95
+            px-4
+            py-2
             text-[10px]
             font-semibold
             tracking-[0.2em]
             text-white
             shadow-xl
             backdrop-blur-xl
-            transition-all duration-300
-            hover:border-white/30
-            hover:bg-[#111B30]
+            transition-all
+            duration-300
+            hover:border-[#D7A0AD]/40
+            hover:bg-[#0B4F32]
           "
         >
           <span
             className="
-              flex h-5 w-5 items-center justify-center
+              flex
+              h-5
+              w-5
+              items-center
+              justify-center
               rounded-full
               bg-white/10
               text-[9px]
               transition
-              group-hover:bg-white/20
+              group-hover:bg-[#A92F46]
             "
           >
             {lang === "en" ? "EN" : "ID"}
@@ -343,30 +339,30 @@ export default function Firm() {
       {/* =========================================================
           HERO
       ========================================================= */}
-      <section className="relative overflow-hidden bg-[#0B1220] text-white">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#155D40] via-[#0B4F32] to-[#073923] text-white">
 
-        {/* Decorative glow */}
-        <div className="absolute -left-40 top-20 h-[420px] w-[420px] rounded-full bg-blue-600/20 blur-[130px]" />
+        <div className="pointer-events-none absolute -right-20 top-24 h-[420px] w-[420px] rounded-full border border-white/[0.06]" />
 
-        <div className="absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-cyan-400/10 blur-[150px]" />
+        <div className="pointer-events-none absolute -right-8 top-40 h-[300px] w-[300px] rounded-full border border-[#D7A0AD]/10" />
 
-        <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/[0.04]" />
+        <div className="pointer-events-none absolute -left-32 bottom-[-180px] h-[500px] w-[500px] rounded-full border border-white/[0.04]" />
 
-        <div className="absolute left-1/2 top-1/2 h-[430px] w-[430px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/[0.04]" />
+        <div className="pointer-events-none absolute right-[12%] top-[24%] h-px w-40 rotate-[35deg] bg-[#E1A7B1]/30" />
 
-        {/* Hero content */}
+        <div className="pointer-events-none absolute right-[9%] top-[27%] h-px w-24 rotate-[35deg] bg-[#E1A7B1]/20" />
+
         <div className="relative mx-auto max-w-7xl px-6 pb-28 pt-32 md:px-10 md:pb-36 md:pt-40">
 
           <div className="mx-auto max-w-5xl text-center">
 
             <div className="mb-8 flex items-center justify-center gap-3">
-              <span className="h-px w-10 bg-blue-400/60" />
+              <span className="h-px w-10 bg-[#E1A7B1]/60" />
 
-              <p className="text-[10px] font-semibold tracking-[0.35em] text-blue-300/80">
+              <p className="text-[10px] font-semibold tracking-[0.35em] text-[#E1A7B1]">
                 {t.heroEyebrow[lang]}
               </p>
 
-              <span className="h-px w-10 bg-blue-400/60" />
+              <span className="h-px w-10 bg-[#E1A7B1]/60" />
             </div>
 
             <h1
@@ -383,7 +379,7 @@ export default function Firm() {
               {t.heroTitle[lang]}
             </h1>
 
-            <div className="mx-auto mt-8 h-px w-16 bg-blue-400/70" />
+            <div className="mx-auto mt-8 h-px w-16 bg-[#D7A0AD]/70" />
 
             <h2
               className="
@@ -406,7 +402,7 @@ export default function Firm() {
                 max-w-2xl
                 text-sm
                 leading-7
-                text-white/55
+                text-white/60
                 md:text-base
               "
             >
@@ -433,13 +429,14 @@ export default function Firm() {
                 backdrop-blur-md
                 transition-all
                 duration-300
-                hover:border-blue-300/50
+                hover:-translate-y-0.5
+                hover:border-[#D7A0AD]/50
                 hover:bg-white/10
               "
             >
               {t.explore[lang]}
 
-              <span className="text-blue-300">↓</span>
+              <span className="text-[#E1A7B1]">↓</span>
             </a>
           </div>
 
@@ -451,6 +448,7 @@ export default function Firm() {
                 <p className="text-[10px] tracking-[0.25em] text-white/30">
                   APPROACH
                 </p>
+
                 <p className="mt-2 text-xs text-white/70">
                   Precision & Strategy
                 </p>
@@ -460,6 +458,7 @@ export default function Firm() {
                 <p className="text-[10px] tracking-[0.25em] text-white/30">
                   FOCUS
                 </p>
+
                 <p className="mt-2 text-xs text-white/70">
                   Legal & Tax Advisory
                 </p>
@@ -469,6 +468,7 @@ export default function Firm() {
                 <p className="text-[10px] tracking-[0.25em] text-white/30">
                   CLIENTS
                 </p>
+
                 <p className="mt-2 text-xs text-white/70">
                   Corporations & Institutions
                 </p>
@@ -484,15 +484,14 @@ export default function Firm() {
       ========================================================= */}
       <section
         id="practice"
-        className="bg-[#F6F7FB] py-24 md:py-32"
+        className="bg-[#F8F6EF] py-24 md:py-32"
       >
         <div className="mx-auto max-w-7xl px-6 md:px-10">
 
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.5fr] lg:gap-20">
 
-            {/* Heading */}
             <div>
-              <p className="text-[10px] font-semibold tracking-[0.3em] text-blue-600">
+              <p className="text-[10px] font-semibold tracking-[0.3em] text-[#A92F46]">
                 {t.practiceLabel[lang]}
               </p>
 
@@ -504,19 +503,18 @@ export default function Firm() {
                   font-light
                   leading-tight
                   tracking-[-0.035em]
-                  text-[#0B1220]
+                  text-[#16251F]
                   md:text-4xl
                 "
               >
                 {t.practiceTitle[lang]}
               </h2>
 
-              <p className="mt-6 max-w-md text-sm leading-7 text-gray-500">
+              <p className="mt-6 max-w-md text-sm leading-7 text-[#68736D]">
                 {t.practiceDesc[lang]}
               </p>
             </div>
 
-            {/* Cards */}
             <div className="grid gap-4">
               {practiceAreas.map((area) => (
                 <div
@@ -527,14 +525,14 @@ export default function Firm() {
                     overflow-hidden
                     rounded-2xl
                     border
-                    border-gray-200
+                    border-[#DDE1DB]
                     bg-white
                     p-6
                     transition-all
                     duration-500
                     hover:-translate-y-1
-                    hover:border-blue-200
-                    hover:shadow-[0_20px_60px_rgba(11,18,32,0.08)]
+                    hover:border-[#A92F46]/30
+                    hover:shadow-[0_20px_60px_rgba(22,37,31,0.08)]
                     md:p-8
                   "
                 >
@@ -549,13 +547,13 @@ export default function Firm() {
                         items-center
                         justify-center
                         rounded-full
-                        bg-[#0B1220]
+                        bg-[#0B4F32]
                         text-[10px]
                         font-semibold
                         tracking-widest
                         text-white
                         transition
-                        group-hover:bg-blue-600
+                        group-hover:bg-[#A92F46]
                       "
                     >
                       {area.number}
@@ -568,14 +566,14 @@ export default function Firm() {
                           text-sm
                           font-semibold
                           tracking-[0.08em]
-                          text-[#0B1220]
+                          text-[#16251F]
                           md:text-base
                         "
                       >
                         {area.title[lang]}
                       </h3>
 
-                      <p className="mt-3 text-sm leading-7 text-gray-500">
+                      <p className="mt-3 text-sm leading-7 text-[#68736D]">
                         {area.desc[lang]}
                       </p>
 
@@ -583,19 +581,18 @@ export default function Firm() {
                         {area.problems[lang].map((problem, index) => (
                           <div
                             key={index}
-                            className="flex items-start gap-3 text-xs leading-5 text-gray-600"
+                            className="flex items-start gap-3 text-xs leading-5 text-[#59645E]"
                           >
-                            <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-blue-500" />
+                            <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-[#A92F46]" />
                             <span>{problem}</span>
                           </div>
                         ))}
                       </div>
 
                     </div>
-
                   </div>
 
-                  <div className="absolute -bottom-12 -right-12 h-32 w-32 rounded-full bg-blue-500/[0.04] transition duration-500 group-hover:bg-blue-500/[0.08]" />
+                  <div className="absolute -bottom-12 -right-12 h-32 w-32 rounded-full bg-[#A92F46]/[0.035] transition duration-500 group-hover:bg-[#A92F46]/[0.07]" />
                 </div>
               ))}
             </div>
@@ -611,7 +608,7 @@ export default function Firm() {
         <div className="mx-auto max-w-7xl px-6 md:px-10">
 
           <div className="mb-14 max-w-2xl">
-            <p className="text-[10px] font-semibold tracking-[0.3em] text-blue-600">
+            <p className="text-[10px] font-semibold tracking-[0.3em] text-[#A92F46]">
               {t.casesLabel[lang]}
             </p>
 
@@ -622,19 +619,30 @@ export default function Firm() {
                 font-light
                 leading-tight
                 tracking-[-0.035em]
-                text-[#0B1220]
+                text-[#16251F]
                 md:text-4xl
               "
             >
               {t.casesTitle[lang]}
             </h2>
 
-            <p className="mt-5 text-sm leading-7 text-gray-500">
+            <p className="mt-5 text-sm leading-7 text-[#68736D]">
               {t.casesDesc[lang]}
             </p>
           </div>
 
-          <div className="grid gap-px overflow-hidden rounded-2xl border border-gray-200 bg-gray-200 md:grid-cols-3">
+          <div
+            className="
+              grid
+              gap-px
+              overflow-hidden
+              rounded-2xl
+              border
+              border-[#DDE1DB]
+              bg-[#DDE1DB]
+              md:grid-cols-2
+            "
+          >
 
             {caseStudies.map((item) => (
               <article
@@ -642,12 +650,12 @@ export default function Firm() {
                 className="
                   group
                   relative
-                  bg-[#F6F7FB]
+                  bg-[#F8F6EF]
                   p-7
                   transition-all
                   duration-500
-                  hover:bg-[#0B1220]
-                  md:p-9
+                  hover:bg-[#073923]
+                  md:p-10
                 "
               >
 
@@ -657,9 +665,9 @@ export default function Firm() {
                       text-[10px]
                       font-semibold
                       tracking-[0.2em]
-                      text-blue-600
+                      text-[#A92F46]
                       transition
-                      group-hover:text-blue-300
+                      group-hover:text-[#E1A7B1]
                     "
                   >
                     {item.number}
@@ -669,7 +677,7 @@ export default function Firm() {
                     className="
                       text-[9px]
                       tracking-[0.18em]
-                      text-gray-400
+                      text-[#8A938E]
                       transition
                       group-hover:text-white/40
                     "
@@ -686,7 +694,7 @@ export default function Firm() {
                     font-light
                     leading-6
                     tracking-[-0.02em]
-                    text-[#0B1220]
+                    text-[#16251F]
                     transition
                     group-hover:text-white
                   "
@@ -699,9 +707,9 @@ export default function Firm() {
                     mt-5
                     text-sm
                     leading-7
-                    text-gray-500
+                    text-[#68736D]
                     transition
-                    group-hover:text-white/50
+                    group-hover:text-white/55
                   "
                 >
                   {item.desc[lang]}
@@ -712,11 +720,11 @@ export default function Firm() {
                     mt-8
                     h-px
                     w-10
-                    bg-gray-300
+                    bg-[#C9CEC9]
                     transition-all
                     duration-500
                     group-hover:w-16
-                    group-hover:bg-blue-400
+                    group-hover:bg-[#D7A0AD]
                   "
                 />
 
@@ -725,7 +733,7 @@ export default function Firm() {
                     mt-4
                     text-[9px]
                     tracking-[0.2em]
-                    text-gray-400
+                    text-[#8A938E]
                     transition
                     group-hover:text-white/30
                   "
@@ -743,13 +751,13 @@ export default function Firm() {
       {/* =========================================================
           LEGAL SERVICES
       ========================================================= */}
-      <section className="bg-[#F6F7FB] py-24 md:py-32">
+      <section className="bg-[#F8F6EF] py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-6 md:px-10">
 
           <div className="grid gap-12 lg:grid-cols-[0.75fr_1.5fr] lg:gap-20">
 
             <div>
-              <p className="text-[10px] font-semibold tracking-[0.3em] text-blue-600">
+              <p className="text-[10px] font-semibold tracking-[0.3em] text-[#A92F46]">
                 {t.legalLabel[lang]}
               </p>
 
@@ -760,14 +768,14 @@ export default function Firm() {
                   font-light
                   leading-tight
                   tracking-[-0.035em]
-                  text-[#0B1220]
+                  text-[#16251F]
                   md:text-4xl
                 "
               >
                 {t.legalTitle[lang]}
               </h2>
 
-              <p className="mt-6 max-w-md text-sm leading-7 text-gray-500">
+              <p className="mt-6 max-w-md text-sm leading-7 text-[#68736D]">
                 {t.legalDesc[lang]}
               </p>
             </div>
@@ -784,14 +792,14 @@ export default function Firm() {
                     justify-between
                     rounded-xl
                     border
-                    border-gray-200
+                    border-[#DDE1DB]
                     bg-white
                     px-5
                     py-4
                     transition-all
                     duration-300
-                    hover:border-[#0B1220]
-                    hover:bg-[#0B1220]
+                    hover:border-[#0B4F32]
+                    hover:bg-[#0B4F32]
                   "
                 >
                   <span
@@ -800,7 +808,7 @@ export default function Firm() {
                       text-xs
                       font-medium
                       tracking-[0.06em]
-                      text-gray-700
+                      text-[#59645E]
                       transition
                       group-hover:text-white
                     "
@@ -810,10 +818,10 @@ export default function Firm() {
 
                   <span
                     className="
-                      text-gray-300
+                      text-[#B4BBB6]
                       transition
                       group-hover:translate-x-1
-                      group-hover:text-blue-300
+                      group-hover:text-[#E1A7B1]
                     "
                   >
                     →
@@ -829,13 +837,13 @@ export default function Firm() {
       {/* =========================================================
           TAX SERVICES
       ========================================================= */}
-      <section className="bg-[#0B1220] py-24 text-white md:py-32">
+      <section className="bg-gradient-to-br from-[#155D40] via-[#0B4F32] to-[#073923] py-24 text-white md:py-32">
         <div className="mx-auto max-w-7xl px-6 md:px-10">
 
           <div className="grid gap-12 lg:grid-cols-[0.75fr_1.5fr] lg:gap-20">
 
             <div>
-              <p className="text-[10px] font-semibold tracking-[0.3em] text-blue-300">
+              <p className="text-[10px] font-semibold tracking-[0.3em] text-[#E1A7B1]">
                 {t.taxLabel[lang]}
               </p>
 
@@ -852,7 +860,7 @@ export default function Firm() {
                 {t.taxTitle[lang]}
               </h2>
 
-              <p className="mt-6 max-w-md text-sm leading-7 text-white/50">
+              <p className="mt-6 max-w-md text-sm leading-7 text-white/55">
                 {t.taxDesc[lang]}
               </p>
             </div>
@@ -870,21 +878,38 @@ export default function Firm() {
                     rounded-xl
                     border
                     border-white/10
-                    bg-white/[0.03]
+                    bg-white/[0.035]
                     px-5
                     py-4
                     backdrop-blur-sm
                     transition-all
                     duration-300
-                    hover:border-blue-300/30
+                    hover:border-[#D7A0AD]/30
                     hover:bg-white/[0.07]
                   "
                 >
-                  <span className="max-w-[85%] text-xs font-medium tracking-[0.06em] text-white/70 transition group-hover:text-white">
+                  <span
+                    className="
+                      max-w-[85%]
+                      text-xs
+                      font-medium
+                      tracking-[0.06em]
+                      text-white/70
+                      transition
+                      group-hover:text-white
+                    "
+                  >
                     {item[lang]}
                   </span>
 
-                  <span className="text-white/20 transition group-hover:translate-x-1 group-hover:text-blue-300">
+                  <span
+                    className="
+                      text-white/20
+                      transition
+                      group-hover:translate-x-1
+                      group-hover:text-[#E1A7B1]
+                    "
+                  >
                     →
                   </span>
                 </div>
@@ -898,15 +923,27 @@ export default function Firm() {
       {/* =========================================================
           CTA + FOOTER
       ========================================================= */}
-      <div className="bg-[#0B1220]">
+      <div className="bg-[#073923]">
 
-        <section className="relative overflow-hidden border-t border-white/10 py-24 text-center md:py-32">
+        <section
+          className="
+            relative
+            overflow-hidden
+            border-t
+            border-white/10
+            py-24
+            text-center
+            md:py-32
+          "
+        >
 
-          <div className="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-600/10 blur-[120px]" />
+          <div className="pointer-events-none absolute left-[18%] top-20 h-px w-28 rotate-[35deg] bg-[#D7A0AD]/20" />
+
+          <div className="pointer-events-none absolute bottom-24 right-[18%] h-px w-32 rotate-[35deg] bg-[#D7A0AD]/20" />
 
           <div className="relative mx-auto max-w-3xl px-6">
 
-            <p className="text-[10px] font-semibold tracking-[0.3em] text-blue-300">
+            <p className="text-[10px] font-semibold tracking-[0.3em] text-[#E1A7B1]">
               {t.ctaEyebrow[lang]}
             </p>
 
@@ -937,23 +974,23 @@ export default function Firm() {
                 items-center
                 gap-3
                 rounded-full
-                bg-white
+                bg-[#F8F6EF]
                 px-7
                 py-3.5
                 text-xs
                 font-semibold
                 tracking-[0.08em]
-                text-[#0B1220]
+                text-[#073923]
                 transition-all
                 duration-300
                 hover:-translate-y-1
-                hover:bg-blue-50
-                hover:shadow-[0_15px_40px_rgba(255,255,255,0.12)]
+                hover:bg-white
+                hover:shadow-[0_15px_40px_rgba(225,167,177,0.15)]
               "
             >
               {t.ctaBtn[lang]}
 
-              <span>↗</span>
+              <span className="text-[#A92F46]">↗</span>
             </a>
 
           </div>

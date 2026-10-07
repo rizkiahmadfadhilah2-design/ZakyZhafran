@@ -3,8 +3,8 @@ import ScrollReveal from "../ui/ScrollReveal";
 const items = [
   {
     title: {
-      en: "Corporate Governance & Compliance Expertise",
-      id: "Keahlian Tata Kelola & Kepatuhan Korporasi",
+      en: "CORPORATE GOVERNANCE & COMPLIANCE EXPERTISE",
+      id: "KEAHLIAN TATA KELOLA & KEPATUHAN KORPORASI",
     },
     desc: {
       en: "Providing structured legal advisory aligned with corporate governance standards, regulatory compliance, and risk management frameworks.",
@@ -13,8 +13,8 @@ const items = [
   },
   {
     title: {
-      en: "Responsive Strategic Advisory",
-      id: "Konsultasi Strategis yang Responsif",
+      en: "RESPONSIVE STRATEGIC ADVISORY",
+      id: "KONSULTASI STRATEGIS YANG RESPONSIF",
     },
     desc: {
       en: "Delivering timely legal insights to support critical business decisions in dynamic commercial environments.",
@@ -23,8 +23,8 @@ const items = [
   },
   {
     title: {
-      en: "Internationally Aligned Legal Standards",
-      id: "Standar Hukum Berorientasi Internasional",
+      en: "INTERNATIONALLY ALIGNED LEGAL STANDARDS",
+      id: "STANDAR HUKUM BERORIENTASI INTERNASIONAL",
     },
     desc: {
       en: "Practicing legal methodologies consistent with global standards and cross-border regulatory expectations.",
@@ -33,8 +33,8 @@ const items = [
   },
   {
     title: {
-      en: "Long-Term Advisory Partnership",
-      id: "Kemitraan Konsultasi Jangka Panjang",
+      en: "LONG-TERM ADVISORY PARTNERSHIP",
+      id: "KEMITRAAN KONSULTASI JANGKA PANJANG",
     },
     desc: {
       en: "Acting as a strategic legal partner for sustainable growth of startups, SMEs, and enterprise organizations.",
@@ -45,10 +45,10 @@ const items = [
 
 export default function WhyChoose({ lang }) {
   return (
-    <section className="relative overflow-hidden bg-white py-24 md:py-32">
+    <section className="relative overflow-hidden bg-[#F8F6EF] py-24 md:py-32">
 
       {/* =========================================================
-          BACKGROUND
+          BACKGROUND ACCENTS
       ========================================================= */}
 
       <div
@@ -56,11 +56,11 @@ export default function WhyChoose({ lang }) {
           pointer-events-none
           absolute
           -right-40
-          top-20
+          top-10
           h-[420px]
           w-[420px]
           rounded-full
-          bg-blue-500/[0.025]
+          bg-[#C45A70]/[0.035]
           blur-[120px]
         "
       />
@@ -74,8 +74,37 @@ export default function WhyChoose({ lang }) {
           h-[400px]
           w-[400px]
           rounded-full
-          bg-slate-900/[0.02]
+          bg-[#0B4F32]/[0.035]
           blur-[120px]
+        "
+      />
+
+      {/* Decorative circles */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          right-[-120px]
+          top-32
+          h-[360px]
+          w-[360px]
+          rounded-full
+          border
+          border-[#0B4F32]/[0.04]
+        "
+      />
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          right-[-70px]
+          top-44
+          h-[260px]
+          w-[260px]
+          rounded-full
+          border
+          border-[#A92F46]/[0.04]
         "
       />
 
@@ -86,14 +115,13 @@ export default function WhyChoose({ lang }) {
         ======================================================= */}
 
         <ScrollReveal>
-
           <div className="mb-16 max-w-4xl md:mb-20">
 
             {/* Eyebrow */}
 
             <div className="flex items-center gap-3">
 
-              <span className="h-px w-8 bg-blue-500" />
+              <span className="h-px w-8 bg-[#A92F46]" />
 
               <p
                 className="
@@ -101,7 +129,7 @@ export default function WhyChoose({ lang }) {
                   font-semibold
                   uppercase
                   tracking-[0.32em]
-                  text-blue-600
+                  text-[#A92F46]
                 "
               >
                 {lang === "en"
@@ -119,21 +147,22 @@ export default function WhyChoose({ lang }) {
                 max-w-3xl
                 text-3xl
                 font-light
+                uppercase
                 leading-[1.08]
                 tracking-[-0.04em]
-                text-[#0B1220]
+                text-[#0B4F32]
                 sm:text-4xl
                 md:text-5xl
               "
             >
               {lang === "en"
-                ? "Why clients trust our firm."
-                : "Mengapa klien mempercayai firma kami."}
+                ? "WHY CLIENTS TRUST OUR FIRM."
+                : "MENGAPA KLIEN MEMERCAYAI FIRMA KAMI."}
             </h2>
 
             {/* Divider */}
 
-            <div className="mt-7 h-px w-16 bg-[#0B1220]/15" />
+            <div className="mt-7 h-px w-16 bg-[#A92F46]" />
 
             {/* Description */}
 
@@ -143,7 +172,7 @@ export default function WhyChoose({ lang }) {
                 max-w-2xl
                 text-sm
                 leading-7
-                text-gray-500
+                text-[#68736D]
                 md:text-base
                 md:leading-8
               "
@@ -154,7 +183,6 @@ export default function WhyChoose({ lang }) {
             </p>
 
           </div>
-
         </ScrollReveal>
 
         {/* =======================================================
@@ -173,14 +201,17 @@ export default function WhyChoose({ lang }) {
               className="
                 relative
                 overflow-hidden
-                bg-[#0B1220]
+                bg-gradient-to-br
+                from-[#155D40]
+                via-[#0B4F32]
+                to-[#073923]
                 p-7
                 md:p-9
                 lg:p-10
               "
             >
 
-              {/* Glow */}
+              {/* Pink Glow */}
 
               <div
                 className="
@@ -191,12 +222,42 @@ export default function WhyChoose({ lang }) {
                   h-72
                   w-72
                   rounded-full
-                  bg-blue-500/10
+                  bg-[#C45A70]/10
                   blur-[90px]
                 "
               />
 
-              {/* Decorative number */}
+              {/* Botanical decorative circles */}
+
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  -right-16
+                  top-16
+                  h-52
+                  w-52
+                  rounded-full
+                  border
+                  border-white/[0.05]
+                "
+              />
+
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  -right-5
+                  top-28
+                  h-32
+                  w-32
+                  rounded-full
+                  border
+                  border-[#E1A7B1]/[0.06]
+                "
+              />
+
+              {/* Decorative Number */}
 
               <span
                 className="
@@ -224,7 +285,7 @@ export default function WhyChoose({ lang }) {
                     font-semibold
                     uppercase
                     tracking-[0.3em]
-                    text-blue-300
+                    text-[#E1A7B1]
                   "
                 >
                   {lang === "en"
@@ -232,7 +293,7 @@ export default function WhyChoose({ lang }) {
                     : "KOMITMEN KAMI"}
                 </p>
 
-                {/* Main statement */}
+                {/* Main Statement */}
 
                 <h3
                   className="
@@ -240,6 +301,7 @@ export default function WhyChoose({ lang }) {
                     max-w-md
                     text-2xl
                     font-light
+                    uppercase
                     leading-tight
                     tracking-[-0.035em]
                     text-white
@@ -247,13 +309,13 @@ export default function WhyChoose({ lang }) {
                   "
                 >
                   {lang === "en"
-                    ? "Legal clarity for decisions that matter."
-                    : "Kejelasan hukum untuk keputusan yang penting."}
+                    ? "LEGAL CLARITY FOR DECISIONS THAT MATTER."
+                    : "KEJELASAN HUKUM UNTUK KEPUTUSAN YANG PENTING."}
                 </h3>
 
                 {/* Accent */}
 
-                <div className="mt-7 h-px w-12 bg-blue-400" />
+                <div className="mt-7 h-px w-12 bg-[#D37A8A]" />
 
                 {/* Description */}
 
@@ -262,7 +324,7 @@ export default function WhyChoose({ lang }) {
                     mt-6
                     text-sm
                     leading-7
-                    text-white/45
+                    text-white/55
                     md:leading-8
                   "
                 >
@@ -323,13 +385,13 @@ export default function WhyChoose({ lang }) {
                     group
                     relative
                     border-t
-                    border-gray-200
+                    border-[#D9D7CF]
                     py-7
                     md:py-8
                   "
                 >
 
-                  {/* Hover accent */}
+                  {/* Hover Accent */}
 
                   <div
                     className="
@@ -338,7 +400,7 @@ export default function WhyChoose({ lang }) {
                       top-0
                       h-px
                       w-0
-                      bg-blue-500
+                      bg-[#A92F46]
                       transition-all
                       duration-500
                       group-hover:w-full
@@ -363,10 +425,10 @@ export default function WhyChoose({ lang }) {
                           text-[10px]
                           font-semibold
                           tracking-[0.22em]
-                          text-gray-300
+                          text-[#B8B5AC]
                           transition-colors
                           duration-300
-                          group-hover:text-blue-500
+                          group-hover:text-[#A92F46]
                         "
                       >
                         {String(i + 1).padStart(2, "0")}
@@ -383,19 +445,30 @@ export default function WhyChoose({ lang }) {
                           max-w-xl
                           text-lg
                           font-medium
+                          uppercase
                           leading-snug
                           tracking-[-0.015em]
-                          text-[#0B1220]
+                          text-[#0B4F32]
                           transition-colors
                           duration-300
-                          group-hover:text-blue-700
+                          group-hover:text-[#A92F46]
                           md:text-xl
                         "
                       >
                         {item.title[lang]}
                       </h3>
 
-                      <div className="mt-4 h-px w-8 bg-blue-500 transition-all duration-300 group-hover:w-12" />
+                      <div
+                        className="
+                          mt-4
+                          h-px
+                          w-8
+                          bg-[#A92F46]
+                          transition-all
+                          duration-300
+                          group-hover:w-12
+                        "
+                      />
 
                       <p
                         className="
@@ -403,7 +476,7 @@ export default function WhyChoose({ lang }) {
                           max-w-2xl
                           text-sm
                           leading-7
-                          text-gray-500
+                          text-[#68736D]
                           md:leading-8
                         "
                       >
@@ -420,9 +493,9 @@ export default function WhyChoose({ lang }) {
 
             ))}
 
-            {/* Final border */}
+            {/* Final Border */}
 
-            <div className="border-t border-gray-200" />
+            <div className="border-t border-[#D9D7CF]" />
 
           </div>
 
@@ -441,7 +514,7 @@ export default function WhyChoose({ lang }) {
               flex-col
               gap-5
               border-t
-              border-gray-200
+              border-[#D9D7CF]
               pt-7
               md:flex-row
               md:items-center
@@ -454,7 +527,7 @@ export default function WhyChoose({ lang }) {
                 max-w-2xl
                 text-xs
                 leading-6
-                text-gray-400
+                text-[#8A8F8A]
               "
             >
               {lang === "en"
@@ -464,7 +537,7 @@ export default function WhyChoose({ lang }) {
 
             <div className="flex items-center gap-3">
 
-              <span className="h-px w-8 bg-blue-500" />
+              <span className="h-px w-8 bg-[#A92F46]" />
 
               <span
                 className="
@@ -472,10 +545,10 @@ export default function WhyChoose({ lang }) {
                   font-semibold
                   uppercase
                   tracking-[0.25em]
-                  text-gray-400
+                  text-[#AAA79E]
                 "
               >
-                Zaky Zhafran & Partners
+                ZAKY ZHAFRAN & PARTNERS
               </span>
 
             </div>

@@ -4,59 +4,61 @@ export default function TrustStrip({ lang }) {
   const legalServices = [
     {
       title: {
-        en: "Corporate & Litigation",
-        id: "Korporasi & Litigasi",
+        en: "CORPORATE & LITIGATION",
+        id: "KORPORASI & LITIGASI",
       },
       items: {
         en: [
-          "Litigation Field",
-          "Corporate Sector",
-          "Banking Sector",
-          "Bankruptcy Field",
+          "LITIGATION FIELD",
+          "CORPORATE SECTOR",
+          "BANKING SECTOR",
+          "BANKRUPTCY FIELD",
         ],
         id: [
-          "Bidang Litigasi",
-          "Sektor Korporasi",
-          "Sektor Perbankan",
-          "Kepailitan",
+          "BIDANG LITIGASI",
+          "SEKTOR KORPORASI",
+          "SEKTOR PERBANKAN",
+          "KEPAILITAN",
         ],
       },
     },
+
     {
       title: {
-        en: "Advisory & Compliance",
-        id: "Konsultasi & Kepatuhan",
+        en: "ADVISORY & COMPLIANCE",
+        id: "KONSULTASI & KEPATUHAN",
       },
       items: {
         en: [
-          "Investment Sector",
-          "Labor Sector",
-          "Property & Infrastructure",
-          "Tax Legal Advisory",
+          "INVESTMENT SECTOR",
+          "LABOR SECTOR",
+          "PROPERTY & INFRASTRUCTURE",
+          "TAX LEGAL ADVISORY",
         ],
         id: [
-          "Sektor Investasi",
-          "Sektor Ketenagakerjaan",
-          "Properti & Infrastruktur",
-          "Konsultasi Pajak",
+          "SEKTOR INVESTASI",
+          "SEKTOR KETENAGAKERJAAN",
+          "PROPERTI & INFRASTRUKTUR",
+          "KONSULTASI HUKUM PAJAK",
         ],
       },
     },
+
     {
       title: {
-        en: "Specialized Practice",
-        id: "Praktik Khusus",
+        en: "SPECIALIZED PRACTICE",
+        id: "PRAKTIK KHUSUS",
       },
       items: {
         en: [
-          "Family & Private Law",
-          "Islamic Finance",
-          "Technology & Communications",
+          "FAMILY & PRIVATE LAW",
+          "ISLAMIC FINANCE",
+          "TECHNOLOGY & COMMUNICATIONS",
         ],
         id: [
-          "Hukum Keluarga & Privat",
-          "Keuangan Syariah",
-          "Teknologi & Komunikasi",
+          "HUKUM KELUARGA & PRIVAT",
+          "KEUANGAN SYARIAH",
+          "TEKNOLOGI & KOMUNIKASI",
         ],
       },
     },
@@ -65,57 +67,59 @@ export default function TrustStrip({ lang }) {
   const taxServices = [
     {
       title: {
-        en: "Tax Compliance",
-        id: "Kepatuhan Pajak",
+        en: "TAX COMPLIANCE",
+        id: "KEPATUHAN PAJAK",
       },
       items: {
         en: [
-          "Tax Consultation",
-          "Annual Tax Reporting",
-          "Monthly Tax Reporting",
-          "Tax Compliance Review",
+          "TAX CONSULTATION",
+          "ANNUAL TAX REPORTING",
+          "MONTHLY TAX REPORTING",
+          "TAX COMPLIANCE REVIEW",
         ],
         id: [
-          "Konsultasi Perpajakan",
-          "Pelaporan SPT Tahunan",
-          "SPT Masa",
-          "Review Kepatuhan Pajak",
+          "KONSULTASI PERPAJAKAN",
+          "PELAPORAN SPT TAHUNAN",
+          "SPT MASA",
+          "REVIEW KEPATUHAN PAJAK",
         ],
       },
     },
+
     {
       title: {
-        en: "Tax Handling",
-        id: "Penanganan Pajak",
+        en: "TAX HANDLING",
+        id: "PENANGANAN PAJAK",
       },
       items: {
         en: [
-          "Tax Audit",
-          "Tax Dispute",
-          "Tax Audit Support",
+          "TAX AUDIT",
+          "TAX DISPUTE",
+          "TAX AUDIT SUPPORT",
         ],
         id: [
-          "Pemeriksaan Pajak",
-          "Sengketa Pajak",
-          "Pendampingan Pemeriksaan",
+          "PEMERIKSAAN PAJAK",
+          "SENGKETA PAJAK",
+          "PENDAMPINGAN PEMERIKSAAN PAJAK",
         ],
       },
     },
+
     {
       title: {
-        en: "Tax Strategy",
-        id: "Strategi Pajak",
+        en: "TAX STRATEGY",
+        id: "STRATEGI PAJAK",
       },
       items: {
         en: [
-          "Tax Planning",
-          "Tax Compliance System",
-          "Tax Administration",
+          "TAX PLANNING",
+          "TAX COMPLIANCE SYSTEM",
+          "TAX ADMINISTRATION",
         ],
         id: [
-          "Perencanaan Pajak",
-          "Sistem Kepatuhan Pajak",
-          "Administrasi Pajak",
+          "PERENCANAAN PAJAK",
+          "SISTEM KEPATUHAN PAJAK",
+          "ADMINISTRASI PAJAK",
         ],
       },
     },
@@ -147,8 +151,7 @@ export default function TrustStrip({ lang }) {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#F6F7FB] py-24 md:py-32">
-
+    <section className="relative overflow-hidden bg-[#F8F6EF] py-24 md:py-32">
       {/* =========================================================
           BACKGROUND DECORATION
       ========================================================= */}
@@ -158,11 +161,11 @@ export default function TrustStrip({ lang }) {
           pointer-events-none
           absolute
           -left-40
-          top-20
+          top-16
           h-[420px]
           w-[420px]
           rounded-full
-          bg-blue-500/[0.035]
+          bg-[#C45A70]/[0.045]
           blur-[120px]
         "
       />
@@ -176,8 +179,24 @@ export default function TrustStrip({ lang }) {
           h-[500px]
           w-[500px]
           rounded-full
-          bg-slate-900/[0.035]
+          bg-[#0B4F32]/[0.045]
           blur-[130px]
+        "
+      />
+
+      {/* Decorative curved line */}
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          right-[-90px]
+          top-[180px]
+          h-[320px]
+          w-[320px]
+          rounded-full
+          border
+          border-[#A92F46]/[0.08]
         "
       />
 
@@ -186,17 +205,15 @@ export default function TrustStrip({ lang }) {
       ========================================================= */}
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10">
-
         {/* =======================================================
             HEADER
         ======================================================= */}
 
         <div className="max-w-3xl">
-
           {/* LABEL */}
-          <div className="flex items-center gap-3">
 
-            <span className="h-px w-8 bg-blue-500" />
+          <div className="flex items-center gap-3">
+            <span className="h-px w-8 bg-[#A92F46]" />
 
             <p
               className="
@@ -204,26 +221,27 @@ export default function TrustStrip({ lang }) {
                 font-semibold
                 uppercase
                 tracking-[0.32em]
-                text-blue-600
+                text-[#A92F46]
               "
             >
               {lang === "en"
                 ? "01 / TRUSTED CAPABILITIES"
                 : "01 / KAPABILITAS TERPERCAYA"}
             </p>
-
           </div>
 
           {/* TITLE */}
+
           <h2
             className="
               mt-6
-              max-w-2xl
+              max-w-3xl
               text-3xl
               font-light
-              leading-[1.1]
+              uppercase
+              leading-[1.08]
               tracking-[-0.04em]
-              text-[#0B1220]
+              text-[#16251F]
               sm:text-4xl
               md:text-5xl
             "
@@ -234,25 +252,16 @@ export default function TrustStrip({ lang }) {
           </h2>
 
           {/* LINE */}
-          <div className="mt-7 h-px w-16 bg-[#0B1220]/15" />
+
+          <div className="mt-7 h-px w-16 bg-[#16251F]/15" />
 
           {/* DESCRIPTION */}
-          <p
-            className="
-              mt-6
-              max-w-2xl
-              text-sm
-              leading-7
-              text-gray-500
-              md:text-base
-              md:leading-8
-            "
-          >
+
+          <p className="mt-6 max-w-2xl text-sm leading-7 text-[#16251F]/60 md:text-base md:leading-8">
             {lang === "en"
               ? "Our advisory capabilities are structured around two core pillars, combining comprehensive legal services with practical tax solutions for modern businesses."
               : "Kapabilitas kami dibangun di atas dua pilar utama, menggabungkan layanan hukum yang komprehensif dengan solusi perpajakan praktis untuk kebutuhan bisnis modern."}
           </p>
-
         </div>
 
         {/* =======================================================
@@ -260,7 +269,6 @@ export default function TrustStrip({ lang }) {
         ======================================================= */}
 
         <div className="mt-16 grid gap-5 lg:mt-20 lg:grid-cols-2 lg:gap-6">
-
           {/* =====================================================
               LEGAL PANEL
           ===================================================== */}
@@ -271,16 +279,16 @@ export default function TrustStrip({ lang }) {
               overflow-hidden
               rounded-2xl
               border
-              border-gray-200
+              border-[#16251F]/10
               bg-white
               p-7
-              shadow-[0_20px_70px_rgba(11,18,32,0.04)]
+              shadow-[0_20px_70px_rgba(22,37,31,0.05)]
               md:p-9
               lg:p-10
             "
           >
-
             {/* Decorative circle */}
+
             <div
               className="
                 pointer-events-none
@@ -291,24 +299,36 @@ export default function TrustStrip({ lang }) {
                 w-64
                 rounded-full
                 border
-                border-blue-500/[0.06]
+                border-[#A92F46]/[0.08]
+              "
+            />
+
+            <div
+              className="
+                pointer-events-none
+                absolute
+                -bottom-24
+                -left-24
+                h-52
+                w-52
+                rounded-full
+                border
+                border-[#0B4F32]/[0.06]
               "
             />
 
             {/* Header */}
+
             <div className="relative">
-
               <div className="flex items-start justify-between gap-6">
-
                 <div>
-
                   <p
                     className="
                       text-[9px]
                       font-semibold
                       uppercase
                       tracking-[0.3em]
-                      text-blue-600
+                      text-[#A92F46]
                     "
                   >
                     {lang === "en"
@@ -321,8 +341,9 @@ export default function TrustStrip({ lang }) {
                       mt-3
                       text-2xl
                       font-light
+                      uppercase
                       tracking-[-0.03em]
-                      text-[#0B1220]
+                      text-[#16251F]
                       md:text-3xl
                     "
                   >
@@ -330,7 +351,6 @@ export default function TrustStrip({ lang }) {
                       ? "LEGAL ADVISORY"
                       : "LAYANAN HUKUM"}
                   </h3>
-
                 </div>
 
                 <span
@@ -338,34 +358,26 @@ export default function TrustStrip({ lang }) {
                     text-4xl
                     font-light
                     tracking-[-0.05em]
-                    text-gray-200
+                    text-[#16251F]/10
                   "
                 >
                   01
                 </span>
-
               </div>
 
-              <p
-                className="
-                  mt-5
-                  max-w-lg
-                  text-sm
-                  leading-7
-                  text-gray-500
-                "
-              >
+              <p className="mt-5 max-w-lg text-sm leading-7 text-[#16251F]/60">
                 {lang === "en"
                   ? "Comprehensive legal support across corporate, litigation, regulatory, and specialized practice areas."
                   : "Dukungan hukum komprehensif dalam bidang korporasi, litigasi, regulasi, dan praktik hukum khusus."}
               </p>
-
             </div>
 
             {/* Divider */}
-            <div className="my-8 h-px bg-gray-100" />
+
+            <div className="my-8 h-px bg-[#16251F]/10" />
 
             {/* Legal groups */}
+
             <motion.div
               variants={container}
               initial="hidden"
@@ -376,17 +388,15 @@ export default function TrustStrip({ lang }) {
               }}
               className="space-y-8"
             >
-
               {legalServices.map((group, index) => (
                 <motion.div
                   key={index}
                   variants={item}
                   className="group relative"
                 >
-
                   {/* Group header */}
-                  <div className="flex items-center gap-3">
 
+                  <div className="flex items-center gap-3">
                     <span
                       className="
                         flex
@@ -396,13 +406,13 @@ export default function TrustStrip({ lang }) {
                         items-center
                         justify-center
                         rounded-full
-                        bg-[#0B1220]
+                        bg-[#0B4F32]
                         text-[9px]
                         font-semibold
                         text-white
                         transition
                         duration-300
-                        group-hover:bg-blue-600
+                        group-hover:bg-[#A92F46]
                       "
                     >
                       {String(index + 1).padStart(2, "0")}
@@ -412,18 +422,18 @@ export default function TrustStrip({ lang }) {
                       className="
                         text-sm
                         font-semibold
+                        uppercase
                         tracking-[-0.01em]
-                        text-[#0B1220]
+                        text-[#16251F]
                       "
                     >
                       {group.title[lang]}
                     </h4>
-
                   </div>
 
                   {/* Items */}
-                  <ul className="mt-4 space-y-2 pl-10">
 
+                  <ul className="mt-4 space-y-2 pl-10">
                     {group.items[lang].map((service, idx) => (
                       <li
                         key={idx}
@@ -434,52 +444,51 @@ export default function TrustStrip({ lang }) {
                           gap-3
                           text-xs
                           leading-6
-                          text-gray-500
+                          text-[#16251F]/55
                           transition
                           duration-300
-                          hover:text-[#0B1220]
+                          hover:text-[#16251F]
                         "
                       >
-
                         <span
                           className="
                             h-px
                             w-4
-                            bg-gray-300
+                            bg-[#16251F]/20
                             transition-all
                             duration-300
                             group-hover/item:w-6
-                            group-hover/item:bg-blue-500
+                            group-hover/item:bg-[#A92F46]
                           "
                         />
 
-                        <span>{service}</span>
-
+                        <span className="uppercase">
+                          {service}
+                        </span>
                       </li>
                     ))}
-
                   </ul>
-
                 </motion.div>
               ))}
-
             </motion.div>
 
             {/* Bottom accent */}
+
             <div
               className="
                 absolute
                 bottom-0
                 left-0
                 h-1
-                w-0
-                bg-blue-500
-                transition-all
+                w-full
+                origin-left
+                scale-x-0
+                bg-[#A92F46]
+                transition-transform
                 duration-500
-                hover:w-full
+                hover:scale-x-100
               "
             />
-
           </div>
 
           {/* =====================================================
@@ -493,16 +502,19 @@ export default function TrustStrip({ lang }) {
               rounded-2xl
               border
               border-white/10
-              bg-[#0B1220]
+              bg-gradient-to-br
+              from-[#155D40]
+              via-[#0B4F32]
+              to-[#073923]
               p-7
               text-white
-              shadow-[0_25px_80px_rgba(11,18,32,0.12)]
+              shadow-[0_25px_80px_rgba(7,57,35,0.18)]
               md:p-9
               lg:p-10
             "
           >
-
             {/* Glow */}
+
             <div
               className="
                 pointer-events-none
@@ -512,7 +524,7 @@ export default function TrustStrip({ lang }) {
                 h-72
                 w-72
                 rounded-full
-                bg-blue-500/10
+                bg-[#C45A70]/10
                 blur-[80px]
               "
             />
@@ -526,12 +538,13 @@ export default function TrustStrip({ lang }) {
                 h-72
                 w-72
                 rounded-full
-                bg-blue-400/[0.05]
+                bg-[#E1A7B1]/[0.06]
                 blur-[80px]
               "
             />
 
             {/* Decorative circle */}
+
             <div
               className="
                 pointer-events-none
@@ -542,24 +555,36 @@ export default function TrustStrip({ lang }) {
                 w-64
                 rounded-full
                 border
-                border-white/[0.04]
+                border-white/[0.07]
+              "
+            />
+
+            <div
+              className="
+                pointer-events-none
+                absolute
+                -bottom-20
+                right-10
+                h-32
+                w-32
+                rounded-full
+                border
+                border-[#E1A7B1]/[0.08]
               "
             />
 
             {/* Header */}
+
             <div className="relative">
-
               <div className="flex items-start justify-between gap-6">
-
                 <div>
-
                   <p
                     className="
                       text-[9px]
                       font-semibold
                       uppercase
                       tracking-[0.3em]
-                      text-blue-300
+                      text-[#E1A7B1]
                     "
                   >
                     {lang === "en"
@@ -572,6 +597,7 @@ export default function TrustStrip({ lang }) {
                       mt-3
                       text-2xl
                       font-light
+                      uppercase
                       tracking-[-0.03em]
                       text-white
                       md:text-3xl
@@ -581,7 +607,6 @@ export default function TrustStrip({ lang }) {
                       ? "TAX ADVISORY"
                       : "LAYANAN PAJAK"}
                   </h3>
-
                 </div>
 
                 <span
@@ -594,29 +619,21 @@ export default function TrustStrip({ lang }) {
                 >
                   02
                 </span>
-
               </div>
 
-              <p
-                className="
-                  mt-5
-                  max-w-lg
-                  text-sm
-                  leading-7
-                  text-white/45
-                "
-              >
+              <p className="mt-5 max-w-lg text-sm leading-7 text-white/55">
                 {lang === "en"
                   ? "Practical tax advisory covering compliance, audit handling, dispute resolution, and strategic tax planning."
                   : "Konsultasi pajak praktis yang mencakup kepatuhan, pemeriksaan, penyelesaian sengketa, dan perencanaan pajak strategis."}
               </p>
-
             </div>
 
             {/* Divider */}
+
             <div className="my-8 h-px bg-white/10" />
 
             {/* Tax groups */}
+
             <motion.div
               variants={container}
               initial="hidden"
@@ -627,17 +644,15 @@ export default function TrustStrip({ lang }) {
               }}
               className="space-y-8"
             >
-
               {taxServices.map((group, index) => (
                 <motion.div
                   key={index}
                   variants={item}
                   className="group relative"
                 >
-
                   {/* Group header */}
-                  <div className="flex items-center gap-3">
 
+                  <div className="flex items-center gap-3">
                     <span
                       className="
                         flex
@@ -652,11 +667,11 @@ export default function TrustStrip({ lang }) {
                         bg-white/[0.04]
                         text-[9px]
                         font-semibold
-                        text-blue-300
+                        text-[#E1A7B1]
                         transition
                         duration-300
-                        group-hover:border-blue-300/30
-                        group-hover:bg-blue-500/10
+                        group-hover:border-[#E1A7B1]/30
+                        group-hover:bg-[#A92F46]/20
                       "
                     >
                       {String(index + 1).padStart(2, "0")}
@@ -666,18 +681,18 @@ export default function TrustStrip({ lang }) {
                       className="
                         text-sm
                         font-semibold
+                        uppercase
                         tracking-[-0.01em]
                         text-white
                       "
                     >
                       {group.title[lang]}
                     </h4>
-
                   </div>
 
                   {/* Items */}
-                  <ul className="mt-4 space-y-2 pl-10">
 
+                  <ul className="mt-4 space-y-2 pl-10">
                     {group.items[lang].map((service, idx) => (
                       <li
                         key={idx}
@@ -688,13 +703,12 @@ export default function TrustStrip({ lang }) {
                           gap-3
                           text-xs
                           leading-6
-                          text-white/45
+                          text-white/50
                           transition
                           duration-300
                           hover:text-white
                         "
                       >
-
                         <span
                           className="
                             h-px
@@ -703,24 +717,20 @@ export default function TrustStrip({ lang }) {
                             transition-all
                             duration-300
                             group-hover/item:w-6
-                            group-hover/item:bg-blue-400
+                            group-hover/item:bg-[#541522]
                           "
                         />
 
-                        <span>{service}</span>
-
+                        <span className="uppercase">
+                          {service}
+                        </span>
                       </li>
                     ))}
-
                   </ul>
-
                 </motion.div>
               ))}
-
             </motion.div>
-
           </div>
-
         </div>
 
         {/* =======================================================
@@ -734,30 +744,30 @@ export default function TrustStrip({ lang }) {
             flex-col
             gap-5
             border-t
-            border-gray-200
+            border-[#16251F]/10
             pt-7
             md:flex-row
             md:items-center
             md:justify-between
           "
         >
-
           <p
             className="
               max-w-2xl
               text-xs
+              uppercase
               leading-6
-              text-gray-400
+              tracking-[0.02em]
+              text-[#16251F]/45
             "
           >
             {lang === "en"
-              ? "One advisory partner across legal complexity, regulatory requirements, and tax obligations."
-              : "Satu mitra penasihat untuk menghadapi kompleksitas hukum, kebutuhan regulasi, dan kewajiban perpajakan."}
+              ? "ONE ADVISORY PARTNER ACROSS LEGAL COMPLEXITY, REGULATORY REQUIREMENTS, AND TAX OBLIGATIONS."
+              : "SATU MITRA PENASIHAT UNTUK MENGHADAPI KOMPLEKSITAS HUKUM, KEBUTUHAN REGULASI, DAN KEWAJIBAN PERPAJAKAN."}
           </p>
 
           <div className="flex items-center gap-3">
-
-            <span className="h-px w-8 bg-blue-500" />
+            <span className="h-px w-8 bg-[#A92F46]" />
 
             <span
               className="
@@ -765,16 +775,13 @@ export default function TrustStrip({ lang }) {
                 font-semibold
                 uppercase
                 tracking-[0.25em]
-                text-gray-400
+                text-[#16251F]/45
               "
             >
-              Zaky Zhafran & Partners
+              ZAKY ZHAFRAN & PARTNERS
             </span>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );

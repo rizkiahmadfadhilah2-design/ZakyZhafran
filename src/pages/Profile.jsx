@@ -17,29 +17,44 @@ export default function ProfilePage() {
 
   const [lang, setLang] = useState("en");
 
+  // =========================================================
+  // LAWYERS DATA
+  // =========================================================
+
   const lawyers = [
     {
       id: "zaky",
-      name: "Zaky Zhafran King Mada, S.H., M.H.",
-      shortName: "Zaky Zhafran King Mada",
+
+      name: {
+        en: "Zaky Zhafran King Mada, S.H., M.H.",
+        id: "Zaky Zhafran King Mada, S.H., M.H.",
+      },
+
+      shortName: {
+        en: "Zaky Zhafran King Mada",
+        id: "Zaky Zhafran King Mada",
+      },
+
       role: {
         en: "Managing Partner",
         id: "Managing Partner",
       },
+
       image: fotozk,
 
       email: "kingmada@zakyzhafran.com",
 
       linkedin:
-        "https://id.linkedin.com/in/zaky-zhafran-king-mada-s-h-m-h-925713135/in",
+        "https://www.linkedin.com/in/zaky-zhafran-king-mada-s-h-m-h-925713135?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
 
       whatsapp: "6282242887887",
 
       education: {
         en: [
-          "Bachelor of Law — Universitas Islam Indonesia (UII)",
-          "Master of Law — Universitas Indonesia (UI)",
+          "Bachelor of Laws — Islamic University of Indonesia (UII)",
+          "Master of Laws — University of Indonesia (UI)",
         ],
+
         id: [
           "Sarjana Hukum — Universitas Islam Indonesia (UII)",
           "Magister Hukum — Universitas Indonesia (UI)",
@@ -53,6 +68,7 @@ export default function ProfilePage() {
           "Legal Strategy",
           "Regulatory Compliance",
         ],
+
         id: [
           "Hukum Korporasi",
           "Litigasi",
@@ -88,26 +104,32 @@ export default function ProfilePage() {
 
     {
       id: "dimas",
-      name: "Dimas Nugraha Riyadi, S.H., M.H.",
-      shortName: "Dimas Nugraha Riyadi",
+
+      name: {
+        en: "Dimas Nugraha Riyadi, S.H., M.H.",
+        id: "Dimas Nugraha Riyadi, S.H., M.H.",
+      },
+
+      shortName: {
+        en: "Dimas Nugraha Riyadi",
+        id: "Dimas Nugraha Riyadi",
+      },
+
       role: {
         en: "Partner",
         id: "Partner",
       },
+
       image: fotodnr,
-
-      email: "kingmada@zakyzhafran.com",
-
-      linkedin:
-        "https://id.linkedin.com/in/zaky-zhafran-king-mada-s-h-m-h-925713135/in",
 
       whatsapp: "6282242887887",
 
       education: {
         en: [
-          "Bachelor of Law — Universitas Islam Indonesia (UII)",
-          "Master of Law — Universitas Indonesia (UI)",
+          "Bachelor of Laws — Islamic University of Indonesia (UII)",
+          "Master of Laws — University of Indonesia (UI)",
         ],
+
         id: [
           "Sarjana Hukum — Universitas Islam Indonesia (UII)",
           "Magister Hukum — Universitas Indonesia (UI)",
@@ -121,6 +143,7 @@ export default function ProfilePage() {
           "Commercial Law",
           "Regulatory Compliance",
         ],
+
         id: [
           "Hukum Korporasi",
           "Perbankan & Keuangan",
@@ -156,29 +179,35 @@ export default function ProfilePage() {
 
     {
       id: "dini",
-      name: "Dini Inasyah Alfaridah, S.H., M.H.",
-      shortName: "Dini Inasyah Alfaridah",
+
+      name: {
+        en: "Dini Inasyah Alfaridah, S.H., M.H.",
+        id: "Dini Inasyah Alfaridah, S.H., M.H.",
+      },
+
+      shortName: {
+        en: "Dini Inasyah Alfaridah",
+        id: "Dini Inasyah Alfaridah",
+      },
+
       role: {
         en: "Partner",
         id: "Partner",
       },
+
       image: fotodi,
-
-      email: "kingmada@zakyzhafran.com",
-
-      linkedin:
-        "https://id.linkedin.com/in/zaky-zhafran-king-mada-s-h-m-h-925713135/in",
 
       whatsapp: "6282242887887",
 
       education: {
         en: [
-          "Bachelor of Law — UIN Sunan Gunung Djati",
-          "Master of Law — UIN",
+          "Bachelor of Laws — UIN Sunan Gunung Djati",
+          "Master of Laws — UIN Sunan Gunung Djati",
         ],
+
         id: [
           "Sarjana Hukum — UIN Sunan Gunung Djati",
-          "Magister Hukum — UIN",
+          "Magister Hukum — UIN Sunan Gunung Djati",
         ],
       },
 
@@ -190,6 +219,7 @@ export default function ProfilePage() {
           "Sharia Contracts",
           "Administrative Law",
         ],
+
         id: [
           "Hukum Perdata",
           "Kepatuhan Regulasi",
@@ -226,26 +256,32 @@ export default function ProfilePage() {
 
     {
       id: "dina",
-      name: "Dina Aisyah Alfarijah, S.H., M.Kn.",
-      shortName: "Dina Aisyah Alfarijah",
+
+      name: {
+        en: "Dina Aisyah Alfarijah, S.H., M.Kn.",
+        id: "Dina Aisyah Alfarijah, S.H., M.Kn.",
+      },
+
+      shortName: {
+        en: "Dina Aisyah Alfarijah",
+        id: "Dina Aisyah Alfarijah",
+      },
+
       role: {
         en: "Partner",
         id: "Partner",
       },
+
       image: fotoda,
-
-      email: "kingmada@zakyzhafran.com",
-
-      linkedin:
-        "https://id.linkedin.com/in/zaky-zhafran-king-mada-s-h-m-h-925713135/in",
 
       whatsapp: "6282242887887",
 
       education: {
         en: [
-          "Bachelor of Law — Universitas Padjadjaran (UNPAD)",
-          "Master of Notarial Law — Universitas YARSI",
+          "Bachelor of Laws — Padjadjaran University (UNPAD)",
+          "Master of Notarial Law — YARSI University",
         ],
+
         id: [
           "Sarjana Hukum — Universitas Padjadjaran (UNPAD)",
           "Magister Kenotariatan — Universitas YARSI",
@@ -260,6 +296,7 @@ export default function ProfilePage() {
           "Due Diligence",
           "Licensing",
         ],
+
         id: [
           "Hukum Properti",
           "Hukum Pertanahan",
@@ -296,26 +333,32 @@ export default function ProfilePage() {
 
     {
       id: "tsabbit",
-      name: "Tsabbit Aqdamana, S.H., M.H.",
-      shortName: "Tsabbit Aqdamana",
+
+      name: {
+        en: "Tsabbit Aqdamana, S.H., M.H.",
+        id: "Tsabbit Aqdamana, S.H., M.H.",
+      },
+
+      shortName: {
+        en: "Tsabbit Aqdamana",
+        id: "Tsabbit Aqdamana",
+      },
+
       role: {
         en: "Partner",
         id: "Partner",
       },
+
       image: fotota,
-
-      email: "kingmada@zakyzhafran.com",
-
-      linkedin:
-        "https://id.linkedin.com/in/zaky-zhafran-king-mada-s-h-m-h-925713135/in",
 
       whatsapp: "6282242887887",
 
       education: {
         en: [
-          "Bachelor of Law — Universitas Islam Indonesia (UII)",
-          "Master of Law — Universitas Islam Indonesia (UII)",
+          "Bachelor of Laws — Islamic University of Indonesia (UII)",
+          "Master of Laws — Islamic University of Indonesia (UII)",
         ],
+
         id: [
           "Sarjana Hukum — Universitas Islam Indonesia (UII)",
           "Magister Hukum — Universitas Islam Indonesia (UII)",
@@ -327,14 +370,13 @@ export default function ProfilePage() {
           "Legal Drafting",
           "Startup Advisory",
           "Administrative Law",
-          "PTUN",
           "Constitutional Litigation",
         ],
+
         id: [
           "Legal Drafting",
           "Konsultasi Startup",
           "Hukum Administrasi",
-          "PTUN",
           "Litigasi Konstitusional",
         ],
       },
@@ -349,7 +391,7 @@ export default function ProfilePage() {
         en: [
           "His practice includes preparing and reviewing legal documents, advising startups and businesses, and assisting clients in navigating administrative and regulatory issues.",
 
-          "He also handles matters involving the State Administrative Court (PTUN) and constitutional litigation, requiring detailed legal argumentation and procedural analysis.",
+          "He also handles matters involving administrative proceedings and constitutional litigation, requiring detailed legal argumentation and procedural analysis.",
 
           "His approach focuses on precise legal drafting, structured argumentation, and strategic preparation for contentious matters.",
         ],
@@ -357,7 +399,7 @@ export default function ProfilePage() {
         id: [
           "Praktiknya mencakup penyusunan dan peninjauan dokumen hukum, konsultasi bagi startup dan perusahaan, serta pendampingan klien dalam menghadapi persoalan administratif dan regulasi.",
 
-          "Beliau juga menangani perkara yang berkaitan dengan Pengadilan Tata Usaha Negara (PTUN) dan litigasi konstitusional yang membutuhkan argumentasi hukum serta analisis prosedural secara mendalam.",
+          "Beliau juga menangani perkara yang berkaitan dengan proses administrasi dan litigasi konstitusional yang membutuhkan argumentasi hukum serta analisis prosedural secara mendalam.",
 
           "Pendekatannya berfokus pada ketepatan legal drafting, argumentasi yang terstruktur, serta persiapan strategis dalam menghadapi perkara yang bersifat contentious.",
         ],
@@ -366,25 +408,31 @@ export default function ProfilePage() {
 
     {
       id: "clarte",
-      name: "Clarte Gagah, S.H.",
-      shortName: "Clarte Gagah",
+
+      name: {
+        en: "Clarte Gagah, S.H.",
+        id: "Clarte Gagah, S.H.",
+      },
+
+      shortName: {
+        en: "Clarte Gagah",
+        id: "Clarte Gagah",
+      },
+
       role: {
         en: "Partner",
         id: "Partner",
       },
+
       image: fotocg,
-
-      email: "kingmada@zakyzhafran.com",
-
-      linkedin:
-        "https://id.linkedin.com/in/zaky-zhafran-king-mada-s-h-m-h-925713135/in",
 
       whatsapp: "6282242887887",
 
       education: {
         en: [
-          "Bachelor of Law — Universitas Islam Indonesia (UII)",
+          "Bachelor of Laws — Islamic University of Indonesia (UII)",
         ],
+
         id: [
           "Sarjana Hukum — Universitas Islam Indonesia (UII)",
         ],
@@ -397,6 +445,7 @@ export default function ProfilePage() {
           "Legal Advisory",
           "Legal Representation",
         ],
+
         id: [
           "Litigasi",
           "Penyelesaian Sengketa",
@@ -431,14 +480,9 @@ export default function ProfilePage() {
     },
   ];
 
-  const lawyer = useMemo(
-    () => lawyers.find((item) => item.id === id),
-    [id]
-  );
-
-  /* =========================================================
-      TRANSLATION
-  ========================================================== */
+  // =========================================================
+  // CONTENT
+  // =========================================================
 
   const content = {
     profileNotFound: {
@@ -458,7 +502,7 @@ export default function ProfilePage() {
 
     backToLawyers: {
       en: "Back to Lawyers",
-      id: "Kembali ke Lawyers",
+      id: "Kembali ke Pengacara",
     },
 
     lawyers: {
@@ -532,7 +576,7 @@ export default function ProfilePage() {
     },
 
     contactDescription: {
-      en: "For consultations and legal inquiries, contact our team through the available channels below.",
+      en: "For consultations and legal inquiries, contact our team through the available channel below.",
       id: "Untuk konsultasi dan kebutuhan hukum, hubungi tim kami melalui saluran yang tersedia di bawah.",
     },
 
@@ -589,24 +633,46 @@ export default function ProfilePage() {
 
   const t = (key) => content[key][lang];
 
-  /* =========================================================
-      NOT FOUND
-  ========================================================== */
+  const lawyer = useMemo(
+    () => lawyers.find((item) => item.id === id),
+    [id]
+  );
+
+  // =========================================================
+  // WHATSAPP
+  // =========================================================
+
+  const whatsappMessage = lawyer
+    ? lang === "en"
+      ? `Hello Zaky Zhafran And Partners, I would like to consult with ${lawyer.shortName.en}.`
+      : `Halo Zaky Zhafran And Partners, saya ingin berkonsultasi dengan ${lawyer.shortName.id}.`
+    : "";
+
+  const whatsappLink = lawyer
+    ? `https://wa.me/${
+        lawyer.whatsapp
+      }?text=${encodeURIComponent(whatsappMessage)}`
+    : "#";
+
+  // =========================================================
+  // PROFILE NOT FOUND
+  // =========================================================
 
   if (!lawyer) {
     return (
-      <div className="min-h-screen bg-[#0B1220] text-white">
+      <div className="min-h-screen bg-[#F8F6EF] text-[#16251F]">
         <Navbar />
 
-        {/* Language switcher */}
+        {/* LANGUAGE SWITCHER */}
+
         <div className="fixed right-5 top-20 z-[999]">
-          <div className="flex items-center rounded-full border border-white/10 bg-[#0B1220]/90 p-1 shadow-xl backdrop-blur-md">
+          <div className="flex items-center rounded-full border border-[#A92F46]/20 bg-[#F8F6EF]/95 p-1 shadow-lg backdrop-blur-md">
             <button
               onClick={() => setLang("en")}
               className={`rounded-full px-3 py-1.5 text-[11px] font-semibold tracking-[0.18em] transition ${
                 lang === "en"
-                  ? "bg-white text-[#0B1220]"
-                  : "text-white/60 hover:text-white"
+                  ? "bg-[#0B4F32] text-white"
+                  : "text-[#0B4F32]/50 hover:text-[#A92F46]"
               }`}
             >
               EN
@@ -616,8 +682,8 @@ export default function ProfilePage() {
               onClick={() => setLang("id")}
               className={`rounded-full px-3 py-1.5 text-[11px] font-semibold tracking-[0.18em] transition ${
                 lang === "id"
-                  ? "bg-white text-[#0B1220]"
-                  : "text-white/60 hover:text-white"
+                  ? "bg-[#0B4F32] text-white"
+                  : "text-[#0B4F32]/50 hover:text-[#A92F46]"
               }`}
             >
               ID
@@ -626,22 +692,28 @@ export default function ProfilePage() {
         </div>
 
         <section className="flex min-h-[80vh] items-center justify-center px-6">
-          <div className="text-center">
-            <p className="mb-4 text-[11px] font-semibold tracking-[0.3em] text-blue-300">
-              {t("profileNotFound")}
-            </p>
+          <div className="max-w-xl text-center">
+            <div className="mb-7 flex items-center justify-center gap-4">
+              <span className="h-px w-10 bg-[#A92F46]" />
 
-            <h1 className="text-4xl font-semibold tracking-tight md:text-6xl">
+              <p className="text-[11px] font-semibold tracking-[0.3em] text-[#A92F46]">
+                {t("profileNotFound")}
+              </p>
+
+              <span className="h-px w-10 bg-[#A92F46]" />
+            </div>
+
+            <h1 className="text-4xl font-semibold tracking-[-0.04em] text-[#0B4F32] md:text-6xl">
               {t("unavailable")}
             </h1>
 
-            <p className="mx-auto mt-6 max-w-lg leading-7 text-white/50">
+            <p className="mt-6 leading-8 text-[#16251F]/55">
               {t("unavailableDescription")}
             </p>
 
             <button
               onClick={() => navigate("/lawyers")}
-              className="mt-8 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#0B1220] transition hover:bg-blue-50"
+              className="mt-9 rounded-full bg-[#0B4F32] px-7 py-3.5 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#A92F46]"
             >
               {t("backToLawyers")}
             </button>
@@ -653,32 +725,26 @@ export default function ProfilePage() {
     );
   }
 
-  /* =========================================================
-      WHATSAPP
-  ========================================================== */
-
-  const whatsappMessage =
-    lang === "en"
-      ? `Hello Zaky Zhafran And Partners, I would like to consult with ${lawyer.shortName}.`
-      : `Halo Zaky Zhafran And Partners, saya ingin berkonsultasi dengan ${lawyer.shortName}.`;
-
-  const whatsappLink = `https://wa.me/${
-    lawyer.whatsapp
-  }?text=${encodeURIComponent(whatsappMessage)}`;
+  // =========================================================
+  // MAIN PAGE
+  // =========================================================
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
-      {/* =========================================================
+    <div className="min-h-screen overflow-hidden bg-[#F8F6EF] text-[#16251F]">
+      <Navbar />
+
+      {/* =====================================================
           LANGUAGE SWITCHER
-      ========================================================== */}
-      <div className="fixed right-5 top-20 z-[999]">
-        <div className="flex items-center rounded-full border border-white/10 bg-[#0B1220]/90 p-1 shadow-xl backdrop-blur-md">
+      ====================================================== */}
+
+      <div className="fixed right-5 top-[78px] z-[999]">
+        <div className="flex items-center rounded-full border border-[#A92F46]/20 bg-[#F8F6EF]/95 p-1 shadow-lg backdrop-blur-md">
           <button
             onClick={() => setLang("en")}
             className={`rounded-full px-3 py-1.5 text-[11px] font-semibold tracking-[0.18em] transition ${
               lang === "en"
-                ? "bg-white text-[#0B1220]"
-                : "text-white/60 hover:text-white"
+                ? "bg-[#0B4F32] text-white"
+                : "text-[#0B4F32]/50 hover:text-[#A92F46]"
             }`}
           >
             EN
@@ -688,8 +754,8 @@ export default function ProfilePage() {
             onClick={() => setLang("id")}
             className={`rounded-full px-3 py-1.5 text-[11px] font-semibold tracking-[0.18em] transition ${
               lang === "id"
-                ? "bg-white text-[#0B1220]"
-                : "text-white/60 hover:text-white"
+                ? "bg-[#0B4F32] text-white"
+                : "text-[#0B4F32]/50 hover:text-[#A92F46]"
             }`}
           >
             ID
@@ -697,23 +763,32 @@ export default function ProfilePage() {
         </div>
       </div>
 
-      <Navbar />
-
-      {/* =========================================================
+      {/* =====================================================
           HERO
-      ========================================================== */}
-      <section className="relative overflow-hidden bg-[#0B1220] text-white">
-        {/* Decorative glow */}
-        <div className="pointer-events-none absolute -left-48 top-20 h-[500px] w-[500px] rounded-full bg-blue-500/10 blur-3xl" />
+      ====================================================== */}
 
-        <div className="pointer-events-none absolute -right-48 bottom-0 h-[600px] w-[600px] rounded-full bg-blue-400/10 blur-3xl" />
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#155D40] via-[#0B4F32] to-[#073923] text-white">
+        {/* Decorative background */}
 
-        <div className="pointer-events-none absolute right-[12%] top-[24%] h-44 w-44 rounded-full border border-white/5" />
+        <div className="pointer-events-none absolute -left-48 top-20 h-[500px] w-[500px] rounded-full bg-[#A92F46]/10 blur-3xl" />
 
-        <div className="pointer-events-none absolute right-[15%] top-[29%] h-28 w-28 rounded-full border border-white/5" />
+        <div className="pointer-events-none absolute -right-48 bottom-0 h-[600px] w-[600px] rounded-full bg-[#D37A8A]/8 blur-3xl" />
 
-        <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-32 md:px-10 md:pb-28 md:pt-40 lg:px-12">
+        {/* Botanical Line */}
+
+        <div className="pointer-events-none absolute right-[5%] top-[16%] hidden h-[420px] w-[330px] lg:block">
+          <div className="absolute left-1/2 top-0 h-[390px] w-px rotate-[18deg] bg-gradient-to-b from-transparent via-[#D7A0AD]/30 to-transparent" />
+
+          <div className="absolute left-[7%] top-[22%] h-24 w-14 rotate-[-32deg] rounded-[100%_0_100%_0] border border-[#D7A0AD]/25" />
+
+          <div className="absolute right-[6%] top-[16%] h-28 w-16 rotate-[28deg] rounded-[100%_0_100%_0] border border-[#A92F46]/25" />
+
+          <div className="absolute left-[29%] top-[46%] h-28 w-16 rotate-[25deg] rounded-[100%_0_100%_0] border border-[#A92F46]/20" />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-6 pb-24 pt-36 md:px-10 md:pb-28 md:pt-44 lg:px-12">
           {/* Breadcrumb */}
+
           <div className="mb-10 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.22em]">
             <Link
               to="/lawyers"
@@ -724,26 +799,29 @@ export default function ProfilePage() {
 
             <span className="text-white/20">/</span>
 
-            <span className="text-blue-300">{lawyer.shortName}</span>
+            <span className="text-[#E1A7B1]">
+              {lawyer.shortName[lang]}
+            </span>
           </div>
 
-          <div className="grid items-end gap-14 lg:grid-cols-[1fr_420px]">
-            {/* Hero text */}
+          <div className="grid items-end gap-14 lg:grid-cols-[1fr_400px]">
+            {/* Hero Text */}
+
             <div>
               <div className="mb-7 flex items-center gap-4">
-                <span className="h-px w-10 bg-blue-400" />
+                <span className="h-px w-10 bg-[#D37A8A]" />
 
-                <p className="text-[11px] font-semibold tracking-[0.3em] text-blue-300">
+                <p className="text-[11px] font-semibold tracking-[0.3em] text-[#E1A7B1]">
                   {lawyer.role[lang]}
                 </p>
               </div>
 
               <h1 className="max-w-5xl text-5xl font-semibold leading-[0.95] tracking-[-0.055em] sm:text-6xl md:text-7xl lg:text-[78px]">
-                {lawyer.shortName}
+                {lawyer.shortName[lang]}
               </h1>
 
               <p className="mt-7 text-lg font-medium text-white/40 md:text-xl">
-                {lawyer.name}
+                {lawyer.name[lang]}
               </p>
 
               <p className="mt-8 max-w-2xl text-base leading-8 text-white/60 md:text-lg">
@@ -751,18 +829,19 @@ export default function ProfilePage() {
               </p>
             </div>
 
-            {/* Hero image */}
+            {/* Hero Image */}
+
             <div className="relative">
-              <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white/5">
+              <div className="relative overflow-hidden rounded-[26px] border border-white/10 bg-white/5">
                 <div className="aspect-[4/5]">
                   <img
                     src={lawyer.image}
-                    alt={lawyer.name}
+                    alt={lawyer.name[lang]}
                     className="h-full w-full object-cover object-top"
                   />
                 </div>
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220]/70 via-transparent to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#073923]/80 to-transparent" />
 
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="flex items-end justify-between gap-4">
@@ -776,7 +855,7 @@ export default function ProfilePage() {
                       </p>
                     </div>
 
-                    <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-lg backdrop-blur-md">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-lg backdrop-blur-md">
                       ↗
                     </span>
                   </div>
@@ -785,95 +864,102 @@ export default function ProfilePage() {
             </div>
           </div>
 
-          {/* Hero meta */}
-          <div className="mt-16 grid max-w-4xl grid-cols-1 border-t border-white/10 pt-8 sm:grid-cols-3">
-            <div className="border-b border-white/10 pb-6 sm:border-b-0 sm:border-r sm:pb-0">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/35">
-                {t("practice")}
-              </p>
+          {/* Hero Meta */}
 
-              <p className="mt-2 text-sm font-medium text-white">
-                {lawyer.focus[lang][0]}
-              </p>
-            </div>
+          <div className="mt-16 max-w-4xl border-t border-white/10 pt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3">
+              <div className="border-b border-white/10 pb-6 sm:border-b-0 sm:border-r sm:pb-0 sm:pr-8">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/35">
+                  {t("practice")}
+                </p>
 
-            <div className="border-b border-white/10 py-6 sm:border-b-0 sm:border-r sm:px-8 sm:py-0">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/35">
-                {t("position")}
-              </p>
+                <p className="mt-2 text-sm font-medium text-white">
+                  {lawyer.focus[lang][0]}
+                </p>
+              </div>
 
-              <p className="mt-2 text-sm font-medium text-white">
-                {lawyer.role[lang]}
-              </p>
-            </div>
+              <div className="border-b border-white/10 py-6 sm:border-b-0 sm:border-r sm:px-8 sm:py-0">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/35">
+                  {t("position")}
+                </p>
 
-            <div className="pt-6 sm:px-8 sm:pt-0">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/35">
-                {t("availability")}
-              </p>
+                <p className="mt-2 text-sm font-medium text-white">
+                  {lawyer.role[lang]}
+                </p>
+              </div>
 
-              <p className="mt-2 text-sm font-medium text-white">
-                {t("byAppointment")}
-              </p>
+              <div className="pt-6 sm:pl-8 sm:pt-0">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/35">
+                  {t("availability")}
+                </p>
+
+                <p className="mt-2 text-sm font-medium text-white">
+                  {t("byAppointment")}
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* =========================================================
+      {/* =====================================================
           PROFESSIONAL PROFILE
-      ========================================================== */}
-      <section className="bg-[#F6F7FB] py-24 md:py-32">
+      ====================================================== */}
+
+      <section className="bg-[#F8F6EF] py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
           <div className="grid gap-16 lg:grid-cols-[0.75fr_1.25fr] lg:gap-24">
             <div>
               <div className="mb-6 flex items-center gap-4">
-                <span className="h-px w-10 bg-[#0B1220]" />
+                <span className="h-px w-10 bg-[#A92F46]" />
 
-                <p className="text-[11px] font-semibold tracking-[0.3em] text-gray-500">
+                <p className="text-[11px] font-semibold tracking-[0.3em] text-[#A92F46]">
                   {t("professionalProfile")}
                 </p>
               </div>
 
-              <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] text-[#0B1220] md:text-5xl">
+              <h2 className="text-4xl font-semibold leading-[1.05] tracking-[-0.045em] text-[#0B4F32] md:text-5xl">
                 {t("professionalTitle")}
               </h2>
 
-              <p className="mt-6 text-base leading-8 text-gray-500">
+              <p className="mt-6 text-base leading-8 text-[#16251F]/55">
                 {t("professionalDescription")}
               </p>
             </div>
 
             <div className="space-y-7">
               {lawyer.detail[lang].map((paragraph, index) => (
-                <p
+                <div
                   key={index}
-                  className="text-base leading-8 text-gray-600 md:text-lg"
+                  className="border-b border-[#16251F]/10 pb-7 last:border-b-0"
                 >
-                  {paragraph}
-                </p>
+                  <p className="text-base leading-8 text-[#16251F]/65 md:text-lg">
+                    {paragraph}
+                  </p>
+                </div>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* =========================================================
-          PRACTICE AREAS
-      ========================================================== */}
+      {/* =====================================================
+          AREAS OF EXPERTISE
+      ====================================================== */}
+
       <section className="bg-white py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
           <div className="grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
             <div>
               <div className="mb-6 flex items-center gap-4">
-                <span className="h-px w-10 bg-blue-600" />
+                <span className="h-px w-10 bg-[#A92F46]" />
 
-                <p className="text-[11px] font-semibold tracking-[0.3em] text-blue-600">
+                <p className="text-[11px] font-semibold tracking-[0.3em] text-[#A92F46]">
                   {t("areasOfExpertise")}
                 </p>
               </div>
 
-              <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] text-[#0B1220] md:text-5xl">
+              <h2 className="text-4xl font-semibold leading-[1.05] tracking-[-0.045em] text-[#0B4F32] md:text-5xl">
                 {t("expertiseTitle")}
               </h2>
             </div>
@@ -882,19 +968,19 @@ export default function ProfilePage() {
               {lawyer.focus[lang].map((item, index) => (
                 <div
                   key={item}
-                  className="group rounded-2xl border border-gray-200 bg-[#F6F7FB] p-6 transition duration-300 hover:-translate-y-1 hover:border-gray-300 hover:bg-white hover:shadow-lg"
+                  className="group border border-[#16251F]/10 bg-[#F8F6EF] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#A92F46]/25 hover:bg-white hover:shadow-[0_18px_45px_rgba(11,79,50,0.08)]"
                 >
                   <div className="flex items-start justify-between gap-4">
-                    <span className="text-[10px] font-semibold tracking-[0.2em] text-gray-400">
+                    <span className="text-[10px] font-semibold tracking-[0.2em] text-[#16251F]/30">
                       {String(index + 1).padStart(2, "0")}
                     </span>
 
-                    <span className="text-gray-300 transition group-hover:text-blue-600">
+                    <span className="text-[#16251F]/20 transition group-hover:text-[#A92F46]">
                       ↗
                     </span>
                   </div>
 
-                  <h3 className="mt-10 text-lg font-semibold tracking-tight text-[#0B1220]">
+                  <h3 className="mt-10 text-lg font-semibold tracking-tight text-[#0B4F32]">
                     {item}
                   </h3>
                 </div>
@@ -904,37 +990,38 @@ export default function ProfilePage() {
         </div>
       </section>
 
-      {/* =========================================================
+      {/* =====================================================
           EDUCATION
-      ========================================================== */}
-      <section className="bg-[#F6F7FB] py-24 md:py-32">
+      ====================================================== */}
+
+      <section className="bg-[#F8F6EF] py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
           <div className="grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
             <div>
               <div className="mb-6 flex items-center gap-4">
-                <span className="h-px w-10 bg-[#0B1220]" />
+                <span className="h-px w-10 bg-[#0B4F32]" />
 
-                <p className="text-[11px] font-semibold tracking-[0.3em] text-gray-500">
+                <p className="text-[11px] font-semibold tracking-[0.3em] text-[#0B4F32]">
                   {t("education")}
                 </p>
               </div>
 
-              <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] text-[#0B1220] md:text-5xl">
+              <h2 className="text-4xl font-semibold leading-[1.05] tracking-[-0.045em] text-[#0B4F32] md:text-5xl">
                 {t("educationTitle")}
               </h2>
             </div>
 
-            <div className="space-y-4">
+            <div>
               {lawyer.education[lang].map((education, index) => (
                 <div
                   key={education}
-                  className="flex gap-6 border-b border-gray-200 py-6 first:border-t"
+                  className="flex gap-6 border-b border-[#16251F]/10 py-6 first:border-t"
                 >
-                  <span className="text-xs font-semibold text-gray-400">
+                  <span className="text-[10px] font-semibold tracking-[0.15em] text-[#A92F46]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
-                  <p className="text-base leading-7 text-gray-700">
+                  <p className="text-base leading-7 text-[#16251F]/65 md:text-lg">
                     {education}
                   </p>
                 </div>
@@ -944,87 +1031,117 @@ export default function ProfilePage() {
         </div>
       </section>
 
-      {/* =========================================================
-          CONTACT
-      ========================================================== */}
+      {/* =====================================================
+          DIRECT CONTACT
+      ====================================================== */}
+
       <section className="bg-white py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
           <div className="grid gap-10 lg:grid-cols-2">
-            {/* Contact details */}
+            {/* Contact Details */}
+
             <div>
               <div className="mb-6 flex items-center gap-4">
-                <span className="h-px w-10 bg-blue-600" />
+                <span className="h-px w-10 bg-[#A92F46]" />
 
-                <p className="text-[11px] font-semibold tracking-[0.3em] text-blue-600">
+                <p className="text-[11px] font-semibold tracking-[0.3em] text-[#A92F46]">
                   {t("directContact")}
                 </p>
               </div>
 
-              <h2 className="text-4xl font-semibold leading-tight tracking-[-0.04em] text-[#0B1220] md:text-5xl">
+              <h2 className="text-4xl font-semibold leading-[1.05] tracking-[-0.045em] text-[#0B4F32] md:text-5xl">
                 {t("contactTitle")}
               </h2>
 
-              <p className="mt-6 max-w-xl text-base leading-8 text-gray-500">
+              <p className="mt-6 max-w-xl text-base leading-8 text-[#16251F]/55">
                 {t("contactDescription")}
               </p>
 
-              <div className="mt-10 space-y-0">
-                {/* EMAIL */}
-                <a
-                  href={`mailto:${lawyer.email}`}
-                  className="group flex items-center justify-between border-t border-gray-200 py-6"
-                >
-                  <div>
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-400">
-                      {t("email")}
+              <div className="mt-10">
+                {/* =================================================
+                    EMAIL & LINKEDIN — ZAKY ONLY
+                ================================================= */}
+
+                {lawyer.id === "zaky" && (
+                  <>
+                    {/* EMAIL */}
+
+                    <a
+                      href={`mailto:${lawyer.email}`}
+                      className="group flex items-center justify-between border-t border-[#16251F]/10 py-6"
+                    >
+                      <div>
+                        <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#16251F]/35">
+                          {t("email")}
+                        </p>
+
+                        <p className="mt-2 text-sm font-medium text-[#0B4F32]">
+                          {lawyer.email}
+                        </p>
+                      </div>
+
+                      <span className="text-xl text-[#16251F]/25 transition group-hover:translate-x-1 group-hover:text-[#A92F46]">
+                        →
+                      </span>
+                    </a>
+
+                    {/* LINKEDIN */}
+
+                    <a
+                      href={lawyer.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center justify-between border-t border-[#16251F]/10 py-6"
+                    >
+                      <div>
+                        <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#16251F]/35">
+                          {t("linkedin")}
+                        </p>
+
+                        <p className="mt-2 text-sm font-medium text-[#0B4F32]">
+                          {t("professionalProfileLink")}
+                        </p>
+                      </div>
+
+                      <span className="text-xl text-[#16251F]/25 transition group-hover:translate-x-1 group-hover:text-[#A92F46]">
+                        ↗
+                      </span>
+                    </a>
+                  </>
+                )}
+
+                {/* =================================================
+                    OTHER LAWYERS
+                    Only WhatsApp consultation is available.
+                ================================================= */}
+
+                {lawyer.id !== "zaky" && (
+                  <div className="border-t border-[#16251F]/10 py-6">
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#16251F]/35">
+                      {t("whatsappConsultation")}
                     </p>
 
-                    <p className="mt-2 text-sm font-medium text-[#0B1220]">
-                      {lawyer.email}
+                    <p className="mt-2 text-sm font-medium text-[#0B4F32]">
+                      {t("startConversation")}
                     </p>
                   </div>
-
-                  <span className="text-xl text-gray-300 transition group-hover:translate-x-1 group-hover:text-blue-600">
-                    →
-                  </span>
-                </a>
-
-                {/* LINKEDIN */}
-                <a
-                  href={lawyer.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center justify-between border-t border-gray-200 py-6"
-                >
-                  <div>
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-400">
-                      {t("linkedin")}
-                    </p>
-
-                    <p className="mt-2 text-sm font-medium text-[#0B1220]">
-                      {t("professionalProfileLink")}
-                    </p>
-                  </div>
-
-                  <span className="text-xl text-gray-300 transition group-hover:translate-x-1 group-hover:text-blue-600">
-                    ↗
-                  </span>
-                </a>
+                )}
               </div>
             </div>
 
-            {/* WhatsApp card */}
-            <div className="relative overflow-hidden rounded-[30px] bg-[#0B1220] p-8 text-white md:p-12">
-              <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-blue-500/10 blur-3xl" />
+            {/* WhatsApp */}
 
-              <div className="pointer-events-none absolute bottom-0 left-0 h-40 w-40 rounded-full border border-white/5" />
+            <div className="relative overflow-hidden bg-gradient-to-br from-[#155D40] via-[#0B4F32] to-[#073923] p-8 text-white md:p-12">
+              <div className="pointer-events-none absolute -right-32 -top-32 h-72 w-72 rounded-full bg-[#A92F46]/10 blur-3xl" />
+
+              <div className="pointer-events-none absolute bottom-[-120px] left-[-100px] h-72 w-72 rounded-full border border-white/[0.05]" />
 
               <div className="relative">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-blue-300">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#E1A7B1]">
                   {t("whatsappConsultation")}
                 </p>
 
-                <h3 className="mt-6 text-3xl font-semibold leading-tight tracking-[-0.03em] md:text-4xl">
+                <h3 className="mt-6 text-3xl font-semibold leading-tight tracking-[-0.035em] md:text-4xl">
                   {t("startConversation")}
                 </h3>
 
@@ -1036,7 +1153,7 @@ export default function ProfilePage() {
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-10 inline-flex items-center gap-4 rounded-full bg-white px-7 py-4 text-sm font-semibold text-[#0B1220] transition duration-300 hover:-translate-y-1 hover:bg-blue-50"
+                  className="mt-10 inline-flex items-center gap-4 rounded-full bg-[#F8F6EF] px-7 py-4 text-sm font-semibold text-[#0B4F32] transition duration-300 hover:-translate-y-1 hover:bg-[#A92F46] hover:text-white"
                 >
                   {t("whatsappConsultation")}
 
@@ -1048,49 +1165,56 @@ export default function ProfilePage() {
         </div>
       </section>
 
-      {/* =========================================================
-          CTA + FOOTER
-      ========================================================== */}
-      <div className="bg-[#0B1220]">
-        <section className="relative overflow-hidden py-24 text-white md:py-32">
-          <div className="pointer-events-none absolute -left-40 top-0 h-[500px] w-[500px] rounded-full bg-blue-500/10 blur-3xl" />
+      {/* =====================================================
+          CTA
+      ====================================================== */}
 
-          <div className="pointer-events-none absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-blue-400/10 blur-3xl" />
+      <section className="relative overflow-hidden bg-[#073923] py-24 text-white md:py-32">
+        <div className="pointer-events-none absolute -left-40 top-0 h-[480px] w-[480px] rounded-full bg-[#A92F46]/10 blur-3xl" />
 
-          <div className="relative mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
-            <div className="grid items-end gap-12 lg:grid-cols-[1fr_auto]">
-              <div className="max-w-4xl">
-                <div className="mb-7 flex items-center gap-4">
-                  <span className="h-px w-10 bg-blue-400" />
+        <div className="pointer-events-none absolute -right-40 bottom-0 h-[480px] w-[480px] rounded-full bg-[#D37A8A]/8 blur-3xl" />
 
-                  <p className="text-[11px] font-semibold tracking-[0.3em] text-blue-300">
-                    {t("workWithFirm")}
-                  </p>
-                </div>
+        <div className="pointer-events-none absolute right-[8%] top-[20%] hidden h-[260px] w-px rotate-[28deg] bg-gradient-to-b from-transparent via-[#D7A0AD]/25 to-transparent lg:block" />
 
-                <h2 className="text-4xl font-semibold leading-[1.05] tracking-[-0.04em] md:text-5xl lg:text-6xl">
-                  {t("ctaTitle")}
-                </h2>
+        <div className="relative mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
+          <div className="grid items-end gap-12 lg:grid-cols-[1fr_auto]">
+            <div className="max-w-4xl">
+              <div className="mb-7 flex items-center gap-4">
+                <span className="h-px w-10 bg-[#D37A8A]" />
 
-                <p className="mt-7 max-w-2xl text-base leading-8 text-white/55 md:text-lg">
-                  {t("ctaDescription")}
+                <p className="text-[11px] font-semibold tracking-[0.3em] text-[#E1A7B1]">
+                  {t("workWithFirm")}
                 </p>
               </div>
 
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex w-fit items-center gap-4 rounded-full bg-white px-7 py-4 text-sm font-semibold text-[#0B1220] transition duration-300 hover:-translate-y-1 hover:bg-blue-50"
-              >
-                {t("startConsultation")}
+              <h2 className="text-4xl font-semibold leading-[1.05] tracking-[-0.045em] md:text-5xl lg:text-6xl">
+                {t("ctaTitle")}
+              </h2>
 
-                <span className="text-lg">↗</span>
-              </a>
+              <p className="mt-7 max-w-2xl text-base leading-8 text-white/55 md:text-lg">
+                {t("ctaDescription")}
+              </p>
             </div>
-          </div>
-        </section>
 
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-fit items-center gap-4 rounded-full bg-[#F8F6EF] px-7 py-4 text-sm font-semibold text-[#0B4F32] transition duration-300 hover:-translate-y-1 hover:bg-[#A92F46] hover:text-white"
+            >
+              {t("startConsultation")}
+
+              <span className="text-lg">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* =====================================================
+          FOOTER
+      ====================================================== */}
+
+      <div className="bg-[#073923]">
         <Footer />
       </div>
     </div>

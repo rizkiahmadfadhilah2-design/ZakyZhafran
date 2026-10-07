@@ -2,7 +2,7 @@ import ScrollReveal from "../ui/ScrollReveal";
 
 export default function About({ lang }) {
   return (
-    <section className="relative overflow-hidden bg-white py-24 md:py-32">
+    <section className="relative overflow-hidden bg-[#F8F6EF] py-24 md:py-32">
 
       {/* =========================================================
           SUBTLE BACKGROUND
@@ -17,7 +17,7 @@ export default function About({ lang }) {
           h-[420px]
           w-[420px]
           rounded-full
-          bg-blue-500/[0.035]
+          bg-[#C45A70]/[0.045]
           blur-[120px]
         "
       />
@@ -31,8 +31,24 @@ export default function About({ lang }) {
           h-[450px]
           w-[450px]
           rounded-full
-          bg-slate-900/[0.025]
+          bg-[#0B4F32]/[0.045]
           blur-[120px]
+        "
+      />
+
+      {/* Decorative circle */}
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          right-[-120px]
+          top-[180px]
+          h-[340px]
+          w-[340px]
+          rounded-full
+          border
+          border-[#A92F46]/[0.07]
         "
       />
 
@@ -47,12 +63,13 @@ export default function About({ lang }) {
         ======================================================= */}
 
         <ScrollReveal>
-
           <div className="mb-16 max-w-3xl md:mb-20">
+
+            {/* LABEL */}
 
             <div className="flex items-center gap-3">
 
-              <span className="h-px w-8 bg-blue-500" />
+              <span className="h-px w-8 bg-[#A92F46]" />
 
               <p
                 className="
@@ -60,7 +77,7 @@ export default function About({ lang }) {
                   font-semibold
                   uppercase
                   tracking-[0.32em]
-                  text-blue-600
+                  text-[#A92F46]
                 "
               >
                 {lang === "en"
@@ -70,15 +87,18 @@ export default function About({ lang }) {
 
             </div>
 
+            {/* TITLE */}
+
             <h2
               className="
                 mt-6
-                max-w-2xl
+                max-w-3xl
                 text-3xl
                 font-light
-                leading-[1.1]
+                uppercase
+                leading-[1.08]
                 tracking-[-0.04em]
-                text-[#0B1220]
+                text-[#16251F]
                 sm:text-4xl
                 md:text-5xl
               "
@@ -88,7 +108,9 @@ export default function About({ lang }) {
                 : "Wawasan hukum yang dibangun untuk kebutuhan bisnis Anda."}
             </h2>
 
-            <div className="mt-7 h-px w-16 bg-[#0B1220]/15" />
+            <div className="mt-7 h-px w-16 bg-[#16251F]/15" />
+
+            {/* DESCRIPTION */}
 
             <p
               className="
@@ -96,7 +118,7 @@ export default function About({ lang }) {
                 max-w-2xl
                 text-sm
                 leading-7
-                text-gray-500
+                text-[#16251F]/60
                 md:text-base
                 md:leading-8
               "
@@ -107,7 +129,6 @@ export default function About({ lang }) {
             </p>
 
           </div>
-
         </ScrollReveal>
 
         {/* =======================================================
@@ -133,7 +154,7 @@ export default function About({ lang }) {
                     text-[10px]
                     font-semibold
                     tracking-[0.25em]
-                    text-gray-300
+                    text-[#16251F]/20
                     sm:block
                   "
                 >
@@ -146,8 +167,9 @@ export default function About({ lang }) {
                     className="
                       text-2xl
                       font-light
+                      uppercase
                       tracking-[-0.025em]
-                      text-[#0B1220]
+                      text-[#16251F]
                       md:text-3xl
                     "
                   >
@@ -156,7 +178,7 @@ export default function About({ lang }) {
                       : "Tentang Firma Kami"}
                   </h3>
 
-                  <div className="mt-5 h-px w-12 bg-blue-500" />
+                  <div className="mt-5 h-px w-12 bg-[#A92F46]" />
 
                 </div>
 
@@ -164,7 +186,9 @@ export default function About({ lang }) {
 
             </ScrollReveal>
 
-            {/* PARAGRAPH 1 */}
+            {/* ===================================================
+                PARAGRAPH 1
+            =================================================== */}
 
             <ScrollReveal delay={0.1}>
 
@@ -174,7 +198,7 @@ export default function About({ lang }) {
                   max-w-2xl
                   text-sm
                   leading-7
-                  text-gray-600
+                  text-[#16251F]/65
                   md:text-base
                   md:leading-8
                 "
@@ -186,7 +210,9 @@ export default function About({ lang }) {
 
             </ScrollReveal>
 
-            {/* PARAGRAPH 2 */}
+            {/* ===================================================
+                PARAGRAPH 2
+            =================================================== */}
 
             <ScrollReveal delay={0.2}>
 
@@ -196,7 +222,7 @@ export default function About({ lang }) {
                   max-w-2xl
                   text-sm
                   leading-7
-                  text-gray-600
+                  text-[#16251F]/65
                   md:text-base
                   md:leading-8
                 "
@@ -220,21 +246,21 @@ export default function About({ lang }) {
                   grid
                   grid-cols-3
                   border-y
-                  border-gray-200
+                  border-[#16251F]/10
                   py-7
                 "
               >
 
                 {/* STAT 1 */}
 
-                <div className="border-r border-gray-200 pr-4">
+                <div className="border-r border-[#16251F]/10 pr-4">
 
                   <p
                     className="
                       text-2xl
                       font-light
                       tracking-[-0.04em]
-                      text-[#0B1220]
+                      text-[#0B4F32]
                       md:text-3xl
                     "
                   >
@@ -245,9 +271,10 @@ export default function About({ lang }) {
                     className="
                       mt-2
                       text-[10px]
+                      font-medium
                       uppercase
                       tracking-[0.16em]
-                      text-gray-400
+                      text-[#16251F]/40
                       md:text-xs
                     "
                   >
@@ -260,14 +287,14 @@ export default function About({ lang }) {
 
                 {/* STAT 2 */}
 
-                <div className="border-r border-gray-200 px-4">
+                <div className="border-r border-[#16251F]/10 px-4">
 
                   <p
                     className="
                       text-2xl
                       font-light
                       tracking-[-0.04em]
-                      text-[#0B1220]
+                      text-[#0B4F32]
                       md:text-3xl
                     "
                   >
@@ -278,9 +305,10 @@ export default function About({ lang }) {
                     className="
                       mt-2
                       text-[10px]
+                      font-medium
                       uppercase
                       tracking-[0.16em]
-                      text-gray-400
+                      text-[#16251F]/40
                       md:text-xs
                     "
                   >
@@ -300,7 +328,7 @@ export default function About({ lang }) {
                       text-2xl
                       font-light
                       tracking-[-0.04em]
-                      text-[#0B1220]
+                      text-[#A92F46]
                       md:text-3xl
                     "
                   >
@@ -311,9 +339,10 @@ export default function About({ lang }) {
                     className="
                       mt-2
                       text-[10px]
+                      font-medium
                       uppercase
                       tracking-[0.16em]
-                      text-gray-400
+                      text-[#16251F]/40
                       md:text-xs
                     "
                   >
@@ -349,8 +378,8 @@ export default function About({ lang }) {
                   h-full
                   w-px
                   bg-gradient-to-b
-                  from-blue-500
-                  via-gray-200
+                  from-[#A92F46]
+                  via-[#16251F]/10
                   to-transparent
                   lg:block
                 "
@@ -365,10 +394,13 @@ export default function About({ lang }) {
                   relative
                   overflow-hidden
                   rounded-2xl
-                  bg-[#0B1220]
+                  bg-gradient-to-br
+                  from-[#155D40]
+                  via-[#0B4F32]
+                  to-[#073923]
                   p-7
                   text-white
-                  shadow-[0_25px_80px_rgba(11,18,32,0.12)]
+                  shadow-[0_25px_80px_rgba(7,57,35,0.18)]
                   md:p-9
                   lg:p-10
                 "
@@ -385,7 +417,7 @@ export default function About({ lang }) {
                     h-72
                     w-72
                     rounded-full
-                    bg-blue-500/10
+                    bg-[#C45A70]/10
                     blur-[80px]
                   "
                 />
@@ -399,8 +431,38 @@ export default function About({ lang }) {
                     h-64
                     w-64
                     rounded-full
-                    bg-blue-400/[0.05]
+                    bg-[#E1A7B1]/[0.06]
                     blur-[80px]
+                  "
+                />
+
+                {/* Decorative circles */}
+
+                <div
+                  className="
+                    pointer-events-none
+                    absolute
+                    -right-20
+                    -top-20
+                    h-56
+                    w-56
+                    rounded-full
+                    border
+                    border-white/[0.07]
+                  "
+                />
+
+                <div
+                  className="
+                    pointer-events-none
+                    absolute
+                    bottom-[-70px]
+                    right-[-20px]
+                    h-40
+                    w-40
+                    rounded-full
+                    border
+                    border-[#E1A7B1]/[0.08]
                   "
                 />
 
@@ -432,7 +494,7 @@ export default function About({ lang }) {
                       font-semibold
                       uppercase
                       tracking-[0.3em]
-                      text-blue-300
+                      text-[#E1A7B1]
                     "
                   >
                     {lang === "en"
@@ -446,6 +508,7 @@ export default function About({ lang }) {
                       max-w-md
                       text-2xl
                       font-light
+                      uppercase
                       leading-tight
                       tracking-[-0.03em]
                       text-white
@@ -457,14 +520,14 @@ export default function About({ lang }) {
                       : "Keahlian yang Dapat Anda Percayai. Solusi yang Mendorong Bisnis Anda Maju."}
                   </h3>
 
-                  <div className="mt-6 h-px w-12 bg-blue-400" />
+                  <div className="mt-6 h-px w-12 bg-[#D37A8A]" />
 
                   <p
                     className="
                       mt-6
                       text-sm
                       leading-7
-                      text-white/50
+                      text-white/55
                       md:leading-8
                     "
                   >
@@ -501,10 +564,10 @@ export default function About({ lang }) {
                             border
                             border-white/10
                             text-[9px]
-                            text-blue-300
+                            text-[#E1A7B1]
                             transition
-                            group-hover:border-blue-300/30
-                            group-hover:bg-blue-500/10
+                            group-hover:border-[#E1A7B1]/40
+                            group-hover:bg-[#A92F46]/20
                           "
                         >
                           01
@@ -514,6 +577,7 @@ export default function About({ lang }) {
                           className="
                             text-xs
                             font-medium
+                            uppercase
                             text-white/80
                           "
                         >
@@ -544,10 +608,10 @@ export default function About({ lang }) {
                             border
                             border-white/10
                             text-[9px]
-                            text-blue-300
+                            text-[#E1A7B1]
                             transition
-                            group-hover:border-blue-300/30
-                            group-hover:bg-blue-500/10
+                            group-hover:border-[#E1A7B1]/40
+                            group-hover:bg-[#A92F46]/20
                           "
                         >
                           02
@@ -557,6 +621,7 @@ export default function About({ lang }) {
                           className="
                             text-xs
                             font-medium
+                            uppercase
                             text-white/80
                           "
                         >
@@ -587,10 +652,10 @@ export default function About({ lang }) {
                             border
                             border-white/10
                             text-[9px]
-                            text-blue-300
+                            text-[#E1A7B1]
                             transition
-                            group-hover:border-blue-300/30
-                            group-hover:bg-blue-500/10
+                            group-hover:border-[#E1A7B1]/40
+                            group-hover:bg-[#A92F46]/20
                           "
                         >
                           03
@@ -600,6 +665,7 @@ export default function About({ lang }) {
                           className="
                             text-xs
                             font-medium
+                            uppercase
                             text-white/80
                           "
                         >
@@ -637,7 +703,7 @@ export default function About({ lang }) {
               flex-col
               gap-5
               border-t
-              border-gray-200
+              border-[#16251F]/10
               pt-7
               md:flex-row
               md:items-center
@@ -650,7 +716,7 @@ export default function About({ lang }) {
                 max-w-2xl
                 text-xs
                 leading-6
-                text-gray-400
+                text-[#16251F]/45
               "
             >
               {lang === "en"
@@ -660,7 +726,7 @@ export default function About({ lang }) {
 
             <div className="flex items-center gap-3">
 
-              <span className="h-px w-8 bg-blue-500" />
+              <span className="h-px w-8 bg-[#A92F46]" />
 
               <span
                 className="
@@ -668,10 +734,10 @@ export default function About({ lang }) {
                   font-semibold
                   uppercase
                   tracking-[0.25em]
-                  text-gray-400
+                  text-[#16251F]/45
                 "
               >
-                Zaky Zhafran & Partners
+                ZAKY ZHAFRAN & PARTNERS
               </span>
 
             </div>

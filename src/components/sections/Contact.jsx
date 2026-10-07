@@ -46,7 +46,7 @@ ${form.message}
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-white py-24 md:py-32"
+      className="relative overflow-hidden bg-[#F8F6EF] py-24 md:py-32"
     >
       {/* =========================================================
           BACKGROUND
@@ -61,7 +61,7 @@ ${form.message}
           h-[420px]
           w-[420px]
           rounded-full
-          bg-blue-500/[0.025]
+          bg-[#C45A70]/[0.035]
           blur-[120px]
         "
       />
@@ -75,8 +75,38 @@ ${form.message}
           h-[420px]
           w-[420px]
           rounded-full
-          bg-slate-900/[0.02]
+          bg-[#0B4F32]/[0.035]
           blur-[120px]
+        "
+      />
+
+      {/* Decorative circles */}
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          -right-20
+          top-24
+          h-[360px]
+          w-[360px]
+          rounded-full
+          border
+          border-[#0B4F32]/[0.04]
+        "
+      />
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          -right-5
+          top-40
+          h-[260px]
+          w-[260px]
+          rounded-full
+          border
+          border-[#A92F46]/[0.04]
         "
       />
 
@@ -89,9 +119,11 @@ ${form.message}
         <ScrollReveal>
           <div className="mb-16 max-w-4xl md:mb-20">
 
+            {/* Eyebrow */}
+
             <div className="flex items-center gap-3">
 
-              <span className="h-px w-8 bg-blue-500" />
+              <span className="h-px w-8 bg-[#A92F46]" />
 
               <p
                 className="
@@ -99,7 +131,7 @@ ${form.message}
                   font-semibold
                   uppercase
                   tracking-[0.32em]
-                  text-blue-600
+                  text-[#A92F46]
                 "
               >
                 {lang === "en"
@@ -109,25 +141,32 @@ ${form.message}
 
             </div>
 
+            {/* Main Heading */}
+
             <h2
               className="
                 mt-6
                 max-w-3xl
                 text-3xl
                 font-light
+                uppercase
                 leading-[1.08]
                 tracking-[-0.04em]
-                text-[#0B1220]
+                text-[#0B4F32]
                 sm:text-4xl
                 md:text-5xl
               "
             >
               {lang === "en"
-                ? "Speak with our legal experts."
-                : "Konsultasikan kebutuhan hukum Anda."}
+                ? "SPEAK WITH OUR LEGAL EXPERTS."
+                : "KONSULTASIKAN KEBUTUHAN HUKUM ANDA."}
             </h2>
 
-            <div className="mt-7 h-px w-16 bg-[#0B1220]/15" />
+            {/* Divider */}
+
+            <div className="mt-7 h-px w-16 bg-[#A92F46]" />
+
+            {/* Description */}
 
             <p
               className="
@@ -135,7 +174,7 @@ ${form.message}
                 max-w-2xl
                 text-sm
                 leading-7
-                text-gray-500
+                text-[#68736D]
                 md:text-base
                 md:leading-8
               "
@@ -164,14 +203,17 @@ ${form.message}
               className="
                 relative
                 overflow-hidden
-                bg-[#0B1220]
+                bg-gradient-to-br
+                from-[#155D40]
+                via-[#0B4F32]
+                to-[#073923]
                 p-7
                 md:p-9
                 lg:p-10
               "
             >
 
-              {/* Glow */}
+              {/* Pink Glow */}
 
               <div
                 className="
@@ -182,8 +224,38 @@ ${form.message}
                   h-72
                   w-72
                   rounded-full
-                  bg-blue-500/10
+                  bg-[#C45A70]/10
                   blur-[90px]
+                "
+              />
+
+              {/* Decorative Circles */}
+
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  -right-16
+                  top-16
+                  h-52
+                  w-52
+                  rounded-full
+                  border
+                  border-white/[0.05]
+                "
+              />
+
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  -right-5
+                  top-28
+                  h-32
+                  w-32
+                  rounded-full
+                  border
+                  border-[#E1A7B1]/[0.06]
                 "
               />
 
@@ -215,7 +287,7 @@ ${form.message}
                     font-semibold
                     uppercase
                     tracking-[0.3em]
-                    text-blue-300
+                    text-[#E1A7B1]
                   "
                 >
                   {lang === "en"
@@ -223,7 +295,7 @@ ${form.message}
                     : "KONTAK LANGSUNG"}
                 </p>
 
-                {/* Main heading */}
+                {/* Main Heading */}
 
                 <h3
                   className="
@@ -231,6 +303,7 @@ ${form.message}
                     max-w-md
                     text-2xl
                     font-light
+                    uppercase
                     leading-tight
                     tracking-[-0.035em]
                     text-white
@@ -238,13 +311,13 @@ ${form.message}
                   "
                 >
                   {lang === "en"
-                    ? "Let's discuss what matters to your business."
-                    : "Mari membahas kebutuhan yang penting bagi bisnis Anda."}
+                    ? "LET'S DISCUSS WHAT MATTERS TO YOUR BUSINESS."
+                    : "MARI MEMBAHAS KEBUTUHAN YANG PENTING BAGI BISNIS ANDA."}
                 </h3>
 
                 {/* Accent */}
 
-                <div className="mt-7 h-px w-12 bg-blue-400" />
+                <div className="mt-7 h-px w-12 bg-[#D37A8A]" />
 
                 {/* Description */}
 
@@ -253,7 +326,7 @@ ${form.message}
                     mt-6
                     text-sm
                     leading-7
-                    text-white/45
+                    text-white/55
                     md:leading-8
                   "
                 >
@@ -295,7 +368,7 @@ ${form.message}
                         border
                         border-white/10
                         text-[9px]
-                        text-blue-300
+                        text-[#E1A7B1]
                       "
                     >
                       01
@@ -334,7 +407,7 @@ ${form.message}
                         border
                         border-white/10
                         text-[9px]
-                        text-blue-300
+                        text-[#E1A7B1]
                       "
                     >
                       02
@@ -373,7 +446,7 @@ ${form.message}
                         border
                         border-white/10
                         text-[9px]
-                        text-blue-300
+                        text-[#E1A7B1]
                       "
                     >
                       03
@@ -469,7 +542,7 @@ ${form.message}
                         text-xs
                         text-white/60
                         transition
-                        hover:text-blue-300
+                        hover:text-[#E1A7B1]
                       "
                     >
                       +62 822-4288-7887
@@ -494,7 +567,7 @@ ${form.message}
                         text-xs
                         text-white/60
                         transition
-                        hover:text-blue-300
+                        hover:text-[#E1A7B1]
                       "
                     >
                       {email}
@@ -518,7 +591,7 @@ ${form.message}
 
             <div className="relative">
 
-              {/* Vertical line */}
+              {/* Vertical Line */}
 
               <div
                 className="
@@ -529,8 +602,8 @@ ${form.message}
                   h-full
                   w-px
                   bg-gradient-to-b
-                  from-blue-500
-                  via-gray-200
+                  from-[#A92F46]
+                  via-[#D9D7CF]
                   to-transparent
                   lg:block
                 "
@@ -543,10 +616,10 @@ ${form.message}
               <div
                 className="
                   border
-                  border-gray-200
+                  border-[#D9D7CF]
                   bg-white
                   p-6
-                  shadow-[0_20px_60px_rgba(11,18,32,0.06)]
+                  shadow-[0_20px_60px_rgba(11,79,50,0.06)]
                   sm:p-8
                   md:p-10
                 "
@@ -560,7 +633,7 @@ ${form.message}
 
                   <div className="flex items-center gap-3">
 
-                    <span className="h-px w-8 bg-blue-500" />
+                    <span className="h-px w-8 bg-[#A92F46]" />
 
                     <p
                       className="
@@ -568,7 +641,7 @@ ${form.message}
                         font-semibold
                         uppercase
                         tracking-[0.3em]
-                        text-blue-600
+                        text-[#A92F46]
                       "
                     >
                       {lang === "en"
@@ -583,14 +656,15 @@ ${form.message}
                       mt-5
                       text-2xl
                       font-light
+                      uppercase
                       tracking-[-0.03em]
-                      text-[#0B1220]
+                      text-[#0B4F32]
                       md:text-3xl
                     "
                   >
                     {lang === "en"
-                      ? "Tell us how we can help."
-                      : "Sampaikan kebutuhan hukum Anda."}
+                      ? "TELL US HOW WE CAN HELP."
+                      : "SAMPAIKAN KEBUTUHAN HUKUM ANDA."}
                   </h3>
 
                   <p
@@ -599,7 +673,7 @@ ${form.message}
                       max-w-xl
                       text-sm
                       leading-7
-                      text-gray-500
+                      text-[#68736D]
                     "
                   >
                     {lang === "en"
@@ -611,7 +685,7 @@ ${form.message}
 
                 {/* FORM DIVIDER */}
 
-                <div className="mt-8 border-t border-gray-100" />
+                <div className="mt-8 border-t border-[#E8E5DC]" />
 
                 {/* =================================================
                     SECTION 01 — YOUR DETAILS
@@ -626,7 +700,7 @@ ${form.message}
                         text-[9px]
                         font-semibold
                         tracking-[0.22em]
-                        text-gray-300
+                        text-[#B8B5AC]
                       "
                     >
                       01
@@ -638,7 +712,7 @@ ${form.message}
                         font-semibold
                         uppercase
                         tracking-[0.25em]
-                        text-gray-400
+                        text-[#AAA79E]
                       "
                     >
                       {lang === "en"
@@ -660,7 +734,7 @@ ${form.message}
                           block
                           text-xs
                           font-medium
-                          text-[#0B1220]
+                          text-[#16251F]
                         "
                       >
                         {lang === "en"
@@ -685,21 +759,21 @@ ${form.message}
                         className="
                           w-full
                           border
-                          border-gray-200
-                          bg-[#F8FAFC]
+                          border-[#D9D7CF]
+                          bg-[#F8F6EF]
                           px-4
                           py-3.5
                           text-sm
-                          text-[#0B1220]
+                          text-[#16251F]
                           outline-none
-                          placeholder:text-gray-400
+                          placeholder:text-[#AAA79E]
                           transition
                           duration-300
-                          hover:border-gray-300
-                          focus:border-blue-500
+                          hover:border-[#B8B5AC]
+                          focus:border-[#A92F46]
                           focus:bg-white
                           focus:ring-2
-                          focus:ring-blue-500/10
+                          focus:ring-[#A92F46]/10
                         "
                       />
 
@@ -715,7 +789,7 @@ ${form.message}
                           block
                           text-xs
                           font-medium
-                          text-[#0B1220]
+                          text-[#16251F]
                         "
                       >
                         Email
@@ -734,21 +808,21 @@ ${form.message}
                         className="
                           w-full
                           border
-                          border-gray-200
-                          bg-[#F8FAFC]
+                          border-[#D9D7CF]
+                          bg-[#F8F6EF]
                           px-4
                           py-3.5
                           text-sm
-                          text-[#0B1220]
+                          text-[#16251F]
                           outline-none
-                          placeholder:text-gray-400
+                          placeholder:text-[#AAA79E]
                           transition
                           duration-300
-                          hover:border-gray-300
-                          focus:border-blue-500
+                          hover:border-[#B8B5AC]
+                          focus:border-[#A92F46]
                           focus:bg-white
                           focus:ring-2
-                          focus:ring-blue-500/10
+                          focus:ring-[#A92F46]/10
                         "
                       />
 
@@ -771,7 +845,7 @@ ${form.message}
                         text-[9px]
                         font-semibold
                         tracking-[0.22em]
-                        text-gray-300
+                        text-[#B8B5AC]
                       "
                     >
                       02
@@ -783,7 +857,7 @@ ${form.message}
                         font-semibold
                         uppercase
                         tracking-[0.25em]
-                        text-gray-400
+                        text-[#AAA79E]
                       "
                     >
                       {lang === "en"
@@ -803,7 +877,7 @@ ${form.message}
                         block
                         text-xs
                         font-medium
-                        text-[#0B1220]
+                        text-[#16251F]
                       "
                     >
                       {lang === "en"
@@ -829,21 +903,21 @@ ${form.message}
                         w-full
                         resize-none
                         border
-                        border-gray-200
-                        bg-[#F8FAFC]
+                        border-[#D9D7CF]
+                        bg-[#F8F6EF]
                         p-4
                         text-sm
                         leading-7
-                        text-[#0B1220]
+                        text-[#16251F]
                         outline-none
-                        placeholder:text-gray-400
+                        placeholder:text-[#AAA79E]
                         transition
                         duration-300
-                        hover:border-gray-300
-                        focus:border-blue-500
+                        hover:border-[#B8B5AC]
+                        focus:border-[#A92F46]
                         focus:bg-white
                         focus:ring-2
-                        focus:ring-blue-500/10
+                        focus:ring-[#A92F46]/10
                       "
                     />
 
@@ -855,7 +929,7 @@ ${form.message}
                     ACTION AREA
                 ================================================= */}
 
-                <div className="mt-8 border-t border-gray-100 pt-7">
+                <div className="mt-8 border-t border-[#E8E5DC] pt-7">
 
                   {/* PRIMARY BUTTON */}
 
@@ -868,8 +942,8 @@ ${form.message}
                       items-center
                       justify-between
                       border
-                      border-[#0B1220]
-                      bg-[#0B1220]
+                      border-[#0B4F32]
+                      bg-[#0B4F32]
                       px-5
                       py-4
                       text-left
@@ -878,8 +952,8 @@ ${form.message}
                       text-white
                       transition
                       duration-300
-                      hover:border-blue-600
-                      hover:bg-blue-600
+                      hover:border-[#A92F46]
+                      hover:bg-[#A92F46]
                     "
                   >
 
@@ -920,7 +994,7 @@ ${form.message}
                       grid
                       grid-cols-2
                       border
-                      border-gray-200
+                      border-[#D9D7CF]
                     "
                   >
 
@@ -928,15 +1002,15 @@ ${form.message}
                       onClick={sendWA}
                       className="
                         border-r
-                        border-gray-200
+                        border-[#D9D7CF]
                         py-3.5
                         text-[10px]
                         font-semibold
                         uppercase
                         tracking-[0.18em]
-                        text-gray-500
+                        text-[#68736D]
                         transition
-                        hover:bg-[#0B1220]
+                        hover:bg-[#0B4F32]
                         hover:text-white
                       "
                     >
@@ -951,9 +1025,9 @@ ${form.message}
                         font-semibold
                         uppercase
                         tracking-[0.18em]
-                        text-gray-500
+                        text-[#68736D]
                         transition
-                        hover:bg-[#0B1220]
+                        hover:bg-[#0B4F32]
                         hover:text-white
                       "
                     >
@@ -970,7 +1044,7 @@ ${form.message}
                       text-center
                       text-[10px]
                       leading-5
-                      text-gray-400
+                      text-[#AAA79E]
                     "
                   >
                     {lang === "en"
@@ -1001,7 +1075,7 @@ ${form.message}
               flex-col
               gap-5
               border-t
-              border-gray-200
+              border-[#D9D7CF]
               pt-7
               md:flex-row
               md:items-center
@@ -1014,7 +1088,7 @@ ${form.message}
                 max-w-2xl
                 text-xs
                 leading-6
-                text-gray-400
+                text-[#8A8F8A]
               "
             >
               {lang === "en"
@@ -1024,7 +1098,7 @@ ${form.message}
 
             <div className="flex items-center gap-3">
 
-              <span className="h-px w-8 bg-blue-500" />
+              <span className="h-px w-8 bg-[#A92F46]" />
 
               <span
                 className="
@@ -1032,10 +1106,10 @@ ${form.message}
                   font-semibold
                   uppercase
                   tracking-[0.25em]
-                  text-gray-400
+                  text-[#AAA79E]
                 "
               >
-                Zaky Zhafran & Partners
+                ZAKY ZHAFRAN & PARTNERS
               </span>
 
             </div>

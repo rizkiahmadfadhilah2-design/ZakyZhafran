@@ -32,63 +32,133 @@ export default function Navbar() {
       {/* =====================================================
           NAVBAR
       ===================================================== */}
-      <div className="border-b border-white/10 bg-[#0B1220]/85 backdrop-blur-xl">
 
-        <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-6 md:px-10">
+      <div
+        className="
+          border-b
+          border-white/10
+          bg-[#073923]/90
+          backdrop-blur-xl
+        "
+      >
+
+        <div
+          className="
+            mx-auto
+            flex
+            h-[72px]
+            max-w-7xl
+            items-center
+            justify-between
+            px-6
+            md:px-10
+          "
+        >
 
           {/* =================================================
               LOGO
           ================================================= */}
+
           <Link
             to="/"
             onClick={() => setOpen(false)}
             className="group flex items-center gap-3"
           >
+
             <img
               src="/logozp.png"
               alt="Zaky Zhafran & Partners"
-              className="h-8 w-8 rounded-full object-cover ring-1 ring-white/15 transition duration-300 group-hover:ring-blue-400/50"
+              className="
+                h-8
+                w-8
+                rounded-full
+                object-cover
+                ring-1
+                ring-white/15
+                transition
+                duration-300
+                group-hover:ring-[#A92F46]/70
+              "
             />
 
             <div className="leading-none">
 
-              <p className="text-[11px] font-semibold tracking-[0.18em] text-white">
+              <p
+                className="
+                  text-[11px]
+                  font-semibold
+                  tracking-[0.18em]
+                  text-white
+                "
+              >
                 ZAKY ZHAFRAN
               </p>
 
-              <p className="mt-1 text-[8px] tracking-[0.28em] text-white/40">
+              <p
+                className="
+                  mt-1
+                  text-[8px]
+                  tracking-[0.28em]
+                  text-white/40
+                "
+              >
                 & PARTNERS
               </p>
 
             </div>
+
           </Link>
 
 
           {/* =================================================
               DESKTOP MENU
           ================================================= */}
+
           <div className="hidden items-center gap-8 md:flex">
 
             {menu.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`group relative py-2 text-[11px] font-medium tracking-[0.08em] transition duration-300 ${
-                  isActive(item.path)
-                    ? "text-white"
-                    : "text-white/45 hover:text-white"
-                }`}
+                className={`
+                  group
+                  relative
+                  py-2
+                  text-[11px]
+                  font-medium
+                  uppercase
+                  tracking-[0.08em]
+                  transition
+                  duration-300
+                  ${
+                    isActive(item.path)
+                      ? "text-white"
+                      : "text-white/45 hover:text-white"
+                  }
+                `}
               >
+
                 {item.name}
 
                 {/* ACTIVE LINE */}
+
                 <span
-                  className={`absolute bottom-0 left-0 h-px bg-blue-400 transition-all duration-300 ${
-                    isActive(item.path)
-                      ? "w-full"
-                      : "w-0 group-hover:w-full"
-                  }`}
+                  className={`
+                    absolute
+                    bottom-0
+                    left-0
+                    h-px
+                    bg-[#A92F46]
+                    transition-all
+                    duration-300
+                    ${
+                      isActive(item.path)
+                        ? "w-full"
+                        : "w-0 group-hover:w-full"
+                    }
+                  `}
                 />
+
               </Link>
             ))}
 
@@ -98,33 +168,83 @@ export default function Navbar() {
           {/* =================================================
               DESKTOP CTA
           ================================================= */}
+
           <a
             href={consultationUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden items-center gap-3 border border-white/15 px-4 py-2.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-white transition duration-300 hover:border-blue-400 hover:bg-blue-400 hover:text-[#0B1220] md:inline-flex"
+            className="
+              hidden
+              items-center
+              gap-3
+              border
+              border-white/15
+              px-4
+              py-2.5
+              text-[10px]
+              font-semibold
+              uppercase
+              tracking-[0.16em]
+              text-white
+              transition
+              duration-300
+              hover:border-[#A92F46]
+              hover:bg-[#A92F46]
+              hover:text-[#F8F6EF]
+              md:inline-flex
+            "
           >
+
             <span>Consultation</span>
 
-            <span className="text-sm leading-none transition duration-300 hover:translate-x-1">
+            <span
+              className="
+                text-sm
+                leading-none
+                transition
+                duration-300
+                group-hover:translate-x-1
+              "
+            >
               →
             </span>
+
           </a>
 
 
           {/* =================================================
               MOBILE BUTTON
           ================================================= */}
+
           <button
             type="button"
             onClick={() => setOpen(true)}
             aria-label="Open navigation menu"
-            className="flex h-9 w-9 items-center justify-center border border-white/10 text-white transition duration-300 hover:border-blue-400 md:hidden"
+            className="
+              flex
+              h-9
+              w-9
+              items-center
+              justify-center
+              border
+              border-white/10
+              text-white
+              transition
+              duration-300
+              hover:border-[#A92F46]
+              hover:bg-[#A92F46]/10
+              md:hidden
+            "
           >
+
             <span className="flex flex-col gap-[4px]">
+
               <span className="h-px w-4 bg-white" />
+
               <span className="h-px w-3 bg-white/60" />
+
             </span>
+
           </button>
 
         </div>
@@ -135,60 +255,161 @@ export default function Navbar() {
       {/* =====================================================
           MOBILE MENU
       ===================================================== */}
+
       <div
-        className={`fixed inset-0 z-[1000] transition-all duration-300 ${
-          open
-            ? "visible bg-black/60 opacity-100"
-            : "invisible bg-black/0 opacity-0"
-        }`}
+        className={`
+          fixed
+          inset-0
+          z-[1000]
+          transition-all
+          duration-300
+          ${
+            open
+              ? "visible bg-[#05291A]/70 opacity-100"
+              : "invisible bg-black/0 opacity-0"
+          }
+        `}
       >
 
         {/* BACKDROP */}
+
         <button
           type="button"
           aria-label="Close navigation menu"
           onClick={() => setOpen(false)}
-          className="absolute inset-0 h-full w-full cursor-default"
+          className="
+            absolute
+            inset-0
+            h-full
+            w-full
+            cursor-default
+          "
         />
 
 
         {/* =================================================
             MOBILE PANEL
         ================================================= */}
+
         <div
-          className={`absolute right-0 top-0 flex h-full w-[88%] max-w-sm flex-col bg-[#0B1220] transition-transform duration-300 ${
-            open ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`
+            absolute
+            right-0
+            top-0
+            flex
+            h-full
+            w-[88%]
+            max-w-sm
+            flex-col
+            bg-[#073923]
+            shadow-[-20px_0_60px_rgba(0,0,0,0.25)]
+            transition-transform
+            duration-300
+            ${
+              open
+                ? "translate-x-0"
+                : "translate-x-full"
+            }
+          `}
         >
 
           {/* =================================================
               PANEL HEADER
           ================================================= */}
-          <div className="flex items-center justify-between border-b border-white/10 px-6 py-5">
+
+          <div
+            className="
+              flex
+              items-center
+              justify-between
+              border-b
+              border-white/10
+              px-6
+              py-5
+            "
+          >
 
             <div>
 
-              <p className="text-[9px] font-semibold uppercase tracking-[0.28em] text-blue-300">
+              <p
+                className="
+                  text-[9px]
+                  font-semibold
+                  uppercase
+                  tracking-[0.28em]
+                  text-[#A92F46]
+                "
+              >
                 Navigation
               </p>
 
-              <p className="mt-1 text-xs text-white/35">
+              <p
+                className="
+                  mt-1
+                  text-xs
+                  text-white/35
+                "
+              >
                 Zaky Zhafran & Partners
               </p>
 
             </div>
 
 
+            {/* CLOSE BUTTON */}
+
             <button
               type="button"
               onClick={() => setOpen(false)}
               aria-label="Close navigation menu"
-              className="flex h-8 w-8 items-center justify-center border border-white/10 text-white/60 transition hover:border-blue-400 hover:text-white"
+              className="
+                flex
+                h-8
+                w-8
+                items-center
+                justify-center
+                border
+                border-white/10
+                text-white/60
+                transition
+                hover:border-[#A92F46]
+                hover:bg-[#A92F46]/10
+                hover:text-white
+              "
             >
+
               <span className="relative h-4 w-4">
-                <span className="absolute left-1/2 top-1/2 h-px w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-current" />
-                <span className="absolute left-1/2 top-1/2 h-px w-4 -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-current" />
+
+                <span
+                  className="
+                    absolute
+                    left-1/2
+                    top-1/2
+                    h-px
+                    w-4
+                    -translate-x-1/2
+                    -translate-y-1/2
+                    rotate-45
+                    bg-current
+                  "
+                />
+
+                <span
+                  className="
+                    absolute
+                    left-1/2
+                    top-1/2
+                    h-px
+                    w-4
+                    -translate-x-1/2
+                    -translate-y-1/2
+                    -rotate-45
+                    bg-current
+                  "
+                />
+
               </span>
+
             </button>
 
           </div>
@@ -197,9 +418,27 @@ export default function Navbar() {
           {/* =================================================
               MOBILE NAVIGATION
           ================================================= */}
-          <div className="flex flex-1 flex-col px-6 py-8">
 
-            <p className="mb-6 text-[9px] font-semibold uppercase tracking-[0.28em] text-white/20">
+          <div
+            className="
+              flex
+              flex-1
+              flex-col
+              px-6
+              py-8
+            "
+          >
+
+            <p
+              className="
+                mb-6
+                text-[9px]
+                font-semibold
+                uppercase
+                tracking-[0.28em]
+                text-white/20
+              "
+            >
               Main Navigation
             </p>
 
@@ -210,37 +449,71 @@ export default function Navbar() {
                   key={item.path}
                   to={item.path}
                   onClick={() => setOpen(false)}
-                  className={`group flex items-center justify-between border-b border-white/10 py-5 transition duration-300 ${
-                    isActive(item.path)
-                      ? "text-white"
-                      : "text-white/45 hover:text-white"
-                  }`}
+                  className={`
+                    group
+                    flex
+                    items-center
+                    justify-between
+                    border-b
+                    border-white/10
+                    py-5
+                    transition
+                    duration-300
+                    ${
+                      isActive(item.path)
+                        ? "text-white"
+                        : "text-white/45 hover:text-white"
+                    }
+                  `}
                 >
 
                   <div className="flex items-center gap-4">
 
+                    {/* NUMBER */}
+
                     <span
-                      className={`text-[9px] tracking-[0.15em] ${
-                        isActive(item.path)
-                          ? "text-blue-300"
-                          : "text-white/20"
-                      }`}
+                      className={`
+                        text-[9px]
+                        tracking-[0.15em]
+                        ${
+                          isActive(item.path)
+                            ? "text-[#A92F46]"
+                            : "text-white/20"
+                        }
+                      `}
                     >
                       0{index + 1}
                     </span>
 
-                    <span className="text-base font-light">
+                    {/* NAME */}
+
+                    <span
+                      className="
+                        text-base
+                        font-light
+                        uppercase
+                        tracking-[0.04em]
+                      "
+                    >
                       {item.name}
                     </span>
 
                   </div>
 
+
+                  {/* ARROW */}
+
                   <span
-                    className={`text-sm transition duration-300 ${
-                      isActive(item.path)
-                        ? "translate-x-0 text-blue-300"
-                        : "-translate-x-1 text-white/20 group-hover:translate-x-0 group-hover:text-blue-300"
-                    }`}
+                    className={`
+                      text-sm
+                      transition
+                      duration-300
+                      ${
+                        isActive(item.path)
+                          ? "translate-x-0 text-[#A92F46]"
+                          : "-translate-x-1 text-white/20 group-hover:translate-x-0 group-hover:text-[#A92F46]"
+                      }
+                    `}
                   >
                     →
                   </span>
@@ -256,9 +529,25 @@ export default function Navbar() {
           {/* =================================================
               MOBILE CTA
           ================================================= */}
-          <div className="border-t border-white/10 px-6 py-6">
 
-            <p className="mb-4 text-[9px] uppercase tracking-[0.22em] text-white/25">
+          <div
+            className="
+              border-t
+              border-white/10
+              px-6
+              py-6
+            "
+          >
+
+            <p
+              className="
+                mb-4
+                text-[9px]
+                uppercase
+                tracking-[0.22em]
+                text-white/25
+              "
+            >
               Need legal assistance?
             </p>
 
@@ -267,12 +556,38 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="flex items-center justify-between border border-white/15 px-4 py-4 text-xs font-medium text-white transition duration-300 hover:border-blue-400 hover:bg-blue-400 hover:text-[#0B1220]"
+              className="
+                group
+                flex
+                items-center
+                justify-between
+                border
+                border-white/15
+                px-4
+                py-4
+                text-xs
+                font-medium
+                uppercase
+                tracking-[0.05em]
+                text-white
+                transition
+                duration-300
+                hover:border-[#A92F46]
+                hover:bg-[#A92F46]
+                hover:text-[#F8F6EF]
+              "
             >
 
               <span>Start Consultation</span>
 
-              <span className="text-base">
+              <span
+                className="
+                  text-base
+                  transition
+                  duration-300
+                  group-hover:translate-x-1
+                "
+              >
                 →
               </span>
 
