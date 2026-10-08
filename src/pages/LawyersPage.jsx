@@ -466,8 +466,6 @@ export default function LawyersPage() {
                     className="h-full w-full object-cover object-top grayscale-[8%] transition duration-700 group-hover:scale-[1.035] group-hover:grayscale-0"
                   />
 
-                  {/* Image gradient */}
-
                   <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#073923]/65 to-transparent" />
 
                   {/* Number */}
@@ -494,7 +492,7 @@ export default function LawyersPage() {
                 <div className="flex min-h-[430px] flex-col p-7 md:p-8">
                   {/* Name */}
 
-                  <h3 className="text-[23px] font-semibold leading-[1.12] tracking-[-0.035em] text-[#0B4F32]">
+                  <h3 className="text-[18px] font-semibold leading-[1.12] tracking-[-0.035em] text-[#0B4F32]">
                     {lawyer.name}
                   </h3>
 
@@ -546,13 +544,9 @@ export default function LawyersPage() {
       ========================================================== */}
 
       <section className="relative overflow-hidden bg-[#073923] py-24 text-white md:py-32">
-        {/* Very subtle accent */}
-
         <div className="pointer-events-none absolute -left-40 top-0 h-[420px] w-[420px] rounded-full bg-[#A92F46]/10 blur-3xl" />
 
         <div className="pointer-events-none absolute -right-40 bottom-0 h-[420px] w-[420px] rounded-full bg-[#D37A8A]/8 blur-3xl" />
-
-        {/* Minimal line */}
 
         <div className="pointer-events-none absolute right-[8%] top-[20%] hidden h-[250px] w-px rotate-[28deg] bg-gradient-to-b from-transparent via-[#D7A0AD]/25 to-transparent lg:block" />
 
