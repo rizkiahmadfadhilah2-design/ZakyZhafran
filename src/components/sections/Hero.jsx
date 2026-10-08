@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import heroImage from "../../assets/ZakyZhafran.jpeg";
 
 export default function Hero({ lang }) {
@@ -36,8 +37,6 @@ export default function Hero({ lang }) {
           BACKGROUND GLOW
       ========================================================= */}
 
-      {/* Deep Maroon Glow - Top Right */}
-
       <div
         className="
           pointer-events-none
@@ -52,8 +51,6 @@ export default function Hero({ lang }) {
         "
       />
 
-      {/* Secondary Maroon Glow - Bottom Left */}
-
       <div
         className="
           pointer-events-none
@@ -67,8 +64,6 @@ export default function Hero({ lang }) {
           blur-[120px]
         "
       />
-
-      {/* Center Subtle Glow */}
 
       <div
         className="
@@ -122,8 +117,8 @@ export default function Hero({ lang }) {
         className="
           pointer-events-none
           absolute
-          left-[-180px]
           bottom-[10%]
+          left-[-180px]
           h-[360px]
           w-[360px]
           rounded-full
@@ -190,7 +185,10 @@ export default function Hero({ lang }) {
           ===================================================== */}
 
           <div className="text-center lg:text-left">
-            {/* EYEBROW */}
+
+            {/* =================================================
+                EYEBROW
+            ================================================= */}
 
             <div
               className="
@@ -202,7 +200,7 @@ export default function Hero({ lang }) {
                 lg:justify-start
               "
             >
-              <span className="h-px w-8 bg-[#A92F46]/90" />
+              <span className="h-px w-8 bg-[#C94A60]/90" />
 
               <p
                 className="
@@ -210,7 +208,7 @@ export default function Hero({ lang }) {
                   font-semibold
                   uppercase
                   tracking-[0.32em]
-                  text-[#A92F46]
+                  text-[#C94A60]
                 "
               >
                 {lang === "en"
@@ -218,10 +216,20 @@ export default function Hero({ lang }) {
                   : "KONSULTAN HUKUM & PAJAK TERPERCAYA"}
               </p>
 
-              <span className="hidden h-px w-8 bg-[#A92F46]/90 sm:block" />
+              <span
+                className="
+                  hidden
+                  h-px
+                  w-8
+                  bg-[#C94A60]/90
+                  sm:block
+                "
+              />
             </div>
 
-            {/* MAIN TITLE */}
+            {/* =================================================
+                MAIN TITLE
+            ================================================= */}
 
             <h1
               className="
@@ -243,21 +251,37 @@ export default function Hero({ lang }) {
               {lang === "en" ? (
                 <>
                   LEGAL & TAX SOLUTIONS FOR{" "}
-                  <span className="text-[#A92F46]">
+
+                  <span
+                    className="
+                      font-medium
+                      text-[#C94A60]
+                      drop-shadow-[0_0_18px_rgba(201,74,96,0.30)]
+                    "
+                  >
                     STRONGER BUSINESS GROWTH
                   </span>
                 </>
               ) : (
                 <>
                   SOLUSI HUKUM & PAJAK UNTUK{" "}
-                  <span className="text-[#A92F46]">
+
+                  <span
+                    className="
+                      font-medium
+                      text-[#C94A60]
+                      drop-shadow-[0_0_18px_rgba(201,74,96,0.30)]
+                    "
+                  >
                     PERTUMBUHAN BISNIS KUAT
                   </span>
                 </>
               )}
             </h1>
 
-            {/* SMALL LINE */}
+            {/* =================================================
+                SMALL LINE
+            ================================================= */}
 
             <div
               className="
@@ -265,12 +289,14 @@ export default function Hero({ lang }) {
                 mt-8
                 h-px
                 w-14
-                bg-[#A92F46]
+                bg-[#C94A60]
                 lg:mx-0
               "
             />
 
-            {/* DESCRIPTION */}
+            {/* =================================================
+                DESCRIPTION
+            ================================================= */}
 
             <p
               className="
@@ -290,7 +316,9 @@ export default function Hero({ lang }) {
                 : "Kami menyediakan layanan hukum korporasi, litigasi, perencanaan pajak, dan kepatuhan untuk membantu bisnis berkembang secara aman dan berkelanjutan."}
             </p>
 
-            {/* CTA */}
+            {/* =================================================
+                CTA
+            ================================================= */}
 
             <div
               className="
@@ -304,8 +332,6 @@ export default function Hero({ lang }) {
                 lg:justify-start
               "
             >
-              {/* WHATSAPP */}
-
               <a
                 href={
                   lang === "en"
@@ -333,9 +359,9 @@ export default function Hero({ lang }) {
                   transition-all
                   duration-300
                   hover:-translate-y-1
-                  hover:bg-[#A92F46]
+                  hover:bg-[#C94A60]
                   hover:text-[#F8F6EF]
-                  hover:shadow-[0_15px_40px_rgba(84,21,34,0.32)]
+                  hover:shadow-[0_15px_40px_rgba(201,74,96,0.32)]
                   sm:w-auto
                 "
               >
@@ -394,7 +420,7 @@ export default function Hero({ lang }) {
                     font-medium
                     uppercase
                     tracking-[0.2em]
-                    text-white/40
+                    text-[#F8F6EF]/45
                   "
                 >
                   {lang === "en" ? "CLIENTS" : "KLIEN"}
@@ -408,8 +434,8 @@ export default function Hero({ lang }) {
                   border-l
                   border-white/10
                   text-center
-                  lg:text-left
                   lg:pl-6
+                  lg:text-left
                 "
               >
                 <p
@@ -431,7 +457,7 @@ export default function Hero({ lang }) {
                     font-medium
                     uppercase
                     tracking-[0.2em]
-                    text-white/40
+                    text-[#F8F6EF]/45
                   "
                 >
                   {lang === "en" ? "CASES" : "PERKARA"}
@@ -445,8 +471,8 @@ export default function Hero({ lang }) {
                   border-l
                   border-white/10
                   text-center
-                  lg:text-left
                   lg:pl-6
+                  lg:text-left
                 "
               >
                 <p
@@ -468,7 +494,7 @@ export default function Hero({ lang }) {
                     font-medium
                     uppercase
                     tracking-[0.2em]
-                    text-white/40
+                    text-[#F8F6EF]/45
                   "
                 >
                   {lang === "en" ? "YEARS" : "TAHUN"}
@@ -482,7 +508,8 @@ export default function Hero({ lang }) {
           ===================================================== */}
 
           <div className="relative flex justify-center lg:justify-end">
-            {/* OUTER DEEP MAROON GLOW */}
+
+            {/* OUTER MAROON GLOW */}
 
             <div
               className="
@@ -544,7 +571,9 @@ export default function Hero({ lang }) {
               "
             />
 
-            {/* IMAGE WRAPPER */}
+            {/* =================================================
+                IMAGE WRAPPER
+            ================================================= */}
 
             <div
               className="
@@ -561,9 +590,8 @@ export default function Hero({ lang }) {
                 backdrop-blur-md
               "
             >
-              {/* IMAGE */}
-
               <div className="relative overflow-hidden rounded-[1.15rem]">
+
                 <img
                   src={heroImage}
                   alt="Zaky Zhafran"
@@ -604,6 +632,7 @@ export default function Hero({ lang }) {
                   "
                 >
                   <div className="flex items-end justify-between gap-4">
+
                     <div>
                       <p
                         className="
@@ -611,7 +640,7 @@ export default function Hero({ lang }) {
                           font-semibold
                           uppercase
                           tracking-[0.28em]
-                          text-[#A92F46]
+                          text-[#C94A60]
                         "
                       >
                         MANAGING PARTNER
@@ -635,8 +664,13 @@ export default function Hero({ lang }) {
                       </p>
                     </div>
 
-                    <div
+                    {/* PROFILE LINK */}
+
+                    <Link
+                      to="/profile/zaky"
+                      aria-label="View Zaky Zhafran profile"
                       className="
+                        group
                         flex
                         h-10
                         w-10
@@ -645,21 +679,40 @@ export default function Hero({ lang }) {
                         justify-center
                         rounded-full
                         border
-                        border-white/15
-                        bg-white/10
+                        border-[#C94A60]/50
+                        bg-[#C94A60]/15
                         text-sm
-                        text-[#A92F46]
+                        text-[#C94A60]
                         backdrop-blur-md
+                        transition-all
+                        duration-300
+                        hover:scale-110
+                        hover:border-[#C94A60]
+                        hover:bg-[#C94A60]
+                        hover:text-[#F8F6EF]
+                        hover:shadow-[0_8px_25px_rgba(201,74,96,0.35)]
                       "
                     >
-                      ↗
-                    </div>
+                      <span
+                        className="
+                          transition-transform
+                          duration-300
+                          group-hover:translate-x-0.5
+                          group-hover:-translate-y-0.5
+                        "
+                      >
+                        ↗
+                      </span>
+                    </Link>
+
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* SMALL FLOATING LABEL */}
+            {/* =================================================
+                SMALL FLOATING LABEL
+            ================================================= */}
 
             <div
               className="
@@ -685,7 +738,7 @@ export default function Hero({ lang }) {
                   font-semibold
                   uppercase
                   tracking-[0.2em]
-                  text-[#A92F46]/90
+                  text-[#C94A60]
                 "
               >
                 FIRM
@@ -697,7 +750,7 @@ export default function Hero({ lang }) {
                   text-xs
                   font-medium
                   uppercase
-                  text-white/80
+                  text-[#F8F6EF]/80
                 "
               >
                 Zaky Zhafran & Partners
@@ -731,7 +784,7 @@ export default function Hero({ lang }) {
             font-medium
             uppercase
             tracking-[0.3em]
-            text-white/30
+            text-[#F8F6EF]/35
           "
         >
           {lang === "en"
@@ -787,6 +840,7 @@ export default function Hero({ lang }) {
               "
             >
               <div className="flex items-start justify-between gap-4">
+
                 <div>
                   <p
                     className="
@@ -794,10 +848,12 @@ export default function Hero({ lang }) {
                       font-semibold
                       uppercase
                       tracking-[0.25em]
-                      text-[#A92F46]
+                      text-[#C94A60]
                     "
                   >
-                    {lang === "en" ? "CONSULTATION" : "KONSULTASI"}
+                    {lang === "en"
+                      ? "CONSULTATION"
+                      : "KONSULTASI"}
                   </p>
 
                   <h2
@@ -827,8 +883,8 @@ export default function Hero({ lang }) {
                     border-white/10
                     text-white/50
                     transition
-                    hover:border-[#A92F46]/40
-                    hover:bg-[#A92F46]/30
+                    hover:border-[#C94A60]/40
+                    hover:bg-[#C94A60]/30
                     hover:text-white
                   "
                 >
@@ -840,7 +896,9 @@ export default function Hero({ lang }) {
             {/* MODAL FORM */}
 
             <div className="p-6">
+
               <div className="space-y-4">
+
                 {/* NAME */}
 
                 <div>
@@ -878,9 +936,9 @@ export default function Hero({ lang }) {
                       outline-none
                       transition
                       placeholder:text-[#16251F]/30
-                      focus:border-[#A92F46]
+                      focus:border-[#C94A60]
                       focus:ring-2
-                      focus:ring-[#A92F46]/10
+                      focus:ring-[#C94A60]/10
                     "
                   />
                 </div>
@@ -918,9 +976,9 @@ export default function Hero({ lang }) {
                       outline-none
                       transition
                       placeholder:text-[#16251F]/30
-                      focus:border-[#A92F46]
+                      focus:border-[#C94A60]
                       focus:ring-2
-                      focus:ring-[#A92F46]/10
+                      focus:ring-[#C94A60]/10
                     "
                   />
                 </div>
@@ -963,17 +1021,19 @@ export default function Hero({ lang }) {
                       outline-none
                       transition
                       placeholder:text-[#16251F]/30
-                      focus:border-[#A92F46]
+                      focus:border-[#C94A60]
                       focus:ring-2
-                      focus:ring-[#A92F46]/10
+                      focus:ring-[#C94A60]/10
                     "
                   />
                 </div>
+
               </div>
 
               {/* MODAL BUTTONS */}
 
               <div className="mt-6 flex gap-3">
+
                 <button
                   className="
                     flex-1
@@ -987,7 +1047,7 @@ export default function Hero({ lang }) {
                     tracking-[0.05em]
                     text-white
                     transition
-                    hover:bg-[#A92F46]
+                    hover:bg-[#C94A60]
                   "
                 >
                   {lang === "en" ? "SUBMIT" : "KIRIM"}
@@ -1008,13 +1068,14 @@ export default function Hero({ lang }) {
                     tracking-[0.05em]
                     text-[#16251F]/65
                     transition
-                    hover:border-[#A92F46]/30
-                    hover:bg-[#A92F46]/5
-                    hover:text-[#A92F46]
+                    hover:border-[#C94A60]/30
+                    hover:bg-[#C94A60]/5
+                    hover:text-[#C94A60]
                   "
                 >
                   {lang === "en" ? "CLOSE" : "TUTUP"}
                 </button>
+
               </div>
 
               <p
@@ -1030,6 +1091,7 @@ export default function Hero({ lang }) {
                   ? "Your consultation request will be reviewed by our team."
                   : "Permintaan konsultasi Anda akan ditinjau oleh tim kami."}
               </p>
+
             </div>
           </div>
         </div>

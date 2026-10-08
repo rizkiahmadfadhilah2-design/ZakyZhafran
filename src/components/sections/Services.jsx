@@ -196,37 +196,37 @@ export default function ServicesPage({ lang }) {
           HERO
       ========================================================= */}
 
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#155D40] via-[#0B4F32] to-[#073923] py-28 text-white md:py-36">
-        {/* Decorative botanical line */}
-        <div className="pointer-events-none absolute -right-16 top-20 h-[360px] w-[360px] rounded-full border border-white/[0.06]" />
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#155D40] via-[#0B4F32] to-[#073923] py-24 text-white md:py-32">
+        {/* Decorative circles */}
+        <div className="pointer-events-none absolute -right-16 top-20 h-[320px] w-[320px] rounded-full border border-white/[0.06]" />
 
-        <div className="pointer-events-none absolute -right-8 top-32 h-[280px] w-[280px] rounded-full border border-white/[0.05]" />
+        <div className="pointer-events-none absolute -right-4 top-36 h-[220px] w-[220px] rounded-full border border-white/[0.05]" />
 
-        <div className="pointer-events-none absolute -bottom-32 -left-24 h-[360px] w-[360px] rounded-full bg-[#C45A70]/10 blur-[110px]" />
+        <div className="pointer-events-none absolute -bottom-32 -left-24 h-[320px] w-[320px] rounded-full bg-[#C45A70]/10 blur-[100px]" />
 
         <div className="relative mx-auto max-w-7xl px-6 md:px-10">
           <ScrollReveal>
             <div className="max-w-4xl">
               {/* Eyebrow */}
               <div className="flex items-center gap-3">
-                <span className="h-px w-9 bg-[#E1A7B1]" />
+                <span className="h-px w-8 bg-[#E1A7B1]" />
 
-                <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-[#E1A7B1]">
+                <p className="text-[9px] font-semibold uppercase tracking-[0.3em] text-[#E1A7B1]">
                   {lang === "en"
                     ? "03 / OUR SERVICES"
                     : "03 / LAYANAN KAMI"}
                 </p>
               </div>
 
-              {/* Main heading */}
+              {/* Heading */}
               <h1
                 className="
-                  mt-7
+                  mt-6
                   max-w-4xl
                   text-4xl
                   font-light
                   uppercase
-                  leading-[1.04]
+                  leading-[1.05]
                   tracking-[-0.045em]
                   text-white
                   sm:text-5xl
@@ -239,19 +239,19 @@ export default function ServicesPage({ lang }) {
               </h1>
 
               {/* Divider */}
-              <div className="mt-8 h-px w-16 bg-[#C45A70]" />
+              <div className="mt-7 h-px w-14 bg-[#C45A70]" />
 
               {/* Description */}
               <p
                 className="
-                  mt-7
+                  mt-6
                   max-w-2xl
                   text-sm
-                  leading-7
-                  tracking-[0.025em]
+                  leading-6
+                  tracking-[0.02em]
                   text-white/60
                   md:text-base
-                  md:leading-8
+                  md:leading-7
                 "
               >
                 {lang === "en"
@@ -261,29 +261,29 @@ export default function ServicesPage({ lang }) {
             </div>
           </ScrollReveal>
 
-          {/* Bottom metadata */}
-          <ScrollReveal delay={0.2}>
+          {/* Metadata */}
+          <ScrollReveal delay={0.15}>
             <div
               className="
-                mt-16
+                mt-12
                 flex
                 flex-col
-                gap-5
+                gap-4
                 border-t
                 border-white/10
-                pt-7
+                pt-6
                 md:flex-row
                 md:items-center
                 md:justify-between
               "
             >
-              <p className="text-[10px] uppercase tracking-[0.2em] text-white/35">
+              <p className="text-[9px] uppercase tracking-[0.2em] text-white/35">
                 {lang === "en"
                   ? "LEGAL • TAX • BUSINESS"
                   : "HUKUM • PAJAK • BISNIS"}
               </p>
 
-              <p className="text-[10px] uppercase tracking-[0.2em] text-white/35">
+              <p className="text-[9px] uppercase tracking-[0.2em] text-white/35">
                 ZAKY ZHAFRAN & PARTNERS
               </p>
             </div>
@@ -295,19 +295,19 @@ export default function ServicesPage({ lang }) {
           SERVICES CONTENT
       ========================================================= */}
 
-      <section className="relative overflow-hidden bg-[#F8F6EF] py-24 md:py-32">
-        {/* Subtle accent */}
+      <section className="relative overflow-hidden bg-[#F8F6EF] py-16 md:py-24">
+        {/* Background accent */}
         <div
           className="
             pointer-events-none
             absolute
             -left-32
-            top-48
-            h-[380px]
-            w-[380px]
+            top-40
+            h-[360px]
+            w-[360px]
             rounded-full
-            bg-[#C45A70]/[0.035]
-            blur-[120px]
+            bg-[#C45A70]/[0.03]
+            blur-[110px]
           "
         />
 
@@ -316,9 +316,9 @@ export default function ServicesPage({ lang }) {
             relative
             mx-auto
             max-w-7xl
-            space-y-24
+            space-y-16
             px-6
-            md:space-y-32
+            md:space-y-20
             md:px-10
           "
         >
@@ -334,20 +334,25 @@ export default function ServicesPage({ lang }) {
                 <ScrollReveal>
                   <div
                     className="
-                      mb-10
-                      grid
-                      gap-6
-                      lg:grid-cols-[0.8fr_1.2fr]
+                      mb-6
+                      flex
+                      flex-col
+                      gap-4
+                      border-b
+                      border-[#16251F]/10
+                      pb-5
+                      lg:flex-row
                       lg:items-end
-                      lg:gap-16
+                      lg:justify-between
+                      lg:gap-10
                     "
                   >
-                    {/* LEFT */}
-                    <div className="flex items-start gap-5">
+                    {/* Category */}
+                    <div className="flex items-start gap-4">
                       <span
                         className="
                           pt-1
-                          text-[10px]
+                          text-[9px]
                           font-semibold
                           tracking-[0.25em]
                           text-[#B8B5AC]
@@ -358,14 +363,14 @@ export default function ServicesPage({ lang }) {
 
                       <div>
                         <div className="flex items-center gap-3">
-                          <span className="h-px w-8 bg-[#A92F46]" />
+                          <span className="h-px w-7 bg-[#A92F46]" />
 
                           <p
                             className="
-                              text-[9px]
+                              text-[8px]
                               font-semibold
                               uppercase
-                              tracking-[0.3em]
+                              tracking-[0.28em]
                               text-[#A92F46]
                             "
                           >
@@ -377,14 +382,14 @@ export default function ServicesPage({ lang }) {
 
                         <h2
                           className="
-                            mt-4
-                            text-2xl
+                            mt-2
+                            text-xl
                             font-light
                             uppercase
                             leading-tight
                             tracking-[-0.03em]
                             text-[#0B4F32]
-                            md:text-3xl
+                            md:text-2xl
                           "
                         >
                           {group.category[lang]}
@@ -392,16 +397,15 @@ export default function ServicesPage({ lang }) {
                       </div>
                     </div>
 
-                    {/* RIGHT INTRO */}
+                    {/* Intro */}
                     <p
                       className="
-                        max-w-xl
-                        text-sm
-                        leading-7
-                        tracking-[0.02em]
+                        max-w-2xl
+                        text-xs
+                        leading-6
+                        tracking-[0.01em]
                         text-[#68736D]
-                        md:text-base
-                        md:leading-8
+                        lg:max-w-lg
                       "
                     >
                       {group.intro[lang]}
@@ -410,13 +414,13 @@ export default function ServicesPage({ lang }) {
                 </ScrollReveal>
 
                 {/* =================================================
-                    SERVICE CARDS
+                    COMPACT SERVICE LIST
                 ================================================= */}
 
                 <div
                   className={`
                     grid
-                    gap-4
+                    gap-3
                     ${
                       group.items.length === 4
                         ? "md:grid-cols-2"
@@ -429,7 +433,7 @@ export default function ServicesPage({ lang }) {
                   {group.items.map((item, itemIndex) => (
                     <ScrollReveal
                       key={itemIndex}
-                      delay={itemIndex * 0.08}
+                      delay={itemIndex * 0.05}
                     >
                       <div
                         className={`
@@ -438,10 +442,12 @@ export default function ServicesPage({ lang }) {
                           h-full
                           overflow-hidden
                           border
-                          p-6
+                          px-4
+                          py-4
                           transition-all
-                          duration-500
-                          md:p-7
+                          duration-300
+                          md:px-5
+                          md:py-5
                           ${
                             isTax
                               ? "border-[#0B4F32]/10 bg-[#0B4F32] text-white hover:border-[#541522]/50"
@@ -449,7 +455,7 @@ export default function ServicesPage({ lang }) {
                           }
                         `}
                       >
-                        {/* Top accent */}
+                        {/* Hover line */}
                         <div
                           className="
                             absolute
@@ -464,20 +470,18 @@ export default function ServicesPage({ lang }) {
                           "
                         />
 
-                        {/* Card Header */}
-                        <div className="flex items-start justify-between gap-5">
+                        <div className="flex items-start gap-4">
+                          {/* Icon */}
                           <span
                             className={`
                               flex
-                              h-10
-                              w-10
+                              h-8
+                              w-8
                               shrink-0
                               items-center
                               justify-center
                               border
-                              text-base
-                              transition
-                              duration-300
+                              text-sm
                               ${
                                 isTax
                                   ? "border-white/10 bg-white/[0.04]"
@@ -488,105 +492,77 @@ export default function ServicesPage({ lang }) {
                             {item.icon}
                           </span>
 
-                          <span
-                            className={`
-                              pt-1
-                              text-[9px]
-                              font-semibold
-                              tracking-[0.2em]
-                              ${
-                                isTax
-                                  ? "text-white/25"
-                                  : "text-[#B8B5AC]"
-                              }
-                            `}
-                          >
-                            {String(itemIndex + 1).padStart(2, "0")}
-                          </span>
-                        </div>
+                          {/* Content */}
+                          <div className="min-w-0 flex-1">
+                            <div className="flex items-start justify-between gap-3">
+                              <h3
+                                className={`
+                                  text-sm
+                                  font-medium
+                                  uppercase
+                                  leading-5
+                                  tracking-[0.01em]
+                                  ${
+                                    isTax
+                                      ? "text-white"
+                                      : "text-[#0B4F32]"
+                                  }
+                                `}
+                              >
+                                {item.title[lang]}
+                              </h3>
 
-                        {/* Title */}
-                        <h3
-                          className={`
-                            mt-7
-                            text-base
-                            font-medium
-                            uppercase
-                            tracking-[0.015em]
-                            ${
-                              isTax
-                                ? "text-white"
-                                : "text-[#0B4F32]"
-                            }
-                          `}
-                        >
-                          {item.title[lang]}
-                        </h3>
+                              <span
+                                className={`
+                                  shrink-0
+                                  pt-0.5
+                                  text-[8px]
+                                  font-semibold
+                                  tracking-[0.18em]
+                                  ${
+                                    isTax
+                                      ? "text-white/20"
+                                      : "text-[#B8B5AC]"
+                                  }
+                                `}
+                              >
+                                {String(itemIndex + 1).padStart(2, "0")}
+                              </span>
+                            </div>
 
-                        {/* Divider */}
-                        <div
-                          className={`
-                            mt-4
-                            h-px
-                            w-8
-                            transition-all
-                            duration-300
-                            group-hover:w-12
-                            ${
-                              isTax
-                                ? "bg-[#541522]"
-                                : "bg-[#A92F46]"
-                            }
-                          `}
-                        />
+                            {/* Divider */}
+                            <div
+                              className={`
+                                mt-2
+                                h-px
+                                w-6
+                                transition-all
+                                duration-300
+                                group-hover:w-10
+                                ${
+                                  isTax
+                                    ? "bg-[#541522]"
+                                    : "bg-[#A92F46]"
+                                }
+                              `}
+                            />
 
-                        {/* Description */}
-                        <p
-                          className={`
-                            mt-5
-                            text-sm
-                            leading-7
-                            tracking-[0.015em]
-                            ${
-                              isTax
-                                ? "text-white/50"
-                                : "text-[#68736D]"
-                            }
-                          `}
-                        >
-                          {item.desc[lang]}
-                        </p>
-
-                        {/* Bottom label */}
-                        <div
-                          className={`
-                            mt-8
-                            border-t
-                            pt-4
-                            ${
-                              isTax
-                                ? "border-white/10"
-                                : "border-[#E8E5DC]"
-                            }
-                          `}
-                        >
-                          <span
-                            className={`
-                              text-[9px]
-                              font-semibold
-                              uppercase
-                              tracking-[0.2em]
-                              ${
-                                isTax
-                                  ? "text-white/30"
-                                  : "text-[#AAA79E]"
-                              }
-                            `}
-                          >
-                            {lang === "en"
-                              ? "ADVISORY SERVICE"
-                              : "LAYANAN KONSULTASI"}
-                          </span>
+                            {/* Description */}
+                            <p
+                              className={`
+                                mt-2
+                                text-xs
+                                leading-5
+                                ${
+                                  isTax
+                                    ? "text-white/45"
+                                    : "text-[#68736D]"
+                                }
+                              `}
+                            >
+                              {item.desc[lang]}
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </ScrollReveal>
@@ -602,30 +578,30 @@ export default function ServicesPage({ lang }) {
           BOTTOM STATEMENT
       ========================================================= */}
 
-      <section className="bg-white py-20 md:py-24">
+      <section className="bg-white py-14 md:py-18">
         <div className="mx-auto max-w-7xl px-6 md:px-10">
           <ScrollReveal>
             <div
               className="
                 grid
-                gap-8
+                gap-6
                 border-t
                 border-[#D9D7CF]
-                pt-12
+                pt-8
                 lg:grid-cols-[1fr_auto]
                 lg:items-center
               "
             >
               <div>
                 <div className="flex items-center gap-3">
-                  <span className="h-px w-8 bg-[#A92F46]" />
+                  <span className="h-px w-7 bg-[#A92F46]" />
 
                   <p
                     className="
-                      text-[9px]
+                      text-[8px]
                       font-semibold
                       uppercase
-                      tracking-[0.3em]
+                      tracking-[0.28em]
                       text-[#A92F46]
                     "
                   >
@@ -637,15 +613,15 @@ export default function ServicesPage({ lang }) {
 
                 <h2
                   className="
-                    mt-5
+                    mt-4
                     max-w-3xl
-                    text-2xl
+                    text-xl
                     font-light
                     uppercase
                     leading-tight
                     tracking-[-0.035em]
                     text-[#0B4F32]
-                    md:text-4xl
+                    md:text-3xl
                   "
                 >
                   {lang === "en"
@@ -655,14 +631,14 @@ export default function ServicesPage({ lang }) {
 
                 <p
                   className="
-                    mt-5
+                    mt-4
                     max-w-2xl
-                    text-sm
-                    leading-7
-                    tracking-[0.015em]
+                    text-xs
+                    leading-6
+                    tracking-[0.01em]
                     text-[#68736D]
-                    md:text-base
-                    md:leading-8
+                    md:text-sm
+                    md:leading-7
                   "
                 >
                   {lang === "en"
@@ -672,14 +648,14 @@ export default function ServicesPage({ lang }) {
               </div>
 
               <div className="flex items-center gap-3">
-                <span className="h-px w-8 bg-[#A92F46]" />
+                <span className="h-px w-7 bg-[#A92F46]" />
 
                 <span
                   className="
-                    text-[9px]
+                    text-[8px]
                     font-semibold
                     uppercase
-                    tracking-[0.25em]
+                    tracking-[0.23em]
                     text-[#AAA79E]
                   "
                 >

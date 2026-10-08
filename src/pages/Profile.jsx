@@ -649,9 +649,9 @@ export default function ProfilePage() {
     : "";
 
   const whatsappLink = lawyer
-    ? `https://wa.me/${
-        lawyer.whatsapp
-      }?text=${encodeURIComponent(whatsappMessage)}`
+    ? `https://wa.me/${lawyer.whatsapp}?text=${encodeURIComponent(
+        whatsappMessage
+      )}`
     : "#";
 
   // =========================================================
@@ -800,12 +800,14 @@ export default function ProfilePage() {
             <span className="text-white/20">/</span>
 
             <span className="text-[#E1A7B1]">
-              {lawyer.shortName[lang]}
+              {lawyer.name[lang]}
             </span>
           </div>
 
           <div className="grid items-end gap-14 lg:grid-cols-[1fr_400px]">
-            {/* Hero Text */}
+            {/* =================================================
+                HERO TEXT
+            ================================================= */}
 
             <div>
               <div className="mb-7 flex items-center gap-4">
@@ -816,20 +818,33 @@ export default function ProfilePage() {
                 </p>
               </div>
 
-              <h1 className="max-w-5xl text-5xl font-semibold leading-[0.95] tracking-[-0.055em] sm:text-6xl md:text-7xl lg:text-[78px]">
-                {lawyer.shortName[lang]}
-              </h1>
+              {/* =================================================
+                  LAWYER NAME + TITLE
+              ================================================= */}
 
-              <p className="mt-7 text-lg font-medium text-white/40 md:text-xl">
+              <h1
+                className="
+                  max-w-5xl
+                  text-5xl
+                  font-semibold
+                  leading-[0.95]
+                  tracking-[-0.055em]
+                  sm:text-6xl
+                  md:text-7xl
+                  lg:text-[78px]
+                "
+              >
                 {lawyer.name[lang]}
-              </p>
+              </h1>
 
               <p className="mt-8 max-w-2xl text-base leading-8 text-white/60 md:text-lg">
                 {lawyer.description[lang]}
               </p>
             </div>
 
-            {/* Hero Image */}
+            {/* =================================================
+                HERO IMAGE
+            ================================================= */}
 
             <div className="relative">
               <div className="relative overflow-hidden rounded-[26px] border border-white/10 bg-white/5">
@@ -854,17 +869,15 @@ export default function ProfilePage() {
                         {lawyer.role[lang]}
                       </p>
                     </div>
-
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-lg backdrop-blur-md">
-                      ↗
-                    </span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Hero Meta */}
+          {/* =================================================
+              HERO META
+          ================================================= */}
 
           <div className="mt-16 max-w-4xl border-t border-white/10 pt-8">
             <div className="grid grid-cols-1 sm:grid-cols-3">
@@ -1038,7 +1051,7 @@ export default function ProfilePage() {
       <section className="bg-white py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
           <div className="grid gap-10 lg:grid-cols-2">
-            {/* Contact Details */}
+            {/* CONTACT DETAILS */}
 
             <div>
               <div className="mb-6 flex items-center gap-4">
@@ -1112,7 +1125,6 @@ export default function ProfilePage() {
 
                 {/* =================================================
                     OTHER LAWYERS
-                    Only WhatsApp consultation is available.
                 ================================================= */}
 
                 {lawyer.id !== "zaky" && (
@@ -1129,7 +1141,7 @@ export default function ProfilePage() {
               </div>
             </div>
 
-            {/* WhatsApp */}
+            {/* WHATSAPP */}
 
             <div className="relative overflow-hidden bg-gradient-to-br from-[#155D40] via-[#0B4F32] to-[#073923] p-8 text-white md:p-12">
               <div className="pointer-events-none absolute -right-32 -top-32 h-72 w-72 rounded-full bg-[#A92F46]/10 blur-3xl" />

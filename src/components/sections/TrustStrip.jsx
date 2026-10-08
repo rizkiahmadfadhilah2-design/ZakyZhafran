@@ -236,14 +236,15 @@ export default function TrustStrip({ lang }) {
             className="
               mt-6
               max-w-3xl
-              text-3xl
+              text-2xl
               font-light
               uppercase
-              leading-[1.08]
-              tracking-[-0.04em]
+              leading-[1.12]
+              tracking-[-0.035em]
               text-[#16251F]
-              sm:text-4xl
-              md:text-5xl
+              sm:text-3xl
+              md:text-4xl
+              lg:text-5xl
             "
           >
             {lang === "en"

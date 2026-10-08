@@ -46,7 +46,7 @@ export default function Navbar() {
           className="
             mx-auto
             flex
-            h-[72px]
+            h-[78px]
             max-w-7xl
             items-center
             justify-between
@@ -56,54 +56,126 @@ export default function Navbar() {
         >
 
           {/* =================================================
-              LOGO
+              LOGO & BRAND
           ================================================= */}
 
           <Link
             to="/"
             onClick={() => setOpen(false)}
-            className="group flex items-center gap-3"
+            className="group flex items-center gap-3.5"
           >
 
-            <img
-              src="/logozp.png"
-              alt="Zaky Zhafran & Partners"
+            {/* LOGO */}
+
+            <div
               className="
-                h-8
-                w-8
+                relative
+                flex
+                h-10
+                w-10
+                shrink-0
+                items-center
+                justify-center
                 rounded-full
-                object-cover
                 ring-1
                 ring-white/15
                 transition
-                duration-300
+                duration-500
                 group-hover:ring-[#A92F46]/70
               "
-            />
-
-            <div className="leading-none">
-
-              <p
+            >
+              <img
+                src="/logozp.png"
+                alt="Zaky Zhafran & Partners"
                 className="
-                  text-[11px]
-                  font-semibold
-                  tracking-[0.18em]
-                  text-white
+                  h-full
+                  w-full
+                  rounded-full
+                  object-cover
+                  transition
+                  duration-500
+                  group-hover:scale-[1.03]
+                "
+              />
+            </div>
+
+
+            {/* =================================================
+                FIRM NAME
+            ================================================= */}
+
+            <div className="flex flex-col justify-center">
+
+              {/* MAIN NAME */}
+
+              <div
+                className="
+                  flex
+                  items-center
+                  gap-2
+                  leading-none
                 "
               >
-                ZAKY ZHAFRAN
-              </p>
 
-              <p
+                <span
+                  className="
+                    text-[15px]
+                    font-semibold
+                    uppercase
+                    tracking-[0.08em]
+                    text-white
+                    transition
+                    duration-300
+                    group-hover:text-[#F8F6EF]
+                    sm:text-[16px]
+                    md:text-[18px]
+                  "
+                >
+                  ZAKY ZHAFRAN
+                </span>
+
+              </div>
+
+
+              {/* PARTNERS LINE */}
+
+              <div
                 className="
-                  mt-1
-                  text-[8px]
-                  tracking-[0.28em]
-                  text-white/40
+                  mt-[6px]
+                  flex
+                  items-center
+                  gap-2
                 "
               >
-                & PARTNERS
-              </p>
+
+                {/* DECORATIVE LINE */}
+
+                <span
+                  className="
+                    h-px
+                    w-5
+                    bg-[#A92F46]
+                    transition
+                    duration-300
+                    group-hover:w-7
+                  "
+                />
+
+                <span
+                  className="
+                    text-[9px]
+                    font-medium
+                    uppercase
+                    tracking-[0.30em]
+                    text-white/55
+                    sm:text-[10px]
+                    md:text-[10px]
+                  "
+                >
+                  & PARTNERS
+                </span>
+
+              </div>
 
             </div>
 
